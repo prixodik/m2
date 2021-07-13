@@ -1,0 +1,31 @@
+
+mixin stars(data)
+	.stars&attributes(attributes)
+		._off
+			+svg('star')
+			+svg('star')
+			+svg('star')
+			+svg('star')
+			+svg('star')
+		._on( style="width: calc(20% * "+data.rait+" + 2px)")
+			- var n = 1;
+			while n <= 5
+				- n++
+				+svg('star')
+
+mixin starsSet(data)
+	.stars.-set.-lg&attributes(attributes)
+		._off
+			+svg('star')
+			+svg('star')
+			+svg('star')
+			+svg('star')
+			+svg('star')
+		._on
+			- var n = 1;
+			while n <= 5
+				- var id = 'star-set-'+n;
+				- n++
+				input(type="radio" name="star-set" id=id)
+				label(for=id) 
+					+svg('star')

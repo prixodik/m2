@@ -1,0 +1,241 @@
+.header {
+	background: $white;
+	position: relative;
+	z-index: 10;
+	box-shadow: $cards-bg;
+	&__body {
+		padding: 8px 0 16px;
+
+		&-content {
+			@include flex(space-between, center, center, nowrap);
+			flex: 1 1 auto;
+		}
+	}
+	&__logo {
+		margin-bottom: 9px;
+		display: block;
+		svg,
+		img {
+			margin: 0 auto;
+			display: block;
+			max-width: 183px;
+		}
+		svg {
+			fill: $green;
+			height: 78px;
+		}
+		&-wrap {
+			margin-right: 70px;
+		}
+	}
+	&__slogan {
+		color: $green;
+		font: 11px/16px $baseFF;
+		white-space: nowrap;
+	}
+	&__search {
+		flex: 1 1 auto;
+	}
+	&__search-mob {
+		display: none;
+		&.is-active {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 5;
+			background-color: $green-dark;
+			padding: 8px 50px 8px 13px;
+			bottom: 0;
+			max-width: 400px;
+			width: 100%;
+		}
+	}
+	&__contacts {
+		@include flex(flex-end, center, center, nowrap);
+		&-item {
+			margin-left: 42px;
+			/* &:first-child {
+				margin-left: 0;
+			} */
+		}
+	}
+	&__container {
+		@include flex(space-between, center, center, nowrap);
+	}
+	&__bottom {
+		background: $green;
+
+		&.fixed {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+	&__menu {
+		flex: 1 1 auto;
+	}
+	&__burger {
+		display: none;
+	}
+	&__buttons {
+		@include flex(0, stretch, stretch, nowrap);
+
+		.d-none {
+			display: none;
+		}
+	}
+	&__banner {
+		margin-bottom: 8px;
+		display: block;
+		img {
+			display: block;
+		}
+	}
+
+	&--rose & {
+		&__body {
+			background: url("../images/header-rose-left.png") 0 0 no-repeat,
+				url("../images/header-rose-right.png") 100% 100% no-repeat;
+		}
+	}
+
+	@include media($lg) {
+		&__logo {
+			&-wrap {
+				margin-right: 40px;
+			}
+		}
+		&__contacts {
+			&-item {
+				margin-left: 20px;
+				&:first-child {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+
+	@include media($md) {
+		&__logo {
+			&-wrap {
+				margin-right: 20px;
+			}
+		}
+		&__contacts {
+			&-item {
+				margin-left: 15px;
+				&:first-child {
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+
+	@include media($sm) {
+		/* &__menu {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background: $white;
+			padding: 20px 15px;
+			width: 100%;
+			box-shadow: $cards-bg;
+			//&.is-active{ }
+		} */
+		&__bottom {
+			.container {
+				position: relative;
+			}
+		}
+		&__buttons {
+			.d-block_sm {
+				display: block;
+			}
+			.hidden {
+				display: none;
+			}
+		}
+		&__burger {
+			display: block;
+		}
+		&__body {
+			&-content {
+				flex-wrap: wrap;
+			}
+		}
+		&__search {
+			flex: 0 0 100%;
+			margin-bottom: 10px;
+			display: none;
+		}
+		&__contacts {
+			flex: 0 0 100%;
+			&-item {
+				margin-left: 16px;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	@include media($xs) {
+		&__body {
+			flex-wrap: wrap;
+		}
+		&__container {
+			flex-wrap: wrap;
+		}
+		&__logo {
+			flex: 0 0 100%;
+			&-wrap {
+				flex: 0 0 100%;
+				margin: 0 0 10px;
+				img {
+					margin: 0 auto;
+					display: block;
+				}
+			}
+		}
+		&__slogan {
+			text-align: center;
+		}
+		&__menu {
+			flex: 0 1 auto;
+		}
+		//&__search{ flex: 0 0 100%; margin-bottom: 10px;  }
+		&__contacts {
+			flex: 0 0 100%;
+			@include flex(center, center, center);
+			&-item {
+				margin: 0;
+				flex: 0 0 50%;
+				max-width: 50%;
+				margin-bottom: 16px;
+				&:last-child {
+					margin-bottom: 0;
+					display: none;
+				}
+
+				/* .icon-inline__icon {
+					display: none;
+				} */
+			}
+		}
+
+		&__bottom {
+			.header__container {
+				flex-wrap: nowrap;
+			}
+			&.fixed {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+		}
+	}
+}

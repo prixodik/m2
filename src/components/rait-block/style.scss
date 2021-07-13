@@ -1,0 +1,22 @@
+.rait-block {
+	@include flex(0, center, center, nowrap);
+	&__rait {
+		color: $link;
+		margin-right: 16px;
+		font: $title-h3;
+	}
+	&__comments {
+		margin-left: 16px;
+		color: $text-gray-dark;
+		font: $fs-16;
+	}
+
+	@include media($xs) {
+		&__rait {
+			font: $title-h3-xs;
+		}
+		&__comments {
+			font: $fs-14;
+		}
+	}
+}

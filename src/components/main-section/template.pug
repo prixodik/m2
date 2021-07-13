@@ -1,0 +1,19 @@
+include ../breadcrumbs/template
+
+mixin mainSection(data)
+	.main-section&attributes(attributes)
+		._container.container
+			+breadcrumbs({
+				items: data.bread
+			})._bread 
+
+			block
+
+mixin mainSectionUser(data)
+	.main-section&attributes(attributes)
+		._container.container
+			+breadcrumbsUser({
+				items: data.bread
+			})._bread 
+
+			block

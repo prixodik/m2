@@ -1,0 +1,154 @@
+// Контрольные точки;
+$breakpointsPhone: 400px;
+$breakpointsPhoneWide: 480px;
+$breakpointsPhablet: 540px;
+$breakpointsTabletSmall: 640px;
+$breakpointsTablet: 768px;
+$breakpointsTabletWide: 992px;
+$breakpointsDesktop: 1200px;
+$breakpointsDesktopWideMd: 1450px;
+$breakpointsDesktopWide: 1600px;
+
+$xlg: $breakpointsDesktopWide;
+$lg: $breakpointsDesktopWideMd;
+$md: $breakpointsDesktop;
+$sm: $breakpointsTabletWide;
+$xs: $breakpointsTabletSmall;
+$xxs: $breakpointsPhoneWide;
+
+$breakpoints: (
+	"phone": $breakpointsPhone,
+	"phone-wide": $breakpointsPhoneWide,
+	"phablet": $breakpointsPhablet,
+	"tablet-small": $breakpointsTabletSmall,
+	"tablet": $breakpointsTablet,
+	"tablet-wide": $breakpointsTabletWide,
+	"desktop": $breakpointsDesktop,
+	"desktop-wide-md": $breakpointsDesktopWideMd,
+	"desktop-wide": $breakpointsDesktopWide,
+);
+
+// Цвета на сайте
+
+$white: #fff;
+$black: #000;
+$red: #e01919;
+
+$gray10: scale-color($black, $lightness: 10%); // 1a1a1a
+
+$text-green-dark: #102e25;
+$text-gray-dark: #8699a5;
+$text-form: #3b3b3b;
+$color-amount: #102e25;
+$color-price: #53392d;
+$green: #245e63;
+$green-dark: #1e565a;
+$blue-dark: #2f6283;
+$icon-green: #95bab9;
+$form-blue: #51bcc3;
+$ultra-marine: #5dd6c7;
+$blue: #b5e0e3;
+$link: #f4a528;
+$yellow: #efbc59;
+$gray: #a6b4bc;
+$gray-dark: #c7d3da;
+$icon-bg-directory: #c9dce9;
+$gray-devider: #d7dce7;
+$bg-directory: #dae8f1;
+$gray-bg: #f6f9ff;
+$link-footer: #aacabd;
+$directory-ellipse: #c9dce9;
+$form-input-bg: #ecf3f8;
+$light-green-header: #7ba6a5;
+$header-light-gray: #eef3f6;
+$bg-darker-blue: #a2d9dd;
+$price-color: #53392d;
+$red-bg: #f9e1e1;
+$avatar: #b1c9d9;
+
+$cards-bg: 4px 4px 15px rgba(92, 109, 116, 0.12);
+$ellipse-bg: 2px 2px 8px rgba(92, 109, 116, 0.1);
+
+$gradient-to-white: linear-gradient(90deg, rgba($white, 0) 0%, $white 100%);
+
+$mobileBrackpoints: "tablet";
+
+$enable-grid-classes: true !default;
+
+$grid-breakpoints: (
+	xxxs: 0,
+	xl: $xlg,
+	lg: $lg,
+	md: $md,
+	sm: $sm,
+	xs: $xs,
+	xxs: $xxs,
+) !default;
+
+// Grids
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+$baseFontF: "Fira Sans", "Arial", sans-serif;
+$headlineFontF: "Commissioner", "Arial", sans-serif;
+
+$titleFF: $headlineFontF;
+
+$baseFS: 14px !default;
+$baseLH: (25px / $baseFS);
+$baseFW: 500;
+$baseFSt: normal;
+$baseFF: $baseFontF;
+$baseFClr: $text-green-dark;
+$baseBg: $white;
+
+$family: $baseFF;
+
+$containerW: 1230px;
+$containerP: $grid-gutter-width/2;
+
+$baseLinkColor: inherit;
+$baseLinkColorHover: inherit;
+
+$fs-12: 12px/1.05 $family;
+$fs-14: 14px/1.4 $family;
+$fs-14-500: 500 14px/1.4 $family;
+$fs-14-bold: 500 14px/1.4 $family;
+$fs-link: $fs-14-bold;
+$fs-16: 16px/1.3 $family;
+$fs-16-500: 500 16px/1.3 $family;
+$fs-16-bold: bold 16px/1.3 $family;
+$fs-18: 18px/1.3 $family;
+$fs-18-bold: bold 18px/1.3 $family;
+$fs-card: 600 20px/1.3 $family;
+$fs-news: $fs-card;
+$fs-name: bold 22px/1.4 $family;
+
+// Ascending
+// Used to evaluate Sass maps like our grid breakpoints.
+@mixin assert-ascending($map, $map-name) {
+	$prev-key: null;
+	$prev-num: null;
+	@each $key, $num in $map {
+		@if $prev-num == null {
+			// Do nothing
+		} @else if not comparable($prev-num, $num) {
+			@warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+		} @else if $prev-num < $num {
+			@warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+		}
+		$prev-key: $key;
+		$prev-num: $num;
+	}
+}
+
+// Starts at zero
+// Another grid mixin that ensures the min-width of the lowest breakpoint starts at 0.
+@mixin assert-starts-at-zero($map) {
+	$values: map-values($map);
+	$first-value: nth($values, 1);
+	@if $first-value != 0 {
+		@warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
+	}
+}
+
+@include assert-starts-at-zero($grid-breakpoints);

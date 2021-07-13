@@ -1,0 +1,37 @@
+.lnk,
+a {
+	color: $baseLinkColor;
+	text-decoration: none;
+	@include transition();
+}
+.lnk:hover,
+a:hover {
+	text-decoration: none;
+	color: $baseLinkColorHover;
+}
+
+a[href^="tel:"] {
+	text-decoration: none;
+	color: inherit;
+	border-bottom-color: transparent;
+}
+
+.lnk_reverse {
+	border-bottom-color: transparent;
+	&:hover {
+		border-bottom-color: currentColor;
+	}
+}
+
+.link-dashed {
+	color: $form-blue;
+	font: 600 13px/18px $baseFF;
+	text-decoration: none;
+	border-bottom: 1px $form-blue dashed;
+	@include time();
+
+	&:hover {
+		color: $form-blue;
+		border-color: transparent;
+	}
+}

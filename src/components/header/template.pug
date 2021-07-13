@@ -1,0 +1,35 @@
+//- include ../icon-inline/template
+include ../menu-block/template
+include ../search-block/template
+include ../burger/template
+
+mixin header(data)
+	header.header&attributes(attributes)
+		._body
+			._container.container
+				._logo-wrap
+					a._logo
+						+svg('logo')
+					._slogan 20 лет на рынке товаров для сада
+				._body-content
+					._search
+						a._banner
+							//- +webp('images/header-banner-1.png')
+							+webp('images/header-banner-2.png')
+						//- +searchBlock({
+						//- 	placeholder: 'Название или артикул'
+						//- })
+					
+						
+		._bottom 
+			._container.container 
+					//- +burger()._burger   
+					
+					._menu
+						//- +menuBlock() 
+					._buttons
+						//- +iconInlineSearch({
+						//- 	icon: 'search' 
+						//- }).icon-inline--white._buttons-item.d-none.d-block_sm
+						
+

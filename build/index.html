@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Структура сайта</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- appstore links-->
+    <!-- seo meta-->
+    <meta name="description" content="Meta description">
+    <meta name="keywords" content="Key, words">
+    <meta name="author" content="Site name">
+    <!-- og meta-->
+    <meta property="og:title" content="Site name">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Site name">
+    <meta name="twitter:title" content="Site name">
+    <meta name="twitter:description" content="Site name">
+    <meta name="twitter:image:src" content="https://projectname.surge.shimages/og/1_1200х628.jpg">
+    <meta name="twitter:url" content="https://projectname.surge.sh">
+    <!-- remove for production-->
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="css/template_styles.css">
+  </head>
+  <body class="homepage">
+        <header class="header">
+          <div class="header__body">
+            <div class="header__container container">
+              <div class="header__logo-wrap"><a class="header__logo">
+                  <svg class="icon icon_logo">
+                    <use xlink:href="images/sprite-svg.svg#logo"></use>
+                  </svg></a>
+                <div class="header__slogan">20 лет на рынке товаров для сада</div>
+              </div>
+              <div class="header__body-content">
+                <div class="header__search"><a class="header__banner">
+                    <picture>
+                      <source class="lazy" data-srcset="images/header-banner-2.webp" type="image/webp"/><img class="lazy" data-src="images/header-banner-2.png" alt=""/>
+                    </picture></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="header__bottom"> 
+            <div class="header__container container"> 
+              <div class="header__menu"></div>
+              <div class="header__buttons"></div>
+            </div>
+          </div>
+        </header>
+    <div class="main-section">
+      <div class="main-section__head lazy" data-bg="images/main-banner.jpg">
+        <div class="main-section__container container">
+                    <div class="breadcrumbs main-section__bread">
+                      <ul class="breadcrumbs__ul" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                        <li class="breadcrumbs__li" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+                            <meta itemprop="position" content="0"></a></li>
+                      </ul>
+                    </div>
+        </div>
+      </div>
+      <div class="container">
+        <h1>Cтраницы проекта</h1>
+        <ol>
+          <li><a target="_blank" href="n-main.html">Главная страница</a></li>
+        </ol>
+        <div class="tabs-panel">
+          <div class="in"><a class="is-active" href="#tab1" data-tab>Заголовки</a><a href="#tab2" data-tab>Элементы форм</a><a href="#tab3" data-tab>Кнопки</a><a href="#tab4" data-tab>Иконки</a></div>
+        </div>
+        <div class="tabs-wrap">
+          <div class="tab" id="tab1">
+            <h1>Заголовок h1</h1>
+            <h2>Заголовок h2</h2>
+            <h3>Заголовок h3</h3>
+            <h4>Заголовок h4</h4>
+          </div>
+          <div class="tab" id="tab2">
+            <h1>Элементы форм</h1>
+            <div class="form-group">
+              <label class="inp-lbl" for="input-0">Введите логин <span class="txt-red">*</span></label>
+              <input class="js-required form-control" type="text" id="input-0"/>
+              <div class="error-message">Поле заполнено не верно</div>
+            </div>
+            <div class="form-group">
+              <label class="inp-lbl" for="input-0">Введите логин <span class="txt-red">*</span></label>
+              <input class="js-required form-control" type="text" value="value" id="input-0"/>
+              <div class="error-message">Поле заполнено не верно</div>
+            </div>
+          </div>
+          <div class="tab is-visible" id="tab3">
+            <h1>Кнопки</h1><a class="btn" href="#">button</a><a class="btn btn--border" href="#">button</a><a class="btn btn--yellow" href="#">button</a>
+          </div>
+          <div class="tab" id="tab4">
+            <h1>Иконки</h1>
+                        <div class="icon-list d-flex flex-flow-row-wrap">
+                          <div class="item p-5">
+                            <svg class="icon icon_marker fs-24">
+                              <use xlink:href="images/sprite-svg.svg#marker"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_phone fs-24">
+                              <use xlink:href="images/sprite-svg.svg#phone"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_video fs-24">
+                              <use xlink:href="images/sprite-svg.svg#video"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_photo fs-24">
+                              <use xlink:href="images/sprite-svg.svg#photo"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_arrow-right fs-24">
+                              <use xlink:href="images/sprite-svg.svg#arrow-right"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_filter fs-24">
+                              <use xlink:href="images/sprite-svg.svg#filter"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_cart fs-24">
+                              <use xlink:href="images/sprite-svg.svg#cart"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_marker2 fs-24">
+                              <use xlink:href="images/sprite-svg.svg#marker2"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_exchange fs-24">
+                              <use xlink:href="images/sprite-svg.svg#exchange"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_angle-right fs-24">
+                              <use xlink:href="images/sprite-svg.svg#angle-right"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_tile fs-24">
+                              <use xlink:href="images/sprite-svg.svg#tile"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_burger fs-24">
+                              <use xlink:href="images/sprite-svg.svg#burger"></use>
+                            </svg>
+                          </div>
+                          <div class="item p-5">
+                            <svg class="icon icon_main fs-24">
+                              <use xlink:href="images/sprite-svg.svg#main"></use>
+                            </svg>
+                          </div>
+                        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-layout">
+      <div class="row d-flex ml-0 mr-0">
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+        <div class="col d-flex">
+          <div class="in w-100"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

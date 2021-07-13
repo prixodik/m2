@@ -1,0 +1,55 @@
+.count-block {
+	position: relative;
+	z-index: 1;
+	@include flex(0, stretch, stretch, nowrap);
+	align-items: center;
+	//height: 42px;
+	&__minus,
+	&__plus {
+		@include flex(center, center, center);
+		width: 26px;
+		height: 26px;
+		font: 600 18px/32px $family;
+		text-align: center;
+		color: $green;
+		text-decoration: none;
+		background: $white;
+		border-radius: 18px;
+		@include time();
+		border: 1px $green solid;
+		&:hover {
+			background: $green;
+			color: $white;
+		}
+	}
+	//&__plus{ left: auto; right: 0; }
+	&__input {
+		border: 1px #f6f9ff solid;
+		border-radius: 5px;
+		background: #f6f9ff;
+		font: 600 16px/24px $family;
+		text-align: center;
+		color: $green;
+		padding: 7px 15px;
+		width: 41px;
+		margin: 0 8px;
+		outline: none;
+		box-shadow: none !important;
+		-webkit-appearance: none;
+	}
+	&--small & {
+		&__minus,
+		&__plus {
+			@include flex(center, center, center);
+			width: 18px;
+			height: 18px;
+			font: 600 18px/32px $family;
+			border-radius: 50%;
+		}
+		&__input {
+			margin: 0 6px;
+			width: 29px;
+			padding: 0px;
+		}
+	}
+}

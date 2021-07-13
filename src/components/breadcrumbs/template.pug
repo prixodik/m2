@@ -1,0 +1,26 @@
+mixin breadcrumbs(data)
+  .breadcrumbs&attributes(attributes)
+      ul._ul(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+        li._li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+          a(href='/', itemprop='item')
+            span(itemprop='name') Главная
+            meta(itemprop='position', content='0')
+        each itm, i in data.items
+          li._li.active(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+            a(href=itm.url, itemprop='item')
+              span(itemprop='name')!=itm.title
+              meta(itemprop='position', content=i+1)
+
+mixin breadcrumbsUser(data)
+  .breadcrumbs&attributes(attributes)
+      ul._ul(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+        li._li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+          a(href='/', itemprop='item')
+            span(itemprop='name') Личный кабинет
+            meta(itemprop='position', content='0')
+        each itm, i in data.items
+          li._li.active(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+            a(href=itm.url, itemprop='item')
+              span(itemprop='name')!=itm.title
+              meta(itemprop='position', content=i+1)              
+

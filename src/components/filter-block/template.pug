@@ -1,0 +1,263 @@
+
+mixin filterBlock(data)
+	.filter-block&attributes(attributes)
+		form(action="" class="js-filter") 
+			._head
+				._title Фильтр
+				//- a._reset.js-filter-reset(href="#")
+					//- +svg('refresh')
+					//- span Сбросить
+				a._close.js-filter-block-close(href="#")
+					+svg('close')
+
+			._result.js-filter-result
+				//- a._result-item.js-filter-del(href="#")
+				//- 	span 13 500
+				//- 	+svg('close')
+				//- a._result-item.js-filter-del(href="#")
+				//- 	span Значение 1234
+				//- 	+svg('close')
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle.is-active
+					+svg('arrow-down')
+					span Страна происхождения
+				._group-body.checkbox-list.is-active
+					.checkbox
+						input#ch-1(type="checkbox" value="Россия")
+						label(for="ch-1") Россия
+					.checkbox
+						input#ch-2(type="checkbox" value="Китай")
+						label(for="ch-2") Китай
+					.checkbox
+						input#ch-3(type="checkbox" value="Индонезия")
+						label(for="ch-3") Индонезия
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle.is-active
+					+svg('arrow-down')
+					span Производитель
+				._group-body.checkbox-list.is-active 
+					.checkbox
+						input#ch2-1(type="checkbox" value="Агроуспех")
+						label(for="ch2-1") Агроуспех
+					.checkbox
+						input#ch2-2(type="checkbox" value="Евро-Семена")
+						label(for="ch2-2") Евро-Семена
+					.checkbox
+						input#ch2-3(type="checkbox" value="ВНИИССОК")
+						label(for="ch2-3") ВНИИССОК
+					.checkbox
+						input#ch2-1(type="checkbox" value="Агроуспех")
+						label(for="ch2-1") Агроуспех
+					.checkbox
+						input#ch2-2(type="checkbox" value="Евро-Семена")
+						label(for="ch2-2") Евро-Семена
+					.checkbox
+						input#ch2-3(type="checkbox" value="ВНИИССОК")
+						label(for="ch2-3") ВНИИССОК
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle.is-active
+					+svg('arrow-down')
+					span Цвет
+				._group-body.checkbox-list.is-active 
+					.checkbox
+						input#ch3-1(type="checkbox" value="Белый")
+						label(for="ch3-1") Белый
+					.checkbox
+						input#ch3-2(type="checkbox" value="Красный")
+						label(for="ch3-2") Красный
+					.checkbox
+						input#ch3-3(type="checkbox" value="Розовый")
+						label(for="ch3-3") Розовый
+					.checkbox
+						input#ch3-1(type="checkbox" value="Желтый")
+						label(for="ch3-1") Желтый
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle
+					+svg('arrow-down')
+					span Высота взрослого растения
+				._group-body.checkbox-list 
+					.checkbox
+						input#ch4-1(type="checkbox" value="0,5 м")
+						label(for="ch3-1") 0,5 м
+					.checkbox
+						input#ch4-2(type="checkbox" value="1,2 м")
+						label(for="ch4-2") 1,2 м
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle
+					+svg('arrow-down')
+					span Период цветения/ плодоношения
+				._group-body.checkbox-list 
+					.radiobox
+						input(type="radio" name="p1" id="p1" value="Значение")
+						label(for="p1") Значение
+					.radiobox
+						input(type="radio" name="p1" id="p2" value="Значение 2")
+						label(for="p2") Значение 2
+					.radiobox
+						input(type="radio" name="p1" id="p3" value="Значение 3")
+						label(for="p3") Значение 3
+					.radiobox
+						input(type="radio" name="p1" id="p4" value="Значение 4")
+						label(for="p4") Значение 4
+					
+			._group.accardion-block
+				._group-title.js-accardion-toggle.is-active
+					+svg('arrow-down')
+					span Цена <span class="filter-block__group-cur">руб.</span>
+				._group-body.is-active
+					._range.row.row--between
+						._range-col.col-auto
+							input.js-range-from(type="text" value="От 100" placeholder="От" size="7")
+						._range-col.col
+							input.js-range-to(type="text" value="До 6000" placeholder="До" size="7")
+					input.js-range-slider(type="text" data-min="0" data-max="6000" data-from="100" data-to="6000")
+			
+			._buttons
+				a._reset.btn.btn--border.btn--block.js-filter-reset(href="#")
+					span Сбросить 
+				button.btn.btn--block.btn--yellow-2 Применить фильтр
+				
+
+mixin filterBlockFavorite(data)
+	.filter-block&attributes(attributes)
+		form(action="" class="js-filter") 
+			._head
+				._title Фильтр
+				//- a._reset.js-filter-reset(href="#")
+					//- +svg('refresh')
+					//- span Сбросить
+				a._close.js-filter-block-close(href="#")
+					+svg('close')
+
+			._result.js-filter-result
+				//- a._result-item.js-filter-del(href="#")
+				//- 	span 13 500
+				//- 	+svg('close')
+				//- a._result-item.js-filter-del(href="#")
+				//- 	span Значение 1234
+				//- 	+svg('close')
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle.is-active
+					+svg('arrow-down')
+					span Страна происхождения
+				._group-body.radiobox-list.is-active
+					.radiobox
+						input#cht-1(type="radio" value="Все товары" name="cht")
+						label(for="cht-1") Все товары
+					.radiobox
+						input#cht-2(type="radio" value="В наличии" name="cht")
+						label(for="cht-2") В наличии
+					.radiobox
+						input#cht-3(type="radio" value="Предварительный заказ" name="cht")
+						label(for="cht-3") Предварительный заказ
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle.is-active
+					+svg('arrow-down')
+					span Страна происхождения
+				._group-body.checkbox-list.is-active
+					.checkbox
+						input#ch-1(type="checkbox" value="Россия")
+						label(for="ch-1") Россия
+					.checkbox
+						input#ch-2(type="checkbox" value="Китай")
+						label(for="ch-2") Китай
+					.checkbox
+						input#ch-3(type="checkbox" value="Индонезия")
+						label(for="ch-3") Индонезия
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle.is-active
+					+svg('arrow-down')
+					span Производитель
+				._group-body.checkbox-list.is-active 
+					.checkbox
+						input#ch2-1(type="checkbox" value="Агроуспех")
+						label(for="ch2-1") Агроуспех
+					.checkbox
+						input#ch2-2(type="checkbox" value="Евро-Семена")
+						label(for="ch2-2") Евро-Семена
+					.checkbox
+						input#ch2-3(type="checkbox" value="ВНИИССОК")
+						label(for="ch2-3") ВНИИССОК
+					.checkbox
+						input#ch2-1(type="checkbox" value="Агроуспех")
+						label(for="ch2-1") Агроуспех
+					.checkbox
+						input#ch2-2(type="checkbox" value="Евро-Семена")
+						label(for="ch2-2") Евро-Семена
+					.checkbox
+						input#ch2-3(type="checkbox" value="ВНИИССОК")
+						label(for="ch2-3") ВНИИССОК
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle.is-active
+					+svg('arrow-down')
+					span Цвет
+				._group-body.checkbox-list.is-active 
+					.checkbox
+						input#ch3-1(type="checkbox" value="Белый")
+						label(for="ch3-1") Белый
+					.checkbox
+						input#ch3-2(type="checkbox" value="Красный")
+						label(for="ch3-2") Красный
+					.checkbox
+						input#ch3-3(type="checkbox" value="Розовый")
+						label(for="ch3-3") Розовый
+					.checkbox
+						input#ch3-1(type="checkbox" value="Желтый")
+						label(for="ch3-1") Желтый
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle
+					+svg('arrow-down')
+					span Высота взрослого растения
+				._group-body.checkbox-list 
+					.checkbox
+						input#ch4-1(type="checkbox" value="0,5 м")
+						label(for="ch3-1") 0,5 м
+					.checkbox
+						input#ch4-2(type="checkbox" value="1,2 м")
+						label(for="ch4-2") 1,2 м
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle
+					+svg('arrow-down')
+					span Период цветения/ плодоношения
+				._group-body.checkbox-list 
+					.radiobox
+						input(type="radio" name="p1" id="p1" value="Значение")
+						label(for="p1") Значение
+					.radiobox
+						input(type="radio" name="p1" id="p2" value="Значение 2")
+						label(for="p2") Значение 2
+					.radiobox
+						input(type="radio" name="p1" id="p3" value="Значение 3")
+						label(for="p3") Значение 3
+					.radiobox
+						input(type="radio" name="p1" id="p4" value="Значение 4")
+						label(for="p4") Значение 4
+					
+			._group.accardion-block
+				._group-title.js-accardion-toggle.is-active
+					+svg('arrow-down')
+					span Цена <span class="filter-block__group-cur">руб.</span>
+				._group-body.is-active
+					._range.row.row--between
+						._range-col.col-auto
+							input.js-range-from(type="text" value="От 100" placeholder="От" size="7")
+						._range-col.col
+							input.js-range-to(type="text" value="До 6000" placeholder="До" size="7")
+					input.js-range-slider(type="text" data-min="0" data-max="6000" data-from="100" data-to="6000")
+			
+			._buttons
+				a._reset.btn.btn--border.btn--block.js-filter-reset(href="#")
+					span Сбросить 
+				button.btn.btn--block.btn--yellow-2 Применить фильтр
+				

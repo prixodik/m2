@@ -1,0 +1,11 @@
+mixin countBlock(data)
+	.count-block&attributes(attributes)
+		a._minus.js-count-minus(href="#") -
+		input._input(type="text" value="1")
+		a._plus.js-count-plus(href="#") +
+
+mixin countBlockSmall(data)
+	.count-block.-small&attributes(attributes)
+		a._minus.js-count-minus(href="#") -
+		input._input(type="text" value="1")
+		a._plus.js-count-plus(href="#") +

@@ -1,0 +1,105 @@
+.search-block {
+	border-radius: 11px;
+	border: 1px $green solid;
+	position: relative;
+	@include flex(space-between, stretch, stretch, nowrap);
+	max-width: 416px;
+	overflow: hidden;
+	width: 100%;
+	&__input {
+		border: 0;
+		background: transparent;
+		width: 100%;
+		padding: 13px 15px;
+		color: $green;
+		font: 12px/14px $baseFF;
+
+		&::-webkit-input-placeholder {
+			opacity: 0.5;
+			color: $green;
+		}
+		&::-moz-placeholder {
+			opacity: 0.5;
+			color: $green;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+	&__btn {
+		border: 0;
+		background: transparent;
+		width: 63px;
+		@include flex(center, center, center);
+		svg {
+			fill: $green;
+			font-size: 20px;
+			display: block;
+		}
+	}
+	&__close {
+		display: none;
+	}
+
+	&--mob {
+		background: #eef3f6;
+		max-width: 317px;
+		overflow: visible;
+	}
+	&--mob & {
+		&__input {
+			padding: 13px 15px;
+			color: $green;
+			font: 12px/14px $baseFF;
+
+			&::-webkit-input-placeholder {
+				opacity: 0.5;
+				color: $green;
+			}
+			&::-moz-placeholder {
+				opacity: 0.5;
+				color: $green;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+		&__btn {
+			border: 0;
+			background: transparent;
+			width: 63px;
+			@include flex(center, center, center);
+			svg {
+				fill: $green;
+				font-size: 20px;
+				display: block;
+			}
+		}
+	}
+
+	@include media($sm) {
+		max-width: 100%;
+
+		&__close {
+			@include flex(center, center, center);
+			width: 25px;
+			height: 25px;
+			flex: 0 0 auto;
+			border-radius: 50%;
+			background-color: $white;
+			position: absolute;
+			top: 50%;
+			left: calc(100% + 13px);
+			transform: translateY(-50%);
+
+			svg {
+				color: $link;
+				width: 11px;
+				height: 11px;
+				display: block;
+			}
+		}
+	}
+}

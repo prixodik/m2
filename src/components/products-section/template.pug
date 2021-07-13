@@ -1,0 +1,143 @@
+include ../product-block/template
+
+mixin productsSection(data) 
+	.products-section&attributes(attributes)
+		._container.container
+			._title.title-h2
+				!= data.title 
+			._slider.row.js-products-slider
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlock({
+						img: 'images/product-img-1.jpg',
+						title: 'Кувшинка (Нимфея) Гладстониана',
+						price: '220 ₽',
+						priceOld:'550 ₽' 
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlock({
+						img: 'images/product-img-2.jpg',
+						title: 'Белокрыльник болотный (Калла болотная)',
+						price: '270 ₽',
+						label:'images/bestseller.png'
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12 
+					+productBlock({
+						img: 'images/product-img-3.jpg',
+						title: 'Вахта трехлистная (трилистник водяной)',
+						price: '870 ₽',
+						priceOld:'990 ₽'
+					}).product-block--marker
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlock({
+						img: 'images/product-img-4.jpg',
+						title: 'Кувшинка (Нимфея) Элмост Блэк',
+						price: '2150 ₽',
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlock({
+						img: 'images/product-img-1.jpg',
+						title: 'Кувшинка (Нимфея) Гладстониана',
+						price: '220 ₽',
+						priceOld:'550 ₽'
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlock({
+						img: 'images/product-img-1.jpg',
+						title: 'Кувшинка (Нимфея) Гладстониана',
+						price: '220 ₽',
+						priceOld:'550 ₽'
+					})
+mixin productsSectionWhite(data)
+	.products-section.--white&attributes(attributes)
+		._container.container
+			._title.title-h2
+				!= data.title 
+			._slider.row.js-products-slider
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlock({
+						img: 'images/product-img-1.jpg',
+						title: 'Кувшинка (Нимфея) Гладстониана',
+						price: '220 ₽',
+						priceOld:'550 ₽',
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlock({
+						img: 'images/product-img-2.jpg',
+						title: 'Белокрыльник болотный (Калла болотная)',
+						price: '270 ₽',
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlock({
+						img: 'images/product-img-3.jpg',
+						title: 'Вахта трехлистная (трилистник водяной)',
+						price: '870 ₽',
+						priceOld:'990 ₽',
+						label:'images/promotion.png'
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlock({
+						img: 'images/product-img-4.jpg',
+						title: 'Кувшинка (Нимфея) Элмост Блэк',
+						price: '2150 ₽',
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlock({
+						img: 'images/product-img-1.jpg',
+						title: 'Кувшинка (Нимфея) Гладстониана',
+						price: '220 ₽',
+						priceOld:'550 ₽'
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlock({
+						img: 'images/product-img-1.jpg',
+						title: 'Кувшинка (Нимфея) Гладстониана',
+						price: '220 ₽',
+						priceOld:'550 ₽'
+					})
+mixin productsSectionBlue(data)
+	.products-section.--blue&attributes(attributes)
+		._container.container
+			._title.title-h2
+				!= data.title 
+			._slider.row.js-products-slider
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlockSpecial({
+						img: 'images/product-img-1.jpg',
+						title: 'Кувшинка (Нимфея) Гладстониана',
+						price: '220 ₽',
+						priceOld:'550 ₽'
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlockSpecial({
+						img: 'images/product-img-2.jpg',
+						title: 'Белокрыльник болотный (Калла болотная)',
+						price: '270 ₽'
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlockSpecial({
+						img: 'images/product-img-3.jpg',
+						title: 'Вахта трехлистная (трилистник водяной)',
+						price: '870 ₽',
+						priceOld:'990 ₽'
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlockSpecial({
+						img: 'images/product-img-4.jpg',
+						title: 'Кувшинка (Нимфея) Элмост Блэк',
+						price: '2150 ₽',
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlockSpecial({
+						img: 'images/product-img-1.jpg',
+						title: 'Кувшинка (Нимфея) Гладстониана',
+						price: '220 ₽',
+						priceOld:'550 ₽'
+					})
+				._slider-item.col-3.col-sm-6.col-xs-12
+					+productBlockSpecial({
+						img: 'images/product-img-1.jpg',
+						title: 'Кувшинка (Нимфея) Гладстониана',
+						price: '220 ₽',
+						priceOld:'550 ₽'
+					})
+					
