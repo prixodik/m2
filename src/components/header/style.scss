@@ -3,9 +3,6 @@
 	position: relative;
 	z-index: 10;
 	box-shadow: $cards-bg;
-	&__container {
-		max-width: 1620px;
-	}
 	&__body {
 		padding: 27px 0 18px;
 
@@ -153,6 +150,20 @@
 					margin-left: 15px;
 				}
 			}
+		}
+		&__body {
+			&-content {
+				@include flex (flex-end,0,0,0,0);
+			}
+		}
+		&__item {
+			margin-right: 30px;
+		}
+		&__menu {
+			flex: 0 0 52%;
+		}
+		&__numbers {
+			display: none;
 		}
 	}
 

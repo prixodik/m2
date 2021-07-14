@@ -7,7 +7,7 @@
 	&__part {
 		@include flex();
 		&--left {
-			.nav__item{
+			.nav__item {
 				padding: 15px 16px;
 				border-right: 1px solid $white;
 				&:last-child {
@@ -24,7 +24,7 @@
 			}
 		}
 		&--right {
-			.nav__item{
+			.nav__item {
 				font: 14px/20px $baseFF;
 				padding: 0 16px;
 				border-right: 1px solid $white;
@@ -49,10 +49,17 @@
 		font: 18px/13px $baseFF;
 		svg {
 			font-size: 24px;
-			fill: $black
+			fill: $black;
 		}
 	}
 	&__item-icon {
 		@include flex(0, center, 0, 0, column);
+	}
+	@include media($md) {
+		&__part {
+			&--left {
+				display: none;
+			}
+		}
 	}
 }

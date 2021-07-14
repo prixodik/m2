@@ -6,8 +6,9 @@ block content
 	include ../components/main-section/template
 	+mainSection({
 		bread: [{url: '#', title: 'корзина'}]
-	})
-		h1.main-section__title.title-h3 ваша корзина
+	}).main-section--discount
+		._container.container--sm
+			h1.main-section__title.title-h3 ваша корзина
 
 	include ../components/footer/template  
 	+footer()
