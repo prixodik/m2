@@ -6,20 +6,16 @@
 		padding: 0;
 	}
 	&__li {
-		font: $fs-14;
+		font: $fs-12;
 		color: $text-green-dark;
 		@include flex(0, center, center, nowrap);
 		&:after {
-			content: "";
-			width: 4px;
-			height: 4px;
-			background: $text-green-dark;
-			border-radius: 50%;
-			margin: 0 12px;
+			content: "/";
+			margin: 0 4px;
 		}
 		a {
-			color: $text-green-dark;
 			text-decoration: none;
+			text-transform: uppercase;
 		}
 
 		&:last-child {
@@ -27,7 +23,7 @@
 				display: none;
 			}
 			a {
-				color: rgba($green, 0.4);
+				color: $blue;
 			}
 		}
 	}
