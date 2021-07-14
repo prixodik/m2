@@ -1,5 +1,5 @@
 .header {
-	background: $white;
+	background: url("../images/bg-main.png");
 	position: relative;
 	z-index: 10;
 	box-shadow: $cards-bg;
@@ -29,9 +29,6 @@
 			margin-bottom: 12px;
 		}
 		@include flex(center, center, center, 0, column);
-	}
-	&__item-slogan {
-		font: 12px/13px $baseFF;
 	}
 	&__numbers {
 		@include flex();
