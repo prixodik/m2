@@ -1,26 +1,23 @@
 .search-block {
-	border-radius: 11px;
-	border: 1px $green solid;
-	position: relative;
 	@include flex(space-between, stretch, stretch, nowrap);
-	max-width: 416px;
+	max-width: 317px;
 	overflow: hidden;
 	width: 100%;
 	&__input {
 		border: 0;
-		background: transparent;
+		background: $gray-light;
 		width: 100%;
-		padding: 13px 15px;
-		color: $green;
-		font: 12px/14px $baseFF;
+		padding: 10px 11px 10px 0;
+		color: $text-gray;
+		font: 14px/24px $baseFF;
 
 		&::-webkit-input-placeholder {
 			opacity: 0.5;
-			color: $green;
+			color: $black;
 		}
 		&::-moz-placeholder {
 			opacity: 0.5;
-			color: $green;
+			color: $black;
 		}
 
 		&:focus {
@@ -29,12 +26,12 @@
 	}
 	&__btn {
 		border: 0;
-		background: transparent;
-		width: 63px;
+		background: $gray-light;
+		width: 55px;
 		@include flex(center, center, center);
 		svg {
-			fill: $green;
-			font-size: 20px;
+			fill: $black;
+			font-size: 22px;
 			display: block;
 		}
 	}

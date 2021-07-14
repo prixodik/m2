@@ -1,8 +1,7 @@
 .btn {
-	border: 1px solid $green;
-	background: $green;
-	font: 700 15px/20px $baseFF;
-	padding: 16px 25px;
+	background: $blue;
+	font: 18px/24px $baseFF;
+	padding: 10px 45px;
 	color: $white;
 	text-align: center;
 	display: inline-block;
@@ -10,7 +9,6 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	border-radius: 10px;
 
 	svg {
 		fill: $white;
@@ -19,38 +17,12 @@
 
 	&:hover,
 	&:active {
-		border-color: #a4c5da;
-		background: #a4c5da;
-		color: $blue-dark;
-
-		svg {
-			fill: $blue-dark;
-		}
+		background: #277596;
+		color: $white;
 	}
 
 	&:focus {
 		outline: none; /* background: inherit; border-color: inherit; color: inherit;  */
-	}
-
-	&--gray {
-		background: $icon-bg-directory;
-		border-color: $icon-bg-directory;
-		color: $blue-dark;
-	}
-
-	&--disabled,
-	&:disabled,
-	&[disabled],
-	&:disabled:focus {
-		/* background: $icon-bg-directory;
-		border-color: $icon-bg-directory;
-		color: $blue-dark; */
-		opacity: 0.4;
-		pointer-events: none;
-	}
-
-	&--opacity {
-		opacity: 0.3;
 	}
 
 	&--icon {
@@ -73,341 +45,12 @@
 		}
 	}
 
-	&--fire {
-		padding-top: 8px;
-		padding-bottom: 8px;
-		@include flex(center, center, center, nowrap);
-
-		span {
-			flex: 0 1 auto;
-		}
-		svg {
-			font-size: 36px;
-			color: #eea413;
-		}
-	}
-
-	&--blue {
-		background: $blue;
-		border-color: $blue;
-		color: $green;
-		&:hover,
-		&:active {
-			background: #7ec9ce;
-			border-color: #7ec9ce;
-		}
-
-		&.btn--disabled,
-		&:disabled,
-		&[disabled],
-		&:disabled:focus {
-			opacity: 0.5;
-		}
-	}
-
-	&--yellow {
-		background: $yellow;
-		border-color: $yellow;
+	&--blue-dark {
+		background: $blue-dark;
 		color: $white;
-
-		svg {
-			fill: $white;
-		}
-
 		&:hover,
 		&:active {
-			background: $link;
-			border-color: $link;
-			color: $white;
-
-			svg {
-				fill: $white;
-			}
-		}
-
-		&.btn--disabled,
-		&:disabled,
-		&[disabled],
-		&:disabled:focus {
-			opacity: 0.5;
-		}
-	}
-
-	&--yellow-2 {
-		// BG link
-		background: $link;
-		border-color: $link;
-		color: $white;
-
-		svg {
-			fill: $white;
-		}
-
-		&:hover,
-		&:active {
-			background: $yellow;
-			border-color: $yellow;
-			color: $white;
-
-			svg {
-				fill: $white;
-			}
-		}
-
-		&.btn--disabled,
-		&:disabled,
-		&[disabled],
-		&:disabled:focus {
-			opacity: 0.5;
-		}
-	}
-
-	&--grey {
-		background: #ecf3f8;
-		border-color: #ecf3f8;
-		color: #6e8999;
-		&:hover,
-		&:active {
-			background: #c4cace;
-			border-color: #c4cace;
-		}
-	}
-	&--red {
-		background: #f9e1e1;
-		border-color: #f9e1e1;
-		color: $red;
-
-		svg {
-			fill: $red;
-		}
-
-		&:hover,
-		&:active {
-			background: $red;
-			border-color: $red;
-			color: $white;
-
-			svg {
-				fill: $white;
-			}
-		}
-
-		&.btn--disabled,
-		&:disabled,
-		&[disabled],
-		&:disabled:focus {
-			opacity: 1;
-		}
-	}
-
-	&--red-2 {
-		background: $red;
-		border-color: $red;
-		color: $white;
-
-		svg {
-			fill: $white;
-		}
-
-		&.btn--border {
-			color: $red;
-			svg {
-				fill: $red;
-			}
-		}
-
-		&:hover,
-		&:active {
-			background: $red;
-			border-color: $red;
-			color: $white;
-
-			svg {
-				fill: $white;
-			}
-		}
-
-		&.btn--disabled,
-		&:disabled,
-		&[disabled],
-		&:disabled:focus {
-			opacity: 1;
-		}
-	}
-
-	&--blue-light {
-		background: $form-input-bg;
-		border-color: $form-input-bg;
-		color: $blue-dark;
-
-		svg {
-			fill: $blue-dark;
-		}
-
-		&:hover,
-		&:active {
-			background: $green;
-			border-color: $green;
-			color: $white;
-
-			svg {
-				fill: $white;
-			}
-		}
-
-		&.btn--disabled,
-		&:disabled,
-		&[disabled],
-		&:disabled:focus {
-			opacity: 1;
-		}
-	}
-
-	&--blue-darker {
-		background: $bg-darker-blue;
-		border-color: $bg-darker-blue;
-		color: $white;
-
-		svg {
-			fill: $white;
-		}
-
-		&.btn--border {
-			color: $bg-darker-blue;
-			svg {
-				fill: $bg-darker-blue;
-			}
-		}
-
-		&:hover,
-		&:active {
-			background: $green;
-			border-color: $green;
-			color: $white;
-
-			svg {
-				fill: $white;
-			}
-		}
-
-		&.btn--disabled,
-		&:disabled,
-		&[disabled],
-		&:disabled:focus {
-			opacity: 1;
-		}
-	}
-
-	&--form-blue {
-		background: $form-blue;
-		border-color: $form-blue;
-		color: $white;
-
-		svg {
-			fill: $white;
-		}
-
-		&.btn--border {
-			color: $form-blue;
-			svg {
-				fill: $form-blue;
-			}
-		}
-
-		&:hover,
-		&:active {
-			background: $green;
-			border-color: $green;
-			color: $white;
-
-			svg {
-				fill: $white;
-			}
-		}
-
-		&.btn--disabled,
-		&:disabled,
-		&[disabled],
-		&:disabled:focus {
-			opacity: 1;
-		}
-	}
-
-	&--border {
-		background: transparent;
-		color: $green;
-		&:hover,
-		&:active {
-			border-color: $green;
-			background: $green;
-			color: $white;
-		}
-	}
-
-	&--block {
-		width: 100%;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
-	&--only-icon {
-		width: 54px;
-		height: 54px;
-		padding: 0;
-		@include flex(center, center, center);
-		border-radius: 50%;
-		svg {
-			fill: $white;
-			font-size: 21px;
-			display: block;
-			.binfo {
-				fill: $black;
-			}
-		}
-
-		&.btn--cube {
-			width: 70px;
-			height: 70px;
-			border-radius: 10px;
-			background: $bg-darker-blue;
-			border-color: $bg-darker-blue;
-		}
-	}
-
-	&--link {
-		background: transparent;
-		border: 0;
-		padding: 0;
-		border-radius: 0;
-		color: $form-blue;
-		text-align: left;
-		font: bold 15px $baseFF;
-		//border-bottom: currentColor 2px dotted;
-		svg {
-			font-size: 30px;
-			margin-right: 12px;
-		}
-		span {
-			text-align: left;
-		}
-
-		&:hover,
-		&:active {
-			background: none;
-			//text-decoration: underline;
-		}
-
-		&.btn--blue-dark {
-			color: $blue-dark;
-			svg {
-				fill: $blue-dark;
-			}
-		}
-		&.btn--form-blue {
-			color: $form-blue;
-			svg {
-				fill: $form-blue;
-			}
+			background: #2d619c;
 		}
 	}
 
@@ -425,28 +68,6 @@
 		font: 500 14px/26px $baseFF;
 	}
 
-	&--status {
-		padding: 5px 26px;
-		font: 16px/29px $baseFF;
-
-		&.is-work {
-			background-color: $bg-directory;
-			border-color: $bg-directory;
-			color: $green;
-		}
-		&.is-done {
-			background-color: $bg-directory;
-			border-color: $bg-directory;
-			color: $form-blue;
-		}
-		&.is-cancel {
-			background-color: $bg-directory;
-			border-color: $bg-directory;
-			color: $text-green-dark;
-			opacity: 0.5;
-		}
-	}
-
 	@include media($lg) {
 	}
 
@@ -454,29 +75,18 @@
 	}
 
 	@include media($sm) {
-		&--status {
-			padding: 5px 20px;
-			font: 14px/29px $baseFF;
-		}
 	}
 
 	@include media($xs) {
 		font: 700 14px/20px $baseFF;
 		padding: 10px 20px;
 
-		&--only-icon {
-			padding: 0;
-		}
-
 		&--lg {
-			padding: 16px 35px;
+			padding: 11px 48px;
 		}
 		&--sm {
-			padding: 10px 16px;
-		}
-
-		&--link {
-			padding: 0;
+			border-radius: 1px;
+			padding: 20px 13px;
 		}
 	}
 }

@@ -3,34 +3,77 @@
 	position: relative;
 	z-index: 10;
 	box-shadow: $cards-bg;
+	&__container {
+		max-width: 1620px;
+	}
 	&__body {
-		padding: 8px 0 16px;
+		padding: 27px 0 18px;
 
 		&-content {
+			max-width: 900px;
 			@include flex(space-between, center, center, nowrap);
 			flex: 1 1 auto;
 		}
 	}
 	&__logo {
-		margin-bottom: 9px;
 		display: block;
 		svg,
 		img {
-			margin: 0 auto;
 			display: block;
-			max-width: 183px;
+			max-width: 194px;
 		}
+	}
+	&__item {
+		font: 16px/12px $baseFF;
+		img {
+			margin-bottom: 12px;
+		}
+		@include flex(center, center, center, 0, column);
+	}
+	&__item-slogan {
+		font: 12px/13px $baseFF;
+	}
+	&__numbers {
+		@include flex();
+		flex: 0 1 560px;
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__number {
+		@include flex(center, center, center);
+		margin-right: 30px;
+		margin-bottom: 6px;
 		svg {
-			fill: $green;
-			height: 78px;
+			font-size: 20px;
 		}
-		&-wrap {
-			margin-right: 70px;
+		span {
+			margin-left: 8px;
+		}
+	}
+	&__user {
+		@include flex(center, center);
+		svg {
+			font-size: 30px;
+		}
+		span {
+			margin-left: 6px;
+		}
+	}
+	&__language-link {
+		@include flex(center, center);
+	}
+	&__user-link {
+		margin-left: 18px;
+		svg {
+			font-size: 23px;
 		}
 	}
 	&__slogan {
-		color: $green;
-		font: 11px/16px $baseFF;
+		color: #828480;
+		font: 14px/24px $baseFF;
 		white-space: nowrap;
 	}
 	&__search {
@@ -64,8 +107,8 @@
 		@include flex(space-between, center, center, nowrap);
 	}
 	&__bottom {
-		background: $green;
-
+		background: $bg-gray;
+		padding: 13px 0;
 		&.fixed {
 			position: fixed;
 			top: 0;
@@ -74,33 +117,16 @@
 		}
 	}
 	&__menu {
-		flex: 1 1 auto;
+		flex: 0 0 588px;
+		@include flex(0, center);
+		.btn {
+			margin-right: 11px;
+		}
 	}
 	&__burger {
 		display: none;
 	}
-	&__buttons {
-		@include flex(0, stretch, stretch, nowrap);
-
-		.d-none {
-			display: none;
-		}
-	}
-	&__banner {
-		margin-bottom: 8px;
-		display: block;
-		img {
-			display: block;
-		}
-	}
-
-	&--rose & {
-		&__body {
-			background: url("../images/header-rose-left.png") 0 0 no-repeat,
-				url("../images/header-rose-right.png") 100% 100% no-repeat;
-		}
-	}
-
+	
 	@include media($lg) {
 		&__logo {
 			&-wrap {

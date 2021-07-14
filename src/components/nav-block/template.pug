@@ -1,0 +1,24 @@
+mixin navBlock(data)
+	.nav&attributes(attributes)
+		._part.nav__part--left
+			._item
+				a(href="#") 3D визуализация
+			._item
+				a(href="#") Акции
+			._item
+				a(href="#") Оплата и доставка
+			._item
+				a(href="#") Контакты		
+		._part.nav__part--right
+			._item
+				a(href="#")._item-icon
+					+svg('libra')
+					span Сравнить
+			._item
+				a(href="#")._item-icon
+					+svg('heart')
+					span Сравнить
+			._item
+				a(href="#")._item-icon
+					+svg('cart')
+					span Сравнить				

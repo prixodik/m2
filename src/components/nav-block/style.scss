@@ -1,0 +1,58 @@
+.nav {
+	@include flex(space-around, center);
+	flex: 1 1 auto;
+	&__nav {
+		@include flex(0, center);
+	}
+	&__part {
+		@include flex();
+		&--left {
+			.nav__item{
+				padding: 15px 16px;
+				border-right: 1px solid $white;
+				&:last-child {
+					border-right: none;
+				}
+				&:first-child {
+					padding-left: 0;
+				}
+				a {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		&--right {
+			.nav__item{
+				font: 14px/20px $baseFF;
+				padding: 0 16px;
+				border-right: 1px solid $white;
+				svg {
+					fill: $blue;
+				}
+				&:last-child {
+					border-right: none;
+					padding-right: 0;
+				}
+				&:first-child {
+					padding-left: 0;
+				}
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&__item {
+		color: $white;
+		font: 18px/13px $baseFF;
+		svg {
+			font-size: 24px;
+			fill: $black
+		}
+	}
+	&__item-icon {
+		@include flex(0, center, 0, 0, column);
+	}
+}
