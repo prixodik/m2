@@ -1,0 +1,299 @@
+.table {
+	display: table;
+	width: 100%;
+	border: 1px $gray-border solid;
+	border-bottom: none;
+	&__row {
+		display: table-row;
+		border-bottom: 1px $gray-border solid;
+		&:last-child {
+			border-bottom: none;
+		}
+		&--head {
+			.table__cell {
+				padding: 21px 26px;
+				background: $gray;
+				white-space: nowrap;
+				border-top: 1px $gray-border solid;
+				border-bottom: 1px $gray-border solid;
+				font: 700 14px/1.2 $baseFF;
+				text-transform: uppercase;
+				&:first-child {
+					width: 50%;
+				}
+				&:nth-child(2) {
+					width: 13%;
+				}
+				&:nth-child(3) {
+					width: 15%;
+				}
+				&:last-child {
+					width: 100%;
+				}
+				a {
+					@include flex(0, center, center, nowrap);
+				}
+			}
+		}
+	}
+	&__close {
+		display: block;
+		position: relative;
+		height: 26px;
+		width: 26px;
+		border: 1px $gray-border solid;
+		border-radius: 50%;
+		&:hover {
+			background-color: $gray;
+		}
+		&:before {
+			position: absolute;
+			content: "";
+			top: 13px;
+			left: 50%;
+			margin-top: -0.5px;
+			margin-left: -5px;
+			transform: rotate(45deg);
+			height: 1px;
+			width: 10px;
+			background: $red;
+		}
+		&:after {
+			position: absolute;
+			content: "";
+			top: 13px;
+			left: 50%;
+			margin-top: -0.5px;
+			margin-left: -5px;
+			transform: rotate(-45deg);
+			height: 1px;
+			width: 10px;
+			background: $red;
+		}
+	}
+	&__cell {
+		display: table-cell;
+		padding: 24px;
+		border-bottom: 1px $gray-border solid;
+		vertical-align: middle;
+		font-weight: 700;
+		font-size: 14px;
+		&-product {
+			@include flex(0, center);
+		}
+		&-icon {
+			@include flex(space-between, center);
+		}
+		&--users {
+			font: 600 16px/22px $family;
+		}
+	}
+	&__slogan {
+		display: none;
+		font-size: 13px;
+		opacity: 0.8;
+		color: $text-gray;
+	}
+	&__img {
+		border-radius: 1px;
+		width: 52px;
+		height: 58px;
+		margin-right: 20px;
+	}
+	&__name {
+		color: $text-gray;
+		font-weight: 600;
+	}
+	&--carts {
+		background-color: $white;
+	}
+	&--total {
+		max-width: 571px;
+	}
+	&--total & {
+		&__row {
+			display: table-row;
+			&--head {
+				.table__cell {
+					padding: 18px;
+					background: $white;
+					white-space: nowrap;
+					border: 1px solid $gray-border;
+					font: 600 14px/1.2 $baseFF;
+					text-transform: uppercase;
+					&:first-child {
+						width: 287px;
+						border-right: none;
+						border-left: none;
+					}
+					&:nth-child(2) {
+						border-right: none;
+						width: 287px;
+					}
+				}
+			}
+		}
+		&__cell {
+			display: table-cell;
+			padding: 18px;
+			background: $white;
+			vertical-align: middle;
+			font: 600 14px/1.2 $baseFF;
+			&:first-child {
+				width: 287px;
+				border-right: 1px solid $gray-border;
+				border-top: none;
+			}
+			&:nth-child(2) {
+				border-top: none;
+			}
+		}
+	}
+	@include media($sm) {
+		&__row {
+			@include flex(0, 0, 0, nowrap);
+			&--head {
+				.table__cell {
+					padding-left: 16px;
+					padding-right: 16px;
+					&:first-child {
+						flex: 0 0 35%;
+					}
+					&:nth-child(2) {
+						flex: 0 0 auto;
+						width: auto;
+					}
+					&:nth-child(3) {
+						flex: 0 0 auto;
+						width: auto;
+					}
+					&:last-child {
+						flex: 1 0 auto;
+						width: auto;
+					}
+				}
+			}
+		}
+		&__cell {
+			padding: 14px;
+			@include flex(0, center, 0, nowrap);
+			&:first-child {
+				flex: 0 0 35%;
+			}
+			&:nth-child(2) {
+				flex: 0 0 auto;
+			}
+			&:nth-child(3) {
+				flex: 0 0 20%;
+			}
+			&:nth-child(4) {
+				flex: 1 0 auto;
+			}
+			&-product {
+				@include flex(center, center, 0, 0, column);
+				text-align: center;
+			}
+			&-icon {
+				flex: 1 0 auto;
+			}
+		}
+		&__img {
+			margin: 0 0 10px 0;
+		}
+	}
+	@include media($xs) {
+		&__row {
+			&:last-child {
+				border-bottom: 1px $gray-border solid;
+			}
+			@include flex(center);
+			&--head {
+				.table__cell {
+					&:first-child {
+						flex: 1 1 auto;
+					}
+					&:nth-child(2) {
+						display: none;
+					}
+					&:nth-child(3) {
+						display: none;
+					}
+					&:last-child {
+						display: none;
+					}
+				}
+			}
+		}
+		&__cell {
+			border-bottom: none;
+			@include flex(center, 0, 0, 0, column);
+			&:first-child {
+				flex: 0 0 100%;
+			}
+			&:nth-child(4) {
+				flex: 0 0 100%;
+			}
+			&-icon {
+				width: 42%;
+				justify-content: space-around;
+			}
+		}
+		&__slogan {
+			display: block;
+			margin-bottom: 6px;
+		}
+		&--total {
+			border: none;
+			border: 1px solid $gray-border;
+		}
+		&--total & {
+			&__row {
+				@include flex(flex-start, center);
+				border-bottom: 1px solid $gray-border;
+				&--head {
+					.table__cell {
+						@include flex(flex-start, center);
+						padding: 10px;
+						background: $white;
+						white-space: nowrap;
+						font: 600 14px/1.2 $baseFF;
+						text-transform: uppercase;
+						&:first-child {
+							border-right: 1px solid $gray-border;
+							border-left: none;
+							flex: 0 0 50%;
+						}
+						&:nth-child(2) {
+							width: auto;
+							border-right: none;
+							border-left: none;
+							display: block;
+						}
+					}
+				}
+			}
+			&__cell {
+				@include flex(flex-start, center, 0, nowrap);
+				border-bottom: 1px solid $gray-border;
+				padding: 10px;
+				vertical-align: middle;
+				font: 600 14px/1.2 $baseFF;
+				width: auto;
+				&:first-child {
+					flex: 0 0 50%;
+					border-right: 1px solid $gray-border;
+					border-bottom: none;
+				}
+				&:nth-child(2) {
+					border-top: none;
+					border-bottom: none;
+				}
+				&:nth-child(3) {
+					flex: 0 0 50%;
+					border-top: none;
+					border-bottom: none;
+				}
+			}
+		}
+	}
+}

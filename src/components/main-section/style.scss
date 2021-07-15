@@ -6,9 +6,8 @@
 		margin-bottom: 30px;
 	}
 	&__title {
-		margin-bottom: 30px;
 		text-transform: uppercase;
-		color: $green;
+		color: $title-color;
 	}
 	&__subtitle {
 		color: $green;
@@ -50,10 +49,25 @@
 	}
 	&--cart {
 		padding: 30px 0 30px;
+		background: url("../images/bg-main.png");
 	}
 	&--cart & {
+		&__head {
+			@include flex(space-between, center);
+			margin-bottom: 27px;
+			&-link {
+				font: 600 14px/23px $baseFF;
+				letter-spacing: 1px;
+				color: $blue;
+				transition: all 0.3s;
+				&:hover {
+					color: $link-dark;
+				}
+			}
+		}
 		&__title {
-			margin-bottom: 20px;
+			margin-bottom: 0;
+			margin-right: 15px;
 		}
 		&__subtitle {
 			font: 14px/1.4 $baseFF;
@@ -63,13 +77,28 @@
 		&__table-body {
 			width: 100%;
 		}
-		&__accardion {
-			margin-bottom: 60px;
-		}
-		&__text {
-			color: $blue-dark;
-			font: 18px/1.3 $baseFF;
-			margin-bottom: 25px;
+		&__total {
+			@include flex(flex-end);
+			margin-top: 67px;
+			margin-bottom: 95px;
+			&-body {
+				@include flex(0,0,0,0,column);
+			}
+			&-title {
+				font: 700 18px/1.2 $baseFF;
+				margin-bottom: 23px;
+				text-transform: uppercase;
+			}
+			&-table {
+				margin-bottom: 67px;
+			}
+			&-button {
+				margin-top: 27px;
+				max-width: 571px;
+				.btn {
+					width: 100%;
+				}
+			}
 		}
 	}
 
@@ -1112,7 +1141,12 @@
 
 	@include media($sm) {
 		padding: 40px 0 150px;
-
+		&--cart & {
+			&__total {
+				margin-top: 27px;
+				margin-bottom: 35px;
+			}
+		}
 		&--return-first {
 			padding: 40px 0 150px;
 		}
@@ -1312,10 +1346,40 @@
 			padding: 20px 0 20px 0;
 		}
 		&--cart & {
-			&__text {
-				color: $blue-dark;
-				font: 14px/1.3 $baseFF;
+			&__title {
 				margin-bottom: 15px;
+				margin-top: 10px;
+			}
+			&__total {
+				&-body {
+					width: 100%;
+				}
+				&-title {
+					font: 700 18px/1.2 $baseFF;
+					margin-bottom: 23px;
+					text-transform: uppercase;
+				}
+				&-table {
+					margin-bottom: 67px;
+					p {
+						padding: 9px;
+						font: 600 12px/1.2 $baseFF;
+						text-transform: uppercase;
+					}
+				}
+				&-text {
+					flex: 0 1 287px;
+				}
+				&-costs {
+					@include flex(0, 0, 0, 0, column);
+					flex: 0 1 287px;
+				}
+				&-button {
+					max-width: 571px;
+					.btn {
+						width: 100%;
+					}
+				}
 			}
 		}
 		&--product {

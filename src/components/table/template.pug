@@ -1,0 +1,82 @@
+include ../count-block/template
+
+mixin tableNews(data)
+	.table.-carts&attributes(attributes)
+				._row.-head
+					._cell
+						span наименование
+					._cell
+						span цена
+					._cell
+						span количество
+					._cell
+						span всего
+				._row
+					._cell
+						._cell-product
+							._img
+								img(src="images/cart-img-1.png", alt="")
+							a(href="#")._name Плитка Zeus Ceramica Calcare ZRXCL0BR
+					._cell 
+						._slogan цена
+						span 121 грн 
+					._cell
+						._slogan количество
+						+countBlock()
+					._cell 
+						._slogan всего
+						._cell-icon
+							span 242 грн
+							a(href="#")._close
+				._row
+					._cell
+						._cell-product
+							._img
+								img(src="images/cart-img-1.png", alt="")
+							a(href="#")._name Плитка Zeus Ceramica Calcare ZRXCL0BR
+					._cell 
+						._slogan цена
+						span 235 грн 
+					._cell
+						._slogan количество
+						+countBlock()
+					._cell
+						._slogan всего
+						._cell-icon 
+							span 235 грн
+							a(href="#")._close
+				._row
+					._cell
+						._cell-product
+							._img
+								img(src="images/cart-img-1.png", alt="")
+							a(href="#")._name Плитка Zeus Ceramica Calcare ZRXCL0BR
+					._cell
+						._slogan цена 
+						span 456 грн 
+					._cell
+						._slogan количество
+						+countBlock()
+					._cell
+						._slogan всего
+						._cell-icon 
+							span 456 грн
+							a(href="#")._close
+
+mixin tableTotal(data)
+	.table.-carts.-total&attributes(attributes)
+				._row.-head
+					._cell
+						span цена за все
+					._cell
+						span 933,00 грн
+				._row
+					._cell
+						span персональная скидка <strong>(10%)</strong>
+					._cell 
+						span <strong>93 грн</strong>
+				._row
+					._cell
+						span всего
+					._cell 
+						span <strong>840,00 грн</strong>		
