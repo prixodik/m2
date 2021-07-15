@@ -36,26 +36,34 @@ $red: #e01919;
 
 $gray10: scale-color($black, $lightness: 10%); // 1a1a1a
 
-$text-green-dark: #102e25;
+//new
+$blue: #34ade0;
+$text-green-dark: #222;
+$text-gray: #777;
+$blue-dark: #408de4;
+$bg-gray: #65606c;
+$gray-light: #e7e7e7;
+$gray-border: #e8e8e8;
+$gray: #f8f8f8;
+$title-color: #232323;
+$link-dark: #277596;
+
+$gray-bg: #234;
+$gray-dark: #345;
 $text-gray-dark: #8699a5;
 $text-form: #3b3b3b;
 $color-amount: #102e25;
 $color-price: #53392d;
 $green: #245e63;
 $green-dark: #1e565a;
-$blue-dark: #2f6283;
 $icon-green: #95bab9;
 $form-blue: #51bcc3;
 $ultra-marine: #5dd6c7;
-$blue: #b5e0e3;
 $link: #f4a528;
 $yellow: #efbc59;
-$gray: #a6b4bc;
-$gray-dark: #c7d3da;
 $icon-bg-directory: #c9dce9;
 $gray-devider: #d7dce7;
 $bg-directory: #dae8f1;
-$gray-bg: #f6f9ff;
 $link-footer: #aacabd;
 $directory-ellipse: #c9dce9;
 $form-input-bg: #ecf3f8;
@@ -88,8 +96,8 @@ $grid-breakpoints: (
 // Grids
 $grid-columns: 12;
 $grid-gutter-width: 30px;
-$baseFontF: "Fira Sans", "Arial", sans-serif;
-$headlineFontF: "Commissioner", "Arial", sans-serif;
+$baseFontF: "Open Sans", "Fira Sans";
+$headlineFontF: "Open Sans", "Fira Sans";
 
 $titleFF: $headlineFontF;
 
@@ -103,7 +111,8 @@ $baseBg: $white;
 
 $family: $baseFF;
 
-$containerW: 1230px;
+$containerW: 1620px;
+$containerWSm: 1135px;
 $containerP: $grid-gutter-width/2;
 
 $baseLinkColor: inherit;

@@ -1,251 +1,80 @@
 .footer {
-	padding: 48px 0 70px 0;
-	position: relative;
-	color: $white;
-	z-index: 3;
-
-	&:before {
-		content: "";
-		display: block;
-		width: 100%;
-		height: 155px;
-		position: absolute;
-		top: -92px;
-		left: 0;
-		background: url("../images/footer-bg.png") 50% 0 / auto 100% repeat-x;
-		z-index: -1;
-		pointer-events: none;
-	}
-	&:after {
-		content: "";
-		display: block;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		background: $green;
-		z-index: -1;
-		pointer-events: none;
-	}
-	&__copyright {
-		margin-top: 20px;
-		font: 10px/1.4 $baseFF;
-		a {
-			margin-top: 7px;
-			font-size: 10px;
-			color: $link-footer;
-			display: block;
-		}
-	}
-	&__logo {
-		margin-bottom: 10px;
-		svg {
-			fill: $white;
-			height: 78px;
-			max-width: 183px;
-		}
-	}
-	&__slogan-age {
-		font: 12px/1.4 $baseFF;
-		color: $link-footer;
-		margin-bottom: 18px;
-	}
+	padding: 48px 0 67px 0;
+	background: url("../images/bg-main.png");
+	color: $text-gray;
+	border-top: 2px solid #65606c;
 	&__slogan {
-		margin-bottom: 10px;
-		font: 11px/16px $baseFF;
-	}
-	&__adres {
-		font: 10px/14px $baseFF;
-		border-bottom: 1px solid #d7dce760;
-		padding-bottom: 20px;
+		color: #828480;
+		font: 14px/24px $baseFF;
+		white-space: nowrap;
 	}
 	&__menu {
 		&-item {
-			margin-bottom: 11px;
-			font: 13px/1.4 $baseFF;
+			font: 16px/24px $baseFF;
+			margin-bottom: 3px;
 			&:last-child {
 				margin-bottom: 0;
 			}
-			a:hover {
-				color: rgb(185, 185, 185);
+			a {
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
 	&__title {
-		text-transform: uppercase;
-		margin-bottom: 28px;
-		font: bold 15px/18px $titleFF;
-	}
-	&__buyers {
-		padding-top: 24px;
-	}
-	&__contacts {
-		padding: 24px 36px 0 36px;
-		&-row {
-			margin-bottom: -24px;
-		}
-		&-subscribe,
-		&-left-2,
-		&-left {
-			margin-bottom: 24px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-		&-item {
-			margin-bottom: 24px;
-			font: 13px/18px $baseFF;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-		&-link {
-			color: $yellow;
-			font: bold 13px/19px $baseFF;
-			a:hover {
-				color: #bd9648;
-			}
-		}
-		&-soc {
-			@include flex(flex-end);
-		}
-		&-time {
-			font: 12px/142% $baseFF;
-			color: $link-footer;
-		}
+		margin-bottom: 5px;
+		font: 500 24px/24px $baseFF;
 	}
 
 	&__row {
-		margin: 0 -36px;
-	}
-	&__logo-col {
-		padding: 0 36px;
-	}
-	&__menu {
-		padding: 24px 36px 0 36px;
+		@include flex(space-between);
 	}
 	@include media($md) {
 		&__row {
 			justify-content: space-between;
-			margin: 0 -15px;
 		}
 		&__logo-col {
-			padding-left: 15px;
-			padding-right: 15px;
+			margin-bottom: 15px;
 		}
 		&__menu {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-		&__copyright {
-			padding-top: 0;
-		}
-		&__buyers {
-			padding-top: 35px;
-		}
-		&__contacts {
-			padding-left: 15px;
-			padding-right: 15px;
-
-			&-row {
-				margin-bottom: -15px;
-			}
-			&-subscribe,
-			&-left-2,
-			&-left {
-				margin-bottom: 15px;
-			}
-			/* &-item {
-				margin: 0 40px 0 0;
-				&:last-child {
-					margin-right: 0;
-				}
-			} */
-			&-left-2 {
-				.footer__contacts-item {
-					margin: 0 20px 0 0;
-					&:last-child {
-						margin-right: 0;
-					}
-				}
-			}
-			&-left {
-				@include flex(0, center, center);
-			}
-		}
-		&__title {
-			flex: 0 0 100%;
+			margin-bottom: 15px;
+			@include flex(center, 0, 0, 0, column);
 		}
 	}
 
 	@include media($sm) {
-		&__contacts {
-			padding-bottom: 30px;
-			&-soc {
-				display: block;
-				margin-bottom: 15px;
+		padding: 20px 0 40px;
+		&__title {
+			font: 500 20px/20px $baseFF;
+		}
+		&__menu {
+			&-item {
+				font: 15px/20px $baseFF;
 			}
 		}
 	}
 
 	@include media($xs) {
-		background: $green;
-		padding: 0;
-		&:before {
-			top: -95px;
-		}
+		padding: 20px 0 20px;
 		&__row {
 			justify-content: center;
 		}
-		&__logo {
-			svg,
-			img {
-				margin: 0 auto;
-				display: block;
-			}
-		}
-		&__slogan {
-			text-align: center;
-			&-age {
-				text-align: center;
-			}
-		}
-		&__adres {
+		&__menu {
 			text-align: center;
 			margin-bottom: 20px;
+		}
+		&__logo-col {
+			margin-bottom: 20px;
+			text-align: center;
 		}
 		&__title {
-			margin-bottom: 20px;
+			font: 500 19px/20px $baseFF;
 		}
 		&__menu {
-			display: none;
-		}
-		&__buyers {
-			text-align: center;
-			margin-bottom: 40px;
-		}
-		&__contacts {
-			margin-top: 0;
-			text-align: center;
-
-			&-left {
-				.footer__contacts-item {
-					flex: 0 0 100%;
-				}
-			}
-
 			&-item {
-				margin-right: 0;
-				/* flex: 0 0 100%; */
+				font: 14px/20px $baseFF;
 			}
-		}
-		&__bottom {
-			margin-top: 20px;
-			padding: 15px 0;
-		}
-		&__copyright {
-			text-align: center;
 		}
 	}
 }

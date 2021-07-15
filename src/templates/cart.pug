@@ -1,0 +1,40 @@
+extends extends/base.pug
+
+block styles
+	
+block content
+	include ../components/main-section/template
+	include ../components/table/template
+
+	+mainSection({
+		bread: [{url: '#', title: 'корзина'}]
+	}).main-section--cart
+		._container.container--sm
+			.main-section__head
+				h1.main-section__title ваша корзина
+				a.main-section__head-link(href="#") вернутся к каталогу
+			+tableNews()
+			.main-section__total
+				.main-section__total-body
+					.main-section__total-title итого
+					+tableTotal()
+					.main-section__total-button 
+						a(href="#").btn.btn--blue оформить заказ
+			//- .main-section__total
+			//- 	.main-section__total-body
+			//- 		
+			//- 		.main-section__total-table 
+			//- 			.main-section__total-text 
+			//- 				p цена за все
+			//- 				p персональная скидка <strong>(<span>10%</span>)</strong>
+			//- 				p всего
+			//- 			.main-section__total-costs 
+			//- 				p 933,00 грн
+			//- 				p <strong>93 грн</strong>
+			//- 				p <strong>840,00 грн</strong>
+			//- 		
+
+	include ../components/footer/template  
+	+footer()
+
+block scripts 

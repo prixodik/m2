@@ -1,5 +1,6 @@
 //- include ../icon-inline/template
 include ../menu-block/template
+include ../nav-block/template
 include ../search-block/template
 include ../burger/template
 
@@ -8,28 +9,53 @@ mixin header(data)
 		._body
 			._container.container
 				._logo-wrap
-					a._logo
-						+svg('logo')
-					._slogan 20 лет на рынке товаров для сада
+					a(href="#")._logo
+						img(src="images/logo.png", alt="logo")
+					._slogan Интернет магазин керамической плитки
 				._body-content
-					._search
-						a._banner
-							//- +webp('images/header-banner-1.png')
-							+webp('images/header-banner-2.png')
-						//- +searchBlock({
-						//- 	placeholder: 'Название или артикул'
-						//- })
+					a(href="#")._item 
+						img(src="images/call.png", alt="")
+						._item-slogan Обратная связь
+					._numbers
+						._number
+							+svg('phone')
+							span +38 (044) 111-11-11
+						._number
+							+svg('lifecell')
+							span +38 (044) 111-11-11
+						a(href="#")._number
+							+svg('viber')
+							span Viber
+						._number
+							+svg('kyivstar')
+							span +38 (044) 111-11-11
+						._number
+							+svg('vodafon')
+							span +38 (044) 111-11-11
+						a(href="#")._number
+							+svg('telegram')
+							span Telegram
+					._user
+						a(href="#")._language-link
+							+svg('earth')
+							span UA
+						a(href="#")._user-link
+							+svg('user')
+
+
+					
 					
 						
 		._bottom 
 			._container.container 
-					//- +burger()._burger   
+				//- +burger()._burger   
 					
-					._menu
-						//- +menuBlock() 
-					._buttons
-						//- +iconInlineSearch({
-						//- 	icon: 'search' 
-						//- }).icon-inline--white._buttons-item.d-none.d-block_sm
+				._menu
+					a(href="#").btn Каталог продукции
+					+searchBlock({
+						placeholder: 'введите артикул или бренд плитки'
+					})
+					//- +menuBlock() 
+				+navBlock()
 						
 

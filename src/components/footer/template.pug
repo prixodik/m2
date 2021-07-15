@@ -1,68 +1,31 @@
 mixin footer(data)
 	footer.footer&attributes(attributes)
 		._container.container
-			._row.row.-stretch
-				._logo-col.col-auto.col-sm-4.col-xs-12
+			._row.row
+				._logo-col.col-auto.col-md-6.col-xs-12
 					._logo
-						+svg('logo').d-block
-					._slogan-age 20 лет на рынке товаров для сада
-					._slogan Интернет-магазин ООО «БЕСТГАРДЕН»
-					._adres Юридический адрес: 127224, Москва,<br> ул. Широкая, дом 27, пом. I, комн. 21.<br> ОГРН: 1187746815871
-					._copyright 2021, Все права защищены<br> <a href="#">Политика обработки<br> персональных данных</a>
-				._menu.col-4.col-sm-4.col-xs-12
-					._title Каталоги 
-					._menu-items.row
-						._menu-col.col-6.col-sm-12
-							._menu-item
-								a(href="#") Саженцы 
-							._menu-item
-								a(href="#") Саженцы ЗКС
-							._menu-item
-								a(href="#") Луковичные<br> и многолетники 2021
-							._menu-item
-								a(href="#") Луковичные<br> и многолетники Россия
-							._menu-item
-								a(href="#") Комнатные растения
-							._menu-item
-								a(href="#") Лук-севок
-						._menu-col.col-6.col-sm-12
-							._menu-item
-								a(href="#") Рассада
-							._menu-item
-								a(href="#") Семена
-							._menu-item
-								a(href="#") Розы
-							._menu-item
-								a(href="#") Товары для дома,<br> сада и огорода
-							._menu-item
-								a(href="#") Сопутствующие товары
-				._buyers.col-auto.d-none_sm
-					._title Покупателям
+						img(src="images/logo.png", alt="logo")
+					._slogan Интернет магазин керамической плитки
+				._menu.col-auto.col-md-6.col-xs-12
+					._title Время работы  
 					._menu-item
-						a(href="#") Предварительный заказ
+						p Пн.-Пт.: 08:00 - 22:00 
 					._menu-item
-						a(href="#") Акции
+						p Сб.: 09:00 - 20:00
 					._menu-item
-						a(href="#") Доставка и оплата
+						p Вс.: 09:00 - 19:00
+				._menu.col-auto.col-md-6.col-xs-12
+					._title Контакты
 					._menu-item
-						a(href="#") О нас
+						p Тел.: + 38 (044) 111-11-11
 					._menu-item
-						a(href="#") Новости
+						p e-mail: info@sm2.com.ua
+				._menu.col-auto.col-md-6.col-xs-12
+					._title Информация
 					._menu-item
-						a(href="#") Задать вопрос	
-				._contacts.col.col-sm-4.col-xs-12
-					._contacts-row.row
-						._contacts-left.col-9.col-sm-12
-							._title контакты
-							._contacts-item <strong>Садовый центр в Медведково:</strong><br> г. Москва, ул. Широкая, 27
-								._contacts-time ежедневно с 09:00 до 21:00
-							._contacts-item <strong>Садовый центр в Отрадном:</strong><br>г. Москва, ул. Санникова, 13
-								._contacts-time ежедневно с 09:00 до 21:00
-							._contacts-item <strong>Колл-центр:</strong><br>8 (495) 212-85-06	
-						._contacts-soc.col-3.col-sm-12
-							include ../soc-list/template
-							+socList()._soc.soc-list--vertical
-						._contacts-left-2.col-auto.col-md-12 
-							._contacts-link
-								a.js-popup-show(href="#popup-contact-form") Форма обратной связи
+						p Тел.: + 38 (044) 111-11-11
+					._menu-item
+						a(href="#") Пользовательское соглашение
+					._menu-item
+						p © 2020-2021  Интернет-магазин плитки
 						
