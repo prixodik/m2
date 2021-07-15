@@ -120,13 +120,14 @@
 					white-space: nowrap;
 					border: 1px solid $gray-border;
 					font: 600 14px/1.2 $baseFF;
-					text-transform: uppercase;
 					&:first-child {
+						text-transform: uppercase;
 						width: 287px;
 						border-right: none;
 						border-left: none;
 					}
 					&:nth-child(2) {
+						text-transform: none;
 						border-right: none;
 						width: 287px;
 					}
@@ -140,6 +141,7 @@
 			vertical-align: middle;
 			font: 600 14px/1.2 $baseFF;
 			&:first-child {
+				text-transform: uppercase;
 				width: 287px;
 				border-right: 1px solid $gray-border;
 				border-top: none;
