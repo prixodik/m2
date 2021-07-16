@@ -116,8 +116,7 @@ a:hover {
 		max-width: 100%;
 	}
 	&--sm {
-		padding-left: $containerP;
-		padding-right: $containerP;
+		padding: 0;
 		margin-left: auto;
 		margin-right: auto;
 		max-width: $containerWSm;

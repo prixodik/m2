@@ -228,14 +228,6 @@
 				position: relative;
 			}
 		}
-		&__buttons {
-			.d-block_sm {
-				display: block;
-			}
-			.hidden {
-				display: none;
-			}
-		}
 		&__burger {
 			display: block;
 		}
@@ -285,9 +277,6 @@
 		&__slogan {
 			text-align: center;
 		}
-		&__menu {
-		}
-		//&__search{ flex: 0 0 100%; margin-bottom: 10px;  }
 		&__contacts {
 			flex: 0 0 100%;
 			@include flex(center, center, center);
@@ -300,22 +289,6 @@
 					margin-bottom: 0;
 					display: none;
 				}
-
-				/* .icon-inline__icon {
-					display: none;
-				} */
-			}
-		}
-
-		&__bottom {
-			.header__container {
-				flex-wrap: nowrap;
-			}
-			&.fixed {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
 			}
 		}
 	}

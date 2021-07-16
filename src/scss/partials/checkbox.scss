@@ -143,7 +143,7 @@
 		background: none;
 		position: relative;
 		color: $text-form;
-		padding-left: 30px;
+		padding-left: 31px;
 		padding-top: 0;
 		display: inline-block;
 		cursor: pointer;
@@ -151,33 +151,29 @@
 		&:before {
 			content: "";
 			display: block;
-			width: 14px;
-			height: 14px;
+			width: 20px;
+			height: 20px;
 			position: absolute;
-			top: 4px;
+			top: 0;
 			left: 0;
-			border: 1px $gray-border solid;
+			border: 1px $gray solid;
+			border-radius: 3px;
 			@include time();
 			background-color: $white;
+			box-shadow: inset 0 0 10px 0px rgba(0,0,0,0.3);
 		}
 		&:after {
 			content: "";
 			display: block;
-			width: 14px;
-			height: 14px;
-			background: url("../images/tick.svg") no-repeat;
-			fill: $red;
+			width: 20px;
+			height: 20px;
+			background: url("../../images/check.svg") 50% 50%/10px auto no-repeat;
 			position: absolute;
-			top: 4px;
+			top: 0;
 			left: 0;
 			opacity: 0;
 			border-radius: 3px;
 			@include time();
-		}
-
-		a {
-			font-weight: bold;
-			color: $blue;
 		}
 	}
 	input[type="checkbox"],
@@ -187,8 +183,7 @@
 	input[type="checkbox"]:checked + label,
 	input[type="radio"]:checked + label {
 		&:before {
-			background: $form-blue;
-			border-color: $form-blue;
+			background-color: $white;
 		}
 		&:after {
 			opacity: 1;

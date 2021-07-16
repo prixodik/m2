@@ -829,12 +829,12 @@ var uikit = {
 		//this.fancybox();
 		this.popups();
 		this.mask();
-		//this.accardion();
+		this.accardion();
 		this.mobile();
 
 		//this.scrollTo();
 
-		//this.rangeSlider();
+		this.rangeSlider();
 
 
 	}

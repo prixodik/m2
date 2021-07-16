@@ -5,6 +5,8 @@ block styles
 block content
 	include ../components/main-section/template
 	include ../components/table/template
+	include ../components/product-block/template
+	include ../components/pagination/template
 
 	+mainSection({
 		bread: [{url: '#', title: 'каталог'}]
@@ -13,3 +15,113 @@ block content
 			.main-section__left.col-3.col-md-4.col-sm-12
 				include ../components/filter-block/template
 				+filterBlock().main-section__filter.js-filter-block
+			.main-section__content.col-9.col-md-8.col-sm-12
+				.main-section__sort.row 
+					.main-section__sort-button
+						a(href="#").btn.btn--icon ФИЛЬТР
+							+svg('triangle')
+					.main-section__sort-item.col-4.col-md-6.col-xs-12
+						select.nice-select(name="")
+							option(value="") СОРТИРОВАТЬ ПО
+							option(value="") Сначала популярные
+							option(value="") Потом другие
+						a(href="#").main-section__sort-link
+							+svg('sort-1')
+						a(href="#").main-section__sort-link
+							+svg('sort-2')
+
+				.main-section__row.row.row--stretch
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+						+productBlock({
+							special: 'Новинка',
+							img: '../images/product-img-1.png',
+							info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+							cost: '253 ₴'
+						}).product-block--yellow
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+							+productBlock({
+								special: 'Акция',
+								img: '../images/product-img-1.png',
+								info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+								cost: '253 ₴'
+							}).product-block--pink
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+							+productBlock({
+								special: '',
+								img: '../images/product-img-1.png',
+								info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+								cost: '253 ₴'
+							})
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+						+productBlock({
+							special: 'Новинка',
+							img: '../images/product-img-1.png',
+							info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+							cost: '253 ₴'
+						}).product-block--yellow
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+							+productBlock({
+								special: 'Акция',
+								img: '../images/product-img-1.png',
+								info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+								cost: '253 ₴'
+							}).product-block--pink
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+							+productBlock({
+								special: '',
+								img: '../images/product-img-1.png',
+								info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+								cost: '253 ₴'
+							})
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+						+productBlock({
+							special: 'Новинка',
+							img: '../images/product-img-1.png',
+							info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+							cost: '253 ₴'
+						}).product-block--yellow
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+							+productBlock({
+								special: 'Акция',
+								img: '../images/product-img-1.png',
+								info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+								cost: '253 ₴'
+							}).product-block--pink
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+							+productBlock({
+								special: '',
+								img: '../images/product-img-1.png',
+								info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+								cost: '253 ₴'
+							})
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+						+productBlock({
+							special: 'Новинка',
+							img: '../images/product-img-1.png',
+							info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+							cost: '253 ₴'
+						}).product-block--yellow
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+							+productBlock({
+								special: 'Акция',
+								img: '../images/product-img-1.png',
+								info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+								cost: '253 ₴'
+							}).product-block--pink
+					.main-section__row-item.col-4.col-md-6.col-xs-12
+							+productBlock({
+								special: '',
+								img: '../images/product-img-1.png',
+								info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+								cost: '253 ₴'
+							})
+				.main-section__row-bottom
+					a(href="#").main-section__row-link
+						+svg('exchange')
+						span показать еще 60 товаров
+				.main-section__pagination
+					+pagination()
+
+	include ../components/footer/template  
+	+footer()
+						

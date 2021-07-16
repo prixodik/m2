@@ -1,17 +1,22 @@
 .filter-block {
-	background: $white;
+	background: $gray-middle;
 	color: $black;
-	border-radius: 10px;
-	padding: 20px 16px 40px;
-	box-shadow: $cards-bg;
+	padding: 60px 40px 40px 16px;
 
 	&__head {
 		@include flex(space-between, center, center, nowrap);
 		margin-bottom: 24px;
+		&-link {
+			font: 600 14px/1.2 $baseFF;
+			color: $blue;
+			&:hover {
+				color: $blue;
+				text-decoration: underline;
+			}
+		}
 	}
 	&__title {
-		color: $green;
-		font: bold 20px $baseFF;
+		font: bold 18px $baseFF;
 		text-transform: uppercase;
 		margin: 0;
 	}
@@ -20,35 +25,48 @@
 		padding: 0 16px 20px;
 		border-bottom: 1px #f2f5fb solid;
 		&-title {
-			font: bold 18px $baseFF;
-			color: $green;
+			font: 700 13px $baseFF;
+			background: $gray;
+			padding: 15px;
 			@include flex(0, center, center, nowrap);
 			cursor: pointer;
+			text-transform: uppercase;
 			svg {
 				font-size: 8px;
 				margin-right: 12px;
-				fill: $green;
+				fill: #666;
 			}
-
+			span {
+				margin-right: 10px;
+				width: 100%;
+			}
 			&.is-active {
-				margin-bottom: 16px;
+				margin-bottom: 15px;
 				svg {
 					transform: rotate(180deg);
 				}
 			}
 		}
-		&-cur {
-			font-weight: normal;
+		&-slogan {
+			margin-bottom: 10px;
+		}
+		&-input {
+			margin-bottom: 10px;
+			input {
+				width: 100%;
+				padding: 10px;
+				border: 1px solid $gray-dark-border;
+			}
 		}
 		&-body {
 			max-height: 0;
 			overflow: hidden;
 			&.is-active {
-				max-height: 160px;
+				max-height: 100%;
 				overflow-y: auto;
 				padding: 0 16px 20px;
 				margin: 0 -16px -20px;
-
+				padding-bottom: 5px;
 				&::-webkit-scrollbar-track {
 					background-color: #f2f5fb;
 				}
@@ -66,68 +84,15 @@
 			}
 		}
 	}
-	/* &__reset {
-		@include flex(0, center, center, nowrap);
-		text-decoration: none;
-		color: $white;
-		font: 500 12px/14px $baseFF;
-		&:hover,
-		&:focus {
-			color: $white;
-		}
-		svg {
-			width: 14px;
-			height: 14px;
-			margin-right: 8px;
-		}
-	} */
-	&__result {
-		@include flex();
-		margin: 0 -16px 20px;
-		padding: 0 16px 10px;
-		border-bottom: 1px #f2f5fb solid;
-		&:empty {
-			border: 0;
-			padding: 0;
-			margin: 0;
-		}
-		&-item {
-			padding: 7px 10px;
-			border-radius: 4px;
-			@include flex(0, center, center, nowrap);
-			background: $green;
-			font: $fs-12;
-			color: $white;
-			margin: 0 8px 10px 0;
-			@include time();
-			&:last-child {
-				margin-right: 0;
-			}
-			svg {
-				font-size: 10px;
-				fill: $white;
-				margin-left: 10px;
-				@include time();
-			}
-
-			&:hover {
-				background: $blue;
-				color: $green-dark;
-
-				svg {
-					fill: $green-dark;
-				}
-			}
-		}
-	}
-	&__buttons {
+	&__button {
 		@include flex(center);
 		.btn {
-			flex: 0 0 100%;
+			flex: 0 0 90%;
 			margin-bottom: 15px;
 			&:last-child {
 				margin-bottom: 0;
 			}
+			border: none;
 		}
 	}
 
@@ -136,6 +101,9 @@
 		flex-wrap: nowrap;
 		&-col {
 			padding: 0 6px;
+			.btn {
+				padding: 4px 30px;
+			}
 		}
 		input {
 			border: none;
@@ -152,18 +120,6 @@
 				color: $gray-dark;
 				opacity: 1;
 			}
-		}
-	}
-	&__close {
-		width: 12px;
-		height: 12px;
-		display: none;
-		color: #afafaf;
-		svg {
-			color: #afafaf;
-			width: 12px;
-			height: 12px;
-			display: block;
 		}
 	}
 

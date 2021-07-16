@@ -10155,7 +10155,7 @@ var uikit = {
 
 		this.mask();
 
-		//this.accardion();
+		this.accardion();
 
 		this.mobile();
 
@@ -10165,7 +10165,7 @@ var uikit = {
 
 
 
-		//this.rangeSlider();
+		this.rangeSlider();
 
 
 
