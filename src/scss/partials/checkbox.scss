@@ -143,7 +143,7 @@
 		background: none;
 		position: relative;
 		color: $text-form;
-		padding-left: 31px;
+		padding-left: 30px;
 		padding-top: 0;
 		display: inline-block;
 		cursor: pointer;
@@ -151,24 +151,24 @@
 		&:before {
 			content: "";
 			display: block;
-			width: 20px;
-			height: 20px;
+			width: 14px;
+			height: 14px;
 			position: absolute;
-			top: 0;
+			top: 4px;
 			left: 0;
-			border: 1px $gray solid;
-			border-radius: 3px;
+			border: 1px $gray-border solid;
 			@include time();
 			background-color: $white;
 		}
 		&:after {
 			content: "";
 			display: block;
-			width: 20px;
-			height: 20px;
-			background: url("../images/check-white.svg") 50% 50%/14px auto no-repeat;
+			width: 14px;
+			height: 14px;
+			background: url("../images/tick.svg") no-repeat;
+			fill: $red;
 			position: absolute;
-			top: 0;
+			top: 4px;
 			left: 0;
 			opacity: 0;
 			border-radius: 3px;

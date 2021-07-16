@@ -88,7 +88,7 @@
                         </svg></a>
                     </div>
               </div>
-                  <div class="nav">
+                  <div class="nav header__menu-nav">
                     <div class="nav__part nav__part--left">
                       <div class="nav__item"><a href="#">3D визуализация</a></div>
                       <div class="nav__item"><a href="#">Акции</a></div>
@@ -97,14 +97,17 @@
                     </div>
                     <div class="nav__part nav__part--right">
                       <div class="nav__item"><a class="nav__item-icon" href="#">
+                          <div class="nav__amount">1</div>
                           <svg class="icon icon_libra">
                             <use xlink:href="images/sprite-svg.svg#libra"></use>
                           </svg><span>Сравнить</span></a></div>
                       <div class="nav__item"><a class="nav__item-icon" href="#">
+                          <div class="nav__amount">1</div>
                           <svg class="icon icon_heart">
                             <use xlink:href="images/sprite-svg.svg#heart"></use>
                           </svg><span>Сравнить</span></a></div>
                       <div class="nav__item"><a class="nav__item-icon" href="#">
+                          <div class="nav__amount">1</div>
                           <svg class="icon icon_cart">
                             <use xlink:href="images/sprite-svg.svg#cart"></use>
                           </svg><span>Сравнить				</span></a></div>
@@ -123,6 +126,163 @@
                         <meta itemprop="position" content="1"></a></li>
                   </ul>
                 </div>
+            <div class="main-section__row row">
+              <div class="main-section__left col-3 col-md-4 col-sm-12">
+                    <div class="filter-block main-section__filter js-filter-block">
+                      <form class="js-filter" action=""> 
+                        <div class="filter-block__head">
+                          <div class="filter-block__title">Фильтр</div><a class="filter-block__close js-filter-block-close" href="#">
+                            <svg class="icon icon_close">
+                              <use xlink:href="images/sprite-svg.svg#close"></use>
+                            </svg></a>
+                        </div>
+                        <div class="filter-block__result js-filter-result"></div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle is-active">
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg><span>Страна происхождения</span>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list is-active">
+                            <div class="checkbox">
+                              <input id="ch-1" type="checkbox" value="Россия">
+                              <label for="ch-1">Россия</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch-2" type="checkbox" value="Китай">
+                              <label for="ch-2">Китай</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch-3" type="checkbox" value="Индонезия">
+                              <label for="ch-3">Индонезия</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle is-active">
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg><span>Производитель</span>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list is-active"> 
+                            <div class="checkbox">
+                              <input id="ch2-1" type="checkbox" value="Агроуспех">
+                              <label for="ch2-1">Агроуспех</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch2-2" type="checkbox" value="Евро-Семена">
+                              <label for="ch2-2">Евро-Семена</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch2-3" type="checkbox" value="ВНИИССОК">
+                              <label for="ch2-3">ВНИИССОК</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch2-1" type="checkbox" value="Агроуспех">
+                              <label for="ch2-1">Агроуспех</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch2-2" type="checkbox" value="Евро-Семена">
+                              <label for="ch2-2">Евро-Семена</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch2-3" type="checkbox" value="ВНИИССОК">
+                              <label for="ch2-3">ВНИИССОК</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle is-active">
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg><span>Цвет</span>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list is-active"> 
+                            <div class="checkbox">
+                              <input id="ch3-1" type="checkbox" value="Белый">
+                              <label for="ch3-1">Белый</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch3-2" type="checkbox" value="Красный">
+                              <label for="ch3-2">Красный</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch3-3" type="checkbox" value="Розовый">
+                              <label for="ch3-3">Розовый</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch3-1" type="checkbox" value="Желтый">
+                              <label for="ch3-1">Желтый</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle">
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg><span>Высота взрослого растения</span>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list"> 
+                            <div class="checkbox">
+                              <input id="ch4-1" type="checkbox" value="0,5 м">
+                              <label for="ch3-1">0,5 м</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch4-2" type="checkbox" value="1,2 м">
+                              <label for="ch4-2">1,2 м</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle">
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg><span>Период цветения/ плодоношения</span>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list"> 
+                            <div class="radiobox">
+                              <input type="radio" name="p1" id="p1" value="Значение">
+                              <label for="p1">Значение</label>
+                            </div>
+                            <div class="radiobox">
+                              <input type="radio" name="p1" id="p2" value="Значение 2">
+                              <label for="p2">Значение 2</label>
+                            </div>
+                            <div class="radiobox">
+                              <input type="radio" name="p1" id="p3" value="Значение 3">
+                              <label for="p3">Значение 3</label>
+                            </div>
+                            <div class="radiobox">
+                              <input type="radio" name="p1" id="p4" value="Значение 4">
+                              <label for="p4">Значение 4</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle is-active">
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg><span>Цена <span class="filter-block__group-cur">руб.</span></span>
+                          </div>
+                          <div class="filter-block__group-body is-active">
+                            <div class="filter-block__range row row--between">
+                              <div class="filter-block__range-col col-auto">
+                                <input class="js-range-from" type="text" value="От 100" placeholder="От" size="7">
+                              </div>
+                              <div class="filter-block__range-col col">
+                                <input class="js-range-to" type="text" value="До 6000" placeholder="До" size="7">
+                              </div>
+                            </div>
+                            <input class="js-range-slider" type="text" data-min="0" data-max="6000" data-from="100" data-to="6000">
+                          </div>
+                        </div>
+                        <div class="filter-block__buttons"><a class="filter-block__reset btn btn--border btn--block js-filter-reset" href="#"><span>Сбросить </span></a>
+                          <button class="btn btn--block btn--yellow-2">Применить фильтр</button>
+                        </div>
+                      </form>
+                    </div>
+              </div>
+            </div>
           </div>
         </div>
     <script type="text/javascript" src="js/script.js"></script>

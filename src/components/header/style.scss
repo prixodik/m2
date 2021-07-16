@@ -121,6 +121,9 @@
 		.btn {
 			margin-right: 11px;
 		}
+		&-nav {
+			margin-left: 10px;
+		}
 	}
 	&__menu-burger {
 		margin-right: 30px;
@@ -144,7 +147,13 @@
 			}
 		}
 	}
-
+	@include media ($xlg) {
+		&__menu {
+			.btn {
+				display: none;
+			}
+		}
+	}
 	@include media($md) {
 		&__logo {
 			@include flex (center,center);
@@ -190,9 +199,6 @@
 		&__menu {
 			flex: 1 1 auto;
 			flex-wrap: nowrap;
-			.btn {
-				display: none;
-			}
 		}
 		&__numbers {
 			display: none;

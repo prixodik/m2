@@ -9,3 +9,7 @@ block content
 	+mainSection({
 		bread: [{url: '#', title: 'каталог'}]
 	}).main-section--catalog
+		.main-section__row.row
+			.main-section__left.col-3.col-md-4.col-sm-12
+				include ../components/filter-block/template
+				+filterBlock().main-section__filter.js-filter-block
