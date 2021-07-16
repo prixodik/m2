@@ -75,10 +75,11 @@
 			}
 		}
 	}
-
+	@include media ($md) {
+		max-width: 317px;
+	}
 	@include media($sm) {
-		max-width: 100%;
-
+		width: 100%;
 		&__close {
 			@include flex(center, center, center);
 			width: 25px;
@@ -98,5 +99,12 @@
 				display: block;
 			}
 		}
+		&__input {
+			font-size: 12px;
+			padding: 5px 5px 5px 0;
+		}
+	}
+	@include media($xs) {
+
 	}
 }

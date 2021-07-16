@@ -55,11 +55,12 @@
 @import "../components/footer/style";
 /* Мобильное меню
 -----------------------------*/
-@import "../components/search-block/style";
+@import "../components/menu-block/style";
 
 // @import "../components/soc-list/style";
-// @import "../components/burger/style";
+@import "../components/burger/style";
 // @import "../components/popup/style";
+@import "../components/search-block/style";
 @import "../components/breadcrumbs/style";
 @import "../components/table/style";
 @import "../components/count-block/style";

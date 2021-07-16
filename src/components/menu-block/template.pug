@@ -1,128 +1,17 @@
 
 mixin menuBlock(data)
 	.menu-block&attributes(attributes)
-		._item.parent
-			a.js-menu-toggle(href="#")
-				+svg('menu-burger')
-				span.d-none_xs Каталоги
-			._sub.js-mobile-menu
-				._sub-item
-					a(href="#")
-						+webp('images/catalog-menu-img-1.png')
-						span Все товары
-					
-				._sub-item.parent.js-menu-parent-2
-					a(href="#")
-						+webp('images/catalog-menu-img-2.png')
-						span Саженцы
-					._sub2
-						._sub-item
-							a(href="#")
-								+webp('images/catalog-menu-img-13.png')
-								span Гортензии
-						._sub-item
-							a(href="#")
-								+webp('images/catalog-menu-img-14.png')
-								span Клематисы
-						._sub-item
-							a(href="#")
-								+webp('images/catalog-menu-img-15.png')
-								span Саженцы декоративные
-						._sub-item
-							a(href="#")
-								+webp('images/catalog-menu-img-16.png')
-								span Саженцы хвойные
-						._sub-item
-							a(href="#")
-								+webp('images/catalog-menu-img-17.png')
-								span Саженцы ягодные
-
-				._sub-item.active
-					a(href="#")
-						+webp('images/catalog-menu-img-3.png')
-						span Саженцы ЗКС
-					
-
-				._sub-item 
-					a(href="#")
-						+webp('images/catalog-menu-img-4.png')
-						span Луковичные <br>и многолетние
-				._sub-item 
-					a(href="#")
-						+webp('images/catalog-menu-img-5.png')
-						span Картофель
-				
-				._sub-item 
-					a(href="#")
-						+webp('images/catalog-menu-img-6.png')
-						span Комнатные<br> растения
-				._sub-item 
-					a(href="#")
-						+webp('images/catalog-menu-img-7.png')
-						span Лук-севок
-				._sub-item 
-					a(href="#")
-						+webp('images/catalog-menu-img-8.png')
-						span Рассада
-				._sub-item 
-					a(href="#")
-						+webp('images/catalog-menu-img-9.png')
-						span Розы
-				._sub-item 
-					a(href="#")
-						+webp('images/catalog-menu-img-10.png')
-						span Для дома и сада
-
-				._sub-item 
-					a(href="#")
-						+webp('images/catalog-menu-img-11.png')
-						span Сопутствующие<br> товары
-				._sub-item 
-					a(href="#")
-						+webp('images/catalog-menu-img-12.png')
-						span Зоотовары
-
-				._item.d-none.d-block_sm
-					a(href="#") Предварительный заказ
-				._item.d-none.d-block_sm
-					a(href="#") Акции
-				._item.d-none.d-block_sm
-					a(href="#") Доставка и оплата
-				._item.d-none.d-block_sm
-					a(href="#") О нас
-				._item.d-none.d-block_sm
-					a(href="#") Новости
-				._item.d-none.d-block_sm
-					a(href="#") Контакты
-				._item.d-none.d-block_sm
-					a(href="#") Задать вопрос
-
-		._item.d-none_xs
-			a(href="#") Предварительный заказ
-		._item.d-none_md
-			a(href="#") Акции
-		._item.d-none_md
-			a(href="#") Доставка и оплата
-		._item.d-none_md
+		._item
+			a(href="#") Каталоги
+		._item
 			a(href="#") О нас
-		._item.d-none_md
+		._item
+			a(href="#") Доставка и оплата
+		._item
+			a(href="#") Задать вопрос
+		._item
+			a(href="#") Скидки
+		._item
 			a(href="#") Новости
-		._item.d-none_md
+		._item
 			a(href="#") Контакты
-		._item.d-none_md
-			a.js-popup-show(href="#popup-contact-form") Задать вопрос
-		._item.d-none.d-block_md.d-none_xs
-			span Покупателю
-			._sub-min 
-				._item
-					a(href="#") Акции
-				._item
-					a(href="#") Доставка и оплата
-				._item
-					a(href="#") О нас
-				._item
-					a(href="#") Новости
-				._item
-					a(href="#") Контакты
-				._item
-					a.js-popup-show(href="#popup-contact-form") Задать вопрос

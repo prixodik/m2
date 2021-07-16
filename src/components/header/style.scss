@@ -26,6 +26,10 @@
 			margin-bottom: 12px;
 		}
 		@include flex(center, center, center, 0, column);
+		&-number {
+			color: $text-gray;
+			display: none;
+		}
 	}
 	&__numbers {
 		@include flex();
@@ -112,15 +116,19 @@
 	}
 	&__menu {
 		flex: 0 0 588px;
-		@include flex(0, center);
+		//width: 72%;
+		@include flex(0, center,0,nowrap);
 		.btn {
 			margin-right: 11px;
 		}
 	}
+	&__menu-burger {
+		margin-right: 30px;
+	}
 	&__burger {
 		display: none;
 	}
-	
+
 	@include media($lg) {
 		&__logo {
 			&-wrap {
@@ -139,9 +147,17 @@
 
 	@include media($md) {
 		&__logo {
+			@include flex (center,center);
 			&-wrap {
 				margin-right: 20px;
 			}
+			svg,
+			img {
+				max-width: 120px;
+			}
+		}
+		&__slogan {
+			font-size: 12px;
 		}
 		&__contacts {
 			&-item {
@@ -153,16 +169,35 @@
 		}
 		&__body {
 			&-content {
-				@include flex (flex-end,0,0,0,0);
+				@include flex(flex-end, 0, 0, 0, 0);
 			}
 		}
 		&__item {
-			margin-right: 30px;
+			margin-right: 0;
+			@include flex(0, center);
+			img {
+				margin-bottom: 0;
+				margin-right: 15px;
+				width: 30px;
+			}
+			&-slogan {
+				display: none;
+			}
+			&-number {
+				display: block;
+			}
 		}
 		&__menu {
-			flex: 0 0 52%;
+			flex: 1 1 auto;
+			flex-wrap: nowrap;
+			.btn {
+				display: none;
+			}
 		}
 		&__numbers {
+			display: none;
+		}
+		&__user {
 			display: none;
 		}
 	}
@@ -179,6 +214,9 @@
 			box-shadow: $cards-bg;
 			//&.is-active{ }
 		} */
+		&__menu-burger {
+			margin-right: 15px;
+		}
 		&__bottom {
 			.container {
 				position: relative;
@@ -218,7 +256,11 @@
 
 	@include media($xs) {
 		&__body {
+			padding: 13px 0;
 			flex-wrap: wrap;
+			&-content {
+				justify-content: center;
+			}
 		}
 		&__container {
 			flex-wrap: wrap;
@@ -238,7 +280,6 @@
 			text-align: center;
 		}
 		&__menu {
-			flex: 0 1 auto;
 		}
 		//&__search{ flex: 0 0 100%; margin-bottom: 10px;  }
 		&__contacts {

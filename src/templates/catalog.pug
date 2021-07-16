@@ -1,0 +1,11 @@
+extends extends/base.pug
+
+block styles
+	
+block content
+	include ../components/main-section/template
+	include ../components/table/template
+
+	+mainSection({
+		bread: [{url: '#', title: 'каталог'}]
+	}).main-section--catalog

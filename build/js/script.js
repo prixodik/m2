@@ -10109,6 +10109,24 @@ var uikit = {
 
 
 
+	mobile: function(){
+
+		$('.js-mobile-menu-toggle').click(function(){
+
+			 $(this).toggleClass('active');
+
+			 //$('.js-mobile-menu').toggleClass('is-active');
+
+			 $('.js-mobile-menu').slideToggle();
+
+			 return false;
+
+		})
+
+   },
+
+
+
 	mainInit: function () {
 
 
@@ -10139,7 +10157,7 @@ var uikit = {
 
 		//this.accardion();
 
-		//this.mobile();
+		this.mobile();
 
 
 

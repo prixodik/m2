@@ -16,6 +16,7 @@ mixin header(data)
 					a(href="#")._item 
 						img(src="images/call.png", alt="")
 						._item-slogan Обратная связь
+						._item-number <strong>+38 (044) 111-11-11</strong>
 					._numbers
 						._number
 							+svg('phone')
@@ -47,15 +48,15 @@ mixin header(data)
 					
 						
 		._bottom 
-			._container.container 
-				//- +burger()._burger   
-					
+			._container.container   
 				._menu
 					a(href="#").btn Каталог продукции
+					//- ._menu.js-mobile-menu
+					//- 	+menuBlock()
+					+burger().header__menu-burger
 					+searchBlock({
 						placeholder: 'введите артикул или бренд плитки'
-					})
-					//- +menuBlock() 
+					}) 
 				+navBlock()
 						
 
