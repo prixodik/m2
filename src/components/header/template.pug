@@ -47,16 +47,17 @@ mixin header(data)
 					
 					
 						
-		div#top_nav._bottom 
-			._container.container   
-				._menu
-					a(href="#").btn Каталог продукции
-					//- ._menu.js-mobile-menu
-					//- 	+menuBlock()
-					+burger().header__menu-burger
-					+searchBlock({
-						placeholder: 'введите артикул или бренд плитки'
-					}) 
-				+navBlock().header__menu-nav
+		div#top_nav._bottom  
+			._container.container
+				._bottom-body 
+					._menu
+						a(href="#").btn Каталог продукции
+						//- ._menu.js-mobile-menu
+						//- 	+menuBlock()
+						+burger().header__menu-burger
+						+searchBlock({
+							placeholder: 'введите артикул или бренд плитки'
+						}) 
+					+navBlock().header__menu-nav
 						
 

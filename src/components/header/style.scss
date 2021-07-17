@@ -114,6 +114,10 @@
 	&__bottom {
 		background: $bg-gray;
 		padding: 13px 0;
+		&-body {
+			@include flex(space-between,center,0,nowrap);
+			width: 100%;
+		}
 		&.fixed {
 			position: fixed;
 			top: 0;

@@ -68,7 +68,11 @@
 		background-color: $blue;
 	}
 	@include media($xlg) {
-		display: none;
+		&__part {
+			&--left {
+				display: none;
+			}
+		}
 	}
 	@include media($md) {
 		flex: 0 1 auto;
@@ -102,6 +106,7 @@
 		}
 	}
 	@include media($xs) {
+		
 		&__item {
 			span {
 				display: none;
