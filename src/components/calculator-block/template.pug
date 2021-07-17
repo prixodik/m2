@@ -1,0 +1,19 @@
+mixin calculatorBlock(data)
+	.calculator-block&attributes(attributes)
+		._body
+			._item
+				input(type="number" placehilder="" name="Площадь(м^2)")
+				span м<sup>2<sup>
+			._item
+				input(type="number" placehilder="" name="Количесвто (шт)")
+				span шт
+			._item
+				input(type="number" placehilder="" name="пак")
+				span пак
+			._item
+				input(type="number" placehilder="" name="Масса (кг)")
+				span кг
+			._item
+				input(type="number" placehilder="" name="пл")
+				span пл
+		._total = <span>485<span> грн

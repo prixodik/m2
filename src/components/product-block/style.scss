@@ -65,6 +65,11 @@
 		margin-left: 13px;
 		@include flex(0, 0, 0, 0, column);
 	}
+	@include media($md) {
+		&__img {
+			@include flex(center,0,0,nowrap);
+		}
+	}
 	@include media($sm) {
 		height: auto;
 		min-height: auto;

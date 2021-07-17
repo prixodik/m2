@@ -8559,9 +8559,9 @@ var uikit = {
 
 		$(".js-count-plus").click(function () {
 
-			var count = $(this).parent().children('input').val();
+			var count = $(this).parent().parent().children('input').val();
 
-			$(this).parent().children('input').val(++count);
+			$(this).parent().parent().children('input').val(++count);
 
 			return false;
 
@@ -8571,17 +8571,53 @@ var uikit = {
 
 		$(".js-count-minus").click(function () {
 
-			var tempCount = $(this).parent().children('input').val();
+			var tempCount = $(this).parent().parent().children('input').val();
 
-			var count = (--tempCount <= 0) ? 0 : tempCount;
+			var count = (--tempCount <= 1) ? 1 : tempCount;
 
 
 
-			$(this).parent().children('input').val(count);
+			$(this).parent().parent().children('input').val(count);
 
 			return false;
 
 		});
+
+	},
+
+
+
+	headerFix: function () {
+
+		var scroller = 0;
+
+		var hpos = hpos = $('.header__bottom').offset().top;
+
+		$(document).scroll(function () {
+
+			scroller = $('html,body').scrollTop();
+
+
+
+			console.log(scroller >= hpos);
+
+			if (scroller >= hpos) {
+
+				$('.header').height($('.header').height());
+
+				$('.header__bottom').addClass('fixed');
+
+			} else {
+
+				$('.header').attr('style', '');
+
+				$('.header__bottom').removeClass('fixed');
+
+			}
+
+		});
+
+
 
 	},
 
@@ -9013,7 +9049,7 @@ var uikit = {
 
 	},
 
-
+	
 
 	tabs: function () {
 
@@ -9297,7 +9333,7 @@ var uikit = {
 
 				variableWidth: false,
 
-				slidesToShow: 3,
+				slidesToShow: 4,
 
 				slidesToScroll: 1,
 
@@ -9819,7 +9855,7 @@ var uikit = {
 
 			iframe: {
 
-				preload: false
+				preload: true
 
 			}
 
@@ -10175,7 +10211,7 @@ var uikit = {
 
 
 
-		//this.sliders();
+		this.sliders();
 
 
 
@@ -10193,7 +10229,9 @@ var uikit = {
 
 		this.countBlock();
 
-		//this.fancybox();
+		this.fancybox();
+
+		this.headerFix();
 
 		this.popups();
 

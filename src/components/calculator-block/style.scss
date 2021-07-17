@@ -1,0 +1,33 @@
+.calculator-block {
+	@include flex(0, center);
+	&__body {
+		color: $text-gray;
+		@include flex(0, center);
+		margin-bottom: -7px;
+	}
+	&__item {
+		margin-bottom: 7px;
+		position: relative;
+		width: 110px;
+		margin-right: 7px;
+		&:last-child {
+			margin-right: 0;
+		}
+		input {
+			width: 100%;
+			padding-right: 40px;
+			height: 56px;
+			padding-left: 10px;
+			border: 1px solid $blue;
+		}
+		span {
+			position: absolute;
+			top: 15px;
+			right: 10px;
+		}
+	}
+	&__total {
+		font: 700 35px/1.2 $baseFF;
+		margin-left: 15px;
+	}
+}

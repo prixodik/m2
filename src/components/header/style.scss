@@ -12,7 +12,7 @@
 	// }
 	&__body {
 		padding: 27px 0 18px;
-
+		min-height: 135px;
 		&-content {
 			max-width: 900px;
 			@include flex(space-between, center, center, nowrap);

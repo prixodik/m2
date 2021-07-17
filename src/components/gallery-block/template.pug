@@ -1,0 +1,25 @@
+
+mixin galleryBlock(data)
+	.gallery-block&attributes(attributes)
+		._main.js-gallery-main
+							._main-item
+								a.js-fancybox(href="images/gallery-img-1.jpg")
+									+webp('images/gallery-img-1.png')
+							._main-item
+								a.js-fancybox(href="images/gallery-img-2.jpg")
+									+webp('images/gallery-img-2.png')
+							._main-item
+								a.js-fancybox(href="images/gallery-img-3.jpg")
+									+webp('images/gallery-img-3.png')
+							._main-item
+								a.js-fancybox(href="images/gallery-img-4.jpg")
+									+webp('images/gallery-img-4.png')
+		._thumb.js-gallery-thumb
+							._thumb-item
+								+webp('images/gallery-img-1.jpg')
+							._thumb-item
+								+webp('images/gallery-img-2.jpg')
+							._thumb-item
+								+webp('images/gallery-img-3.jpg')
+							._thumb-item
+								+webp('images/gallery-img-4.jpg')

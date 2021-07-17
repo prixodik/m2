@@ -1,0 +1,93 @@
+extends extends/base.pug
+
+block styles
+	
+block content
+	include ../components/main-section/template
+	include ../components/table/template
+	include ../components/product-block/template
+	include ../components/count-block/template
+	include ../components/gallery-block/template
+	include ../components/calculator-block/template
+
+	+mainSection({
+		bread: [{url: '#', title: 'каталог'},{url: '#', title: 'плитка atem mono w 20x30'}]
+	}).main-section--product
+		.main-section__container.container
+			.main-section__body.row
+				.main-section__gallery.col-6.col-sm-12
+					+galleryBlock()
+				.main-section__about.col-6.col-sm-12
+					.main-section__head
+						.main-section__articul Артикул 11223344
+						.main-section__logo 
+							img(src="../images/product-logo.png", alt="")
+					.main-section__title Плитка Атем mono w 20X30
+					.main-section__cost 120 грн
+					.main-section__delivery-free
+						span Бесплатная доставка <strong>от 100 шт</strong>
+					.main-section__count 
+						+countBlock().count-block--full
+						span Плитка Атем mono w
+						span <strong>1200грн</strong>
+					.main-section__buttons-row
+						a(href="#").btn.btn--icon 
+							span Добавить в корзину
+							+svg('cart-2')
+						.main-section__buttons-group
+							a(href="#")
+								+svg('heart')
+							a(href="#")
+								+svg('libra')
+					.main-section__description
+						p <strong>Коллекция: </strong> Атем White
+						p <strong>Формат: </strong> 200x300х20 мм
+						p <strong>Тип плитки: </strong> плитка для стен
+						p <strong>Рисунок: </strong> однотонный
+						p <strong>Область применения: </strong> для ванной комнаты, для внутренних работ
+						p <strong>Гарантия: </strong> от производителя...
+					.main-section__calculator-row 
+						.main-section__calculator-title.title-h3 калькулятор
+						+calculatorBlock()
+			.main-section__bottom.row
+				.main-section__table.col-6.col-sm-12
+					.main-section__table-title.title-h3 характеристики
+					+tableTwoCol()
+				.main-section__img.col-6.col-sm-12
+					.main-section__img-title.title-h3 Коллекция с выбранной плиткой
+					img(src="../images/product-img-show.jpg", alt="")
+			.main-section__products
+				.main-section__products-title.title-h3 похожие товары
+				.main-section__products-row.row 
+					.main-section__row-item.col-3.col-md-6.col-xs-12
+						+productBlock({
+							special: '',
+							img: '../images/product-img-1.png',
+							info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+							cost: '253 ₴'
+						})
+					.main-section__row-item.col-3.col-md-6.col-xs-12
+						+productBlock({
+							special: 'Новинка',
+							img: '../images/product-img-1.png',
+							info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+							cost: '253 ₴'
+						}).product-block--yellow
+					.main-section__row-item.col-3.col-md-6.col-xs-12
+						+productBlock({
+							special: 'Новинка',
+							img: '../images/product-img-1.png',
+							info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+							cost: '253 ₴'
+						}).product-block--pink
+					.main-section__row-item.col-3.col-md-6.col-xs-12
+						+productBlock({
+							special: '',
+							img: '../images/product-img-1.png',
+							info: 'Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см',
+							cost: '253 ₴'
+						})
+	include ../components/footer/template  
+	+footer()
+
+				

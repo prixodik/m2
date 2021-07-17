@@ -4,8 +4,14 @@
 	@include flex(0, stretch, stretch, nowrap);
 	align-items: center;
 	//height: 42px;
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		/* display: none; <- Crashes Chrome on hover */
+		-webkit-appearance: none;
+		margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+	}
 	&__body {
-		@include flex(center,center);
+		@include flex(center, center);
 		border: 1px $gray-border solid;
 		border-radius: 1px;
 		background: $white;
@@ -59,6 +65,46 @@
 			border-bottom: 5px black solid;
 			border-right: 5px transparent solid;
 			border-left: 5px transpatent solid;
+		}
+	}
+	&--full & {
+		&__body {
+			position: relative;
+			padding-right: 40px;
+			padding-top: 10px;
+			padding-bottom: 9px;
+		}
+		&__input {
+			font-size: 20px;
+			width: 60px;
+		}
+		&__buttons {
+			height: 45px;
+			top: -1px;
+			right: -1px;
+			position: absolute;
+		}
+		&__minus,
+		&__plus {
+			position: relative;
+			width: 25px;
+			height: 25px;
+			background-color: $white;
+			border: 1px solid $gray-border;
+			@include time();
+		}
+		&__minus {
+			&:before {
+				top: 5px;
+				left: 8px;
+			}
+		}
+		&__plus {
+			&:before {
+				top: 8px;
+				left: 9px;
+			}
+			margin-bottom: 0;
 		}
 	}
 	&--small & {
