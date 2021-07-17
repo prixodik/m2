@@ -45,6 +45,28 @@ var uikit = {
 		});
 	},
 
+	// navFixed: function () {
+	// 	var MaxHight = 195,
+	// 	var MinHight = 0;
+
+	// 	var elem = $('#top_nav');
+	// 	var top = $(this).scrollTop();
+		
+	// 	if(top > MaxHight){
+	// 		elem.css('top', MinHight);
+	// 	}           
+		
+	// 	$(window).scroll(function(){
+	// 		top = $(this).scrollTop();
+				
+	// 		if (top+MinHight < MaxHight) {
+	// 				elem.css('top', (MaxHight-top));
+	// 		} else {
+	// 				elem.css('top', MinHight);
+	// 		}
+	// 	});
+	// },
+
 	validation: function () {
 		var
 			classValidate = 'is-validate',
@@ -823,18 +845,16 @@ var uikit = {
 		//this.validation();
 
 		//this.tabs();
-
+		//this.navFixed();
 		//this.niceSelect();
-		//this.countBlock();
+		this.countBlock();
 		//this.fancybox();
 		this.popups();
 		this.mask();
 		this.accardion();
 		this.mobile();
-
-		//this.scrollTo();
-
 		this.rangeSlider();
+		//this.scrollTo();
 
 
 	}

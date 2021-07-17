@@ -8587,6 +8587,50 @@ var uikit = {
 
 
 
+	// navFixed: function () {
+
+	// 	var MaxHight = 195,
+
+	// 	var MinHight = 0;
+
+
+
+	// 	var elem = $('#top_nav');
+
+	// 	var top = $(this).scrollTop();
+
+		
+
+	// 	if(top > MaxHight){
+
+	// 		elem.css('top', MinHight);
+
+	// 	}           
+
+		
+
+	// 	$(window).scroll(function(){
+
+	// 		top = $(this).scrollTop();
+
+				
+
+	// 		if (top+MinHight < MaxHight) {
+
+	// 				elem.css('top', (MaxHight-top));
+
+	// 		} else {
+
+	// 				elem.css('top', MinHight);
+
+	// 		}
+
+	// 	});
+
+	// },
+
+
+
 	validation: function () {
 
 		var
@@ -10143,11 +10187,11 @@ var uikit = {
 
 		//this.tabs();
 
-
+		//this.navFixed();
 
 		//this.niceSelect();
 
-		//this.countBlock();
+		this.countBlock();
 
 		//this.fancybox();
 
@@ -10159,13 +10203,9 @@ var uikit = {
 
 		this.mobile();
 
-
+		this.rangeSlider();
 
 		//this.scrollTo();
-
-
-
-		this.rangeSlider();
 
 
 
