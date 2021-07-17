@@ -159,14 +159,14 @@
 					padding-left: 16px;
 					padding-right: 16px;
 					&:first-child {
-						flex: 0 0 35%;
+						flex: 0 0 49%;
 					}
 					&:nth-child(2) {
 						flex: 0 0 auto;
 						width: auto;
 					}
 					&:nth-child(3) {
-						flex: 0 0 auto;
+						flex: 0 0 20%;
 						width: auto;
 					}
 					&:last-child {
@@ -180,27 +180,27 @@
 			padding: 14px;
 			@include flex(0, center, 0, nowrap);
 			&:first-child {
-				flex: 0 0 35%;
+				flex: 0 0 50%;
 			}
 			&:nth-child(2) {
 				flex: 0 0 auto;
 			}
 			&:nth-child(3) {
-				flex: 0 0 20%;
+				flex: 0 0 16%;
 			}
 			&:nth-child(4) {
-				flex: 1 0 auto;
+				flex: 1 0 31%;
 			}
 			&-product {
-				@include flex(center, center, 0, 0, column);
+				@include flex(center, center);
 				text-align: center;
 			}
 			&-icon {
-				flex: 1 0 auto;
+				flex: 0 0 58%;
 			}
 		}
 		&__img {
-			margin: 0 0 10px 0;
+			margin: 0 10px 5px 0;
 		}
 	}
 	@include media($xs) {
@@ -245,31 +245,34 @@
 			margin-bottom: 6px;
 		}
 		&--total {
+			display: block;
 			border: none;
 			border: 1px solid $gray-border;
 		}
 		&--total & {
 			&__row {
-				@include flex(flex-start, center);
+				@include flex(center, center);
 				border-bottom: 1px solid $gray-border;
 				&--head {
 					.table__cell {
-						@include flex(flex-start, center);
+						@include flex(center, center);
 						padding: 10px;
 						background: $white;
 						white-space: nowrap;
 						font: 600 14px/1.2 $baseFF;
 						text-transform: uppercase;
 						&:first-child {
-							border-right: 1px solid $gray-border;
-							border-left: none;
-							flex: 0 0 50%;
+							// border-right: 1px solid $gray-border;
+							// border-left: none;
+							//flex: 0 0 50%;
+							display: none;
 						}
 						&:nth-child(2) {
-							width: auto;
+							text-align:  center;
 							border-right: none;
 							border-left: none;
 							display: block;
+							width: auto;
 						}
 					}
 				}
@@ -282,13 +285,15 @@
 				font: 600 14px/1.2 $baseFF;
 				width: auto;
 				&:first-child {
-					flex: 0 0 50%;
-					border-right: 1px solid $gray-border;
-					border-bottom: none;
+					// flex: 0 0 50%;
+					// border-right: 1px solid $gray-border;
+					// border-bottom: none;
+					display: none;
 				}
 				&:nth-child(2) {
 					border-top: none;
 					border-bottom: none;
+					@include flex (0,0,0,0,column);
 				}
 				&:nth-child(3) {
 					flex: 0 0 50%;

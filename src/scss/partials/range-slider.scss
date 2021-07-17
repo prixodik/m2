@@ -137,20 +137,26 @@ Build date: 2019-12-19 16:51:02
 
 .irs--round {
 	height: 14px;
+	.to {
+		display: none;
+	}
+	.from {
+		background: url(../../images/sort-scroll_03.png) 50% -1px/16px auto no-repeat;
+		border-radius: 50%;
+	}
 }
 .irs--round.irs-with-grid {
 	height: 34px;
 }
 .irs--round .irs-line {
-	top: 5px;
-	height: 4px;
-	background-color: $gray-dark;
-	border-radius: 2px;
+	top: 7px;
+	height: 1px;
+	background-color: #ccc;
 }
 .irs--round .irs-bar {
-	top: 5px;
-	height: 4px;
-	background-color: $green;
+	top: 7px;
+	height: 1px;
+	background-color: #ccc;
 }
 .irs--round .irs-bar--single {
 	border-radius: 2px 0 0 2px;
@@ -164,7 +170,8 @@ Build date: 2019-12-19 16:51:02
 	top: 0px;
 	width: 14px;
 	height: 14px;
-	background-color: $green;
+	background-color: $blue;
+	box-shadow: 0 0 5px #222;
 	border-radius: 50%;
 	cursor: pointer;
 }

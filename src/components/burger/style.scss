@@ -56,7 +56,7 @@
 			span{ background: $white; }
 		} */
 	}
-	@include media($md) {
+	@include media($xlg) {
 		display: block;
 	}
 	/* @include media($xs){

@@ -4,11 +4,12 @@ mixin filterBlock(data)
 		form(action="" class="js-filter") 
 			._head
 				._title Фильтр
+				a(href="#")._head-link сбросить фильтр
 				//- a._reset.js-filter-reset(href="#")
 					//- +svg('refresh')
 					//- span Сбросить
-				a._close.js-filter-block-close(href="#")
-					+svg('close')
+				//- a._close.js-filter-block-close(href="#")
+				//- 	+svg('close')
 
 			._result.js-filter-result
 				//- a._result-item.js-filter-del(href="#")
@@ -20,107 +21,205 @@ mixin filterBlock(data)
 
 			._group.accardion-block
 				._group-title.js-accardion-toggle.is-active
+					span бренды
 					+svg('arrow-down')
-					span Страна происхождения
 				._group-body.checkbox-list.is-active
+					._group-input 
+						input(type="text" placeholder="поиск")
 					.checkbox
-						input#ch-1(type="checkbox" value="Россия")
-						label(for="ch-1") Россия
+						input#ch-1(type="checkbox" value="ARGENTA")
+						label(for="ch-1") ARGENTA (<span>71</span>)
 					.checkbox
-						input#ch-2(type="checkbox" value="Китай")
-						label(for="ch-2") Китай
+						input#ch-2(type="checkbox" value="ATEM")
+						label(for="ch-2") ATEM (<span>232</span>)
 					.checkbox
-						input#ch-3(type="checkbox" value="Индонезия")
-						label(for="ch-3") Индонезия
+						input#ch-3(type="checkbox" value="AquaMo")
+						label(for="ch-3") AquaMo (<span>171</span>)
+					.checkbox
+						input#ch-4(type="checkbox" value="Ceresit")
+						label(for="ch-4") Ceresit (<span>672</span>)
+					.checkbox
+						input#ch-5(type="checkbox" value="Ceresanit")
+						label(for="ch-5") Ceresanit (<span>1402</span>)
+					.checkbox
+						input#ch-6(type="checkbox" value="Golden Tile")
+						label(for="ch-6") Golden Tile (<span>1150</span>)
 
 			._group.accardion-block
 				._group-title.js-accardion-toggle.is-active
+					span Цена 
 					+svg('arrow-down')
-					span Производитель
-				._group-body.checkbox-list.is-active 
-					.checkbox
-						input#ch2-1(type="checkbox" value="Агроуспех")
-						label(for="ch2-1") Агроуспех
-					.checkbox
-						input#ch2-2(type="checkbox" value="Евро-Семена")
-						label(for="ch2-2") Евро-Семена
-					.checkbox
-						input#ch2-3(type="checkbox" value="ВНИИССОК")
-						label(for="ch2-3") ВНИИССОК
-					.checkbox
-						input#ch2-1(type="checkbox" value="Агроуспех")
-						label(for="ch2-1") Агроуспех
-					.checkbox
-						input#ch2-2(type="checkbox" value="Евро-Семена")
-						label(for="ch2-2") Евро-Семена
-					.checkbox
-						input#ch2-3(type="checkbox" value="ВНИИССОК")
-						label(for="ch2-3") ВНИИССОК
-
-			._group.accardion-block
-				._group-title.js-accardion-toggle.is-active
-					+svg('arrow-down')
-					span Цвет
-				._group-body.checkbox-list.is-active 
-					.checkbox
-						input#ch3-1(type="checkbox" value="Белый")
-						label(for="ch3-1") Белый
-					.checkbox
-						input#ch3-2(type="checkbox" value="Красный")
-						label(for="ch3-2") Красный
-					.checkbox
-						input#ch3-3(type="checkbox" value="Розовый")
-						label(for="ch3-3") Розовый
-					.checkbox
-						input#ch3-1(type="checkbox" value="Желтый")
-						label(for="ch3-1") Желтый
-
-			._group.accardion-block
-				._group-title.js-accardion-toggle
-					+svg('arrow-down')
-					span Высота взрослого растения
-				._group-body.checkbox-list 
-					.checkbox
-						input#ch4-1(type="checkbox" value="0,5 м")
-						label(for="ch3-1") 0,5 м
-					.checkbox
-						input#ch4-2(type="checkbox" value="1,2 м")
-						label(for="ch4-2") 1,2 м
-
-			._group.accardion-block
-				._group-title.js-accardion-toggle
-					+svg('arrow-down')
-					span Период цветения/ плодоношения
-				._group-body.checkbox-list 
-					.radiobox
-						input(type="radio" name="p1" id="p1" value="Значение")
-						label(for="p1") Значение
-					.radiobox
-						input(type="radio" name="p1" id="p2" value="Значение 2")
-						label(for="p2") Значение 2
-					.radiobox
-						input(type="radio" name="p1" id="p3" value="Значение 3")
-						label(for="p3") Значение 3
-					.radiobox
-						input(type="radio" name="p1" id="p4" value="Значение 4")
-						label(for="p4") Значение 4
-					
-			._group.accardion-block
-				._group-title.js-accardion-toggle.is-active
-					+svg('arrow-down')
-					span Цена <span class="filter-block__group-cur">руб.</span>
 				._group-body.is-active
 					._range.row.row--between
 						._range-col.col-auto
-							input.js-range-from(type="text" value="От 100" placeholder="От" size="7")
+							input.js-range-from(type="text" value="0" placeholder="" size="7")
 						._range-col.col
-							input.js-range-to(type="text" value="До 6000" placeholder="До" size="7")
-					input.js-range-slider(type="text" data-min="0" data-max="6000" data-from="100" data-to="6000")
+							input.js-range-to(type="text" value="152341" placeholder="" size="7")
+						._range-col.col
+							a(href="#").btn.btn--sm OK
+					input.js-range-slider(type="text" data-min="0" data-max="152341" data-from="0" data-to="152341")
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle.is-active
+					span назначение
+					+svg('arrow-down')
+				._group-body.checkbox-list.is-active 
+					.checkbox
+						input#ch2-1(type="checkbox" value="Кухня")
+						label(for="ch2-1") Кухня (<span>12<span>)
+					.checkbox
+						input#ch2-2(type="checkbox" value="Ванная")
+						label(for="ch2-2") Ванная (<span>34<span>)
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle.is-active
+					span применение
+					+svg('arrow-down')
+				._group-body.checkbox-list.is-active 
+					.checkbox
+						input#ch3-1(type="checkbox" value="ля пола")
+						label(for="ch3-1") Для пола
+					.checkbox
+						input#ch3-2(type="checkbox" value="Для стен")
+						label(for="ch3-2") Для стен
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle
+					span форма плитки
+					+svg('arrow-down')
+				._group-body.checkbox-list 
+					.checkbox
+						input#ch4-1(type="checkbox" value="Квадрат")
+						label(for="ch4-1") Квадрат (<span>12<span>)
+					.checkbox
+						input#ch4-2(type="checkbox" value="Прямоугольная")
+						label(for="ch4-2") Прямоугольная (<span>34<span>)
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle
+					span габариты
+					+svg('arrow-down')
+				._group-body.checkbox-list
+					._group-slogan Ширина x длина, мм 
+					.checkbox
+						input#ch5-1(type="checkbox" value="300x300")
+						label(for="ch5-1") 300x300  (<span>27<span>)
+					.checkbox
+						input#ch5-2(type="checkbox" value="300x300")
+						label(for="ch5-2") 320x320  (<span>20<span>)
+					.checkbox
+						input#ch5-3(type="checkbox" value="300x300")
+						label(for="ch5-3") 300x300  (<span>27<span>)
+					.checkbox
+						input#ch5-4(type="checkbox" value="300x300")
+						label(for="ch5-4") 320x320  (<span>20<span>)
+					.checkbox
+						input#ch5-5(type="checkbox" value="300x300")
+						label(for="ch5-5") 300x300  (<span>27<span>)
+					.checkbox
+						input#ch5-6(type="checkbox" value="300x300")
+						label(for="ch5-6") 320x320  (<span>20<span>)
+					<hr>	
+					._group-slogan Ширина x длина, мм 
+					.checkbox
+						input#ch6-1(type="checkbox" value="30")
+						label(for="ch6-1") 30  (<span>27<span>)
+					.checkbox
+						input#ch6-2(type="checkbox" value="32")
+						label(for="ch6-2") 32  (<span>2<span>)	
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle
+					span цвет
+					+svg('arrow-down')
+				._group-body.checkbox-list
+					.checkbox
+						input#ch7-1(type="checkbox" value="Антрацит")
+						label(for="ch7-1") Антрацит (<span>75<span>)
+					.checkbox
+						input#ch7-2(type="checkbox" value="Бужево-белый")
+						label(for="ch7-2") Бужево-белый (<span>2<span>)
+					.checkbox
+						input#ch7-3(type="checkbox" value="Бужево-белый с коричневым")
+						label(for="ch7-3") Бужево-белый с коричневым (<span>12<span>)
+					.checkbox
+						input#ch7-4(type="checkbox" value="Бужево-белый с розовым")
+						label(for="ch7-4") Бужево-белый с розовым (<span>20<span>)
+					.checkbox
+						input#ch7-5(type="checkbox" value="Бужево-голубой")
+						label(for="ch7-5") Бужево-голубой (<span>2<span>)
+					.checkbox
+						input#ch8-6(type="checkbox" value="Бужево-желтый с серым")
+						label(for="ch8-6") Бужево-желтый с серым (<span>1<span>)
+					.checkbox
+						input#ch8-7(type="checkbox" value="Бужево-зеленый")
+						label(for="ch8-7") Бужево-зеленый (<span>3<span>)
+					.checkbox
+						input#ch8-8(type="checkbox" value="Бужево-золотой с коричневым")
+						label(for="ch8-8") Бужево-золотой с коричневым (<span>2<span>)
+					.checkbox
+						input#ch8-9(type="checkbox" value="Бужево-коричневый")
+						label(for="ch8-9") Бужево-коричневый (<span>100<span>)
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle
+					span материал
+					+svg('arrow-down')
+				._group-body.checkbox-list
+					.checkbox
+						input#ch9-1(type="checkbox" value="Бетон")
+						label(for="ch9-1") Бетон (<span>320<span>)
+					.checkbox
+						input#ch9-2(type="checkbox" value="Гипс")
+						label(for="ch9-2") Гипс (<span>74<span>)
+					.checkbox
+						input#ch9-3(type="checkbox" value="Зеркало")
+						label(for="ch9-3") Зеркало (<span>6<span>)
+					.checkbox
+						input#ch9-4(type="checkbox" value="керамика")
+						label(for="ch9-4") керамика (<span>5565<span>)
+					.checkbox
+						input#ch9-5(type="checkbox" value="Керамогранит")
+						label(for="ch9-5") Керамогранит (<span>4479<span>)
+					.checkbox
+						input#ch9-6(type="checkbox" value="Клинкер")
+						label(for="ch9-6") Клинкер (<span>541<span>)
+					.checkbox
+						input#ch9-7(type="checkbox" value="Мрамор")
+						label(for="ch9-7") Мрамор (<span>219<span>)
+					.checkbox
+						input#ch9-8(type="checkbox" value="Натуральный камень")
+						label(for="ch9-8") Натуральный камень (<span>132<span>)
+					.checkbox
+						input#ch9-9(type="checkbox" value="Стекло")
+						label(for="ch9-9") Стекло (<span>752<span>)
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle
+					span поверхности
+					+svg('arrow-down')
+				._group-body.checkbox-list
+					.checkbox
+						input#ch10-1(type="checkbox" value="Антрацит")
+						label(for="ch10-1") Бетон (<span>320<span>)
+					.checkbox
+						input#ch10-2(type="checkbox" value="Бужево-белый")
+						label(for="ch10-2") Гипс (<span>74<span>)
+
+			._group.accardion-block
+				._group-title.js-accardion-toggle
+					span страна производства
+					+svg('arrow-down')
+				._group-body.checkbox-list
+					.checkbox
+						input#ch11-1(type="checkbox" value="Украина")
+						label(for="ch11-1") Украина (<span>12<span>)
+					.checkbox
+						input#ch11-2(type="checkbox" value="Польша")
+						label(for="ch11-2") Польша (<span>34<span>)				
 			
-			._buttons
-				a._reset.btn.btn--border.btn--block.js-filter-reset(href="#")
-					span Сбросить 
-				button.btn.btn--block.btn--yellow-2 Применить фильтр
+			._button
+				button.btn.btn--block.btn--yellow-2 Применить
 				
 
 mixin filterBlockFavorite(data)

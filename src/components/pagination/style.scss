@@ -1,5 +1,5 @@
 .pagination {
-	@include flex(space-between, center, center, nowrap);
+	@include flex(center, center, center, nowrap);
 	&__counter {
 		@include flex(0, center, center, nowrap);
 		&-label {
@@ -12,12 +12,14 @@
 	&__prev {
 		margin-right: 20px;
 		a {
-			width: 34px;
-			height: 34px;
-			@include flex(0, center, center);
+			width: 50px;
+			height: 50px;
+			border-radius: 2px;
+			border: 1px solid $gray-border;
+			@include flex(center, center, center);
 			svg {
-				font-size: 34px;
-				fill: rgba(#245e63, 0.2);
+				font-size: 14px;
+				fill: $gray_dark;
 				display: block;
 				@include time();
 			}
@@ -31,13 +33,10 @@
 		}
 	}
 	&__next {
-		margin-left: 20px;
-		margin-right: 0;
+		margin-left: auto;
 	}
 	&__prev {
-		a {
-			@include flex(flex-end, center, center);
-		}
+		margin-right: auto;
 		svg {
 			transform: rotate(180deg);
 		}
@@ -51,32 +50,28 @@
 		font: 15px $baseFF;
 		span,
 		a {
-			width: 34px;
-			height: 34px;
-			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			border-radius: 2px;
 			@include flex(center, center, center);
-			color: $black;
-			background-color: $white;
-			box-shadow: $cards-bg;
+			color: $gray-dark;
+			border: 1px solid $gray-border;
+			border-radius: 2px;
+			background: transparent;
 			text-align: center;
 			@include time();
 		}
 		span {
-			background: $green;
+			background: $blue;
 			color: $white;
 		}
 
 		&.is-active {
 			a {
-				background: $green;
+				background: $blue;
 				color: $white;
 			}
 		}
-	}
-
-	&__load {
-		margin-bottom: 20px;
-		display: none;
 	}
 
 	/* &--news-view {
@@ -130,6 +125,7 @@
 	}
 
 	@include media($xs) {
+		justify-content: center;
 		flex-wrap: wrap;
 		&__counter {
 			flex: 0 0 100%;
@@ -140,19 +136,14 @@
 				font: 14px $baseFF;
 			}
 		}
-		&__load {
-			display: block;
-			flex: 0 0 100%;
-			padding: 7px 20px;
-		}
 		&__item {
 			margin: 0 3px;
 			font: 14px $baseFF;
 
 			span,
 			a {
-				width: 30px;
-				height: 30px;
+				width: 40px;
+				height: 40px;
 			}
 		}
 		&__list {
@@ -161,28 +152,7 @@
 		}
 		&__next,
 		&__prev {
-			margin-right: 16x;
-			a {
-				width: 30px;
-				height: 30px;
-
-				svg {
-					font-size: 30px;
-				}
-			}
+			display: none;
 		}
-		&__next {
-			margin-left: 16px;
-			margin-right: 0;
-		}
-
-		/* &--news-view & {
-			&__next,
-			&__prev {
-				span {
-					display: none;
-				}
-			}
-		} */
 	}
 }

@@ -88,7 +88,7 @@
                         </svg></a>
                     </div>
               </div>
-                  <div class="nav">
+                  <div class="nav header__menu-nav">
                     <div class="nav__part nav__part--left">
                       <div class="nav__item"><a href="#">3D визуализация</a></div>
                       <div class="nav__item"><a href="#">Акции</a></div>
@@ -97,14 +97,17 @@
                     </div>
                     <div class="nav__part nav__part--right">
                       <div class="nav__item"><a class="nav__item-icon" href="#">
+                          <div class="nav__amount">1</div>
                           <svg class="icon icon_libra">
                             <use xlink:href="images/sprite-svg.svg#libra"></use>
                           </svg><span>Сравнить</span></a></div>
                       <div class="nav__item"><a class="nav__item-icon" href="#">
+                          <div class="nav__amount">1</div>
                           <svg class="icon icon_heart">
                             <use xlink:href="images/sprite-svg.svg#heart"></use>
                           </svg><span>Сравнить</span></a></div>
                       <div class="nav__item"><a class="nav__item-icon" href="#">
+                          <div class="nav__amount">1</div>
                           <svg class="icon icon_cart">
                             <use xlink:href="images/sprite-svg.svg#cart"></use>
                           </svg><span>Сравнить				</span></a></div>
@@ -123,8 +126,707 @@
                         <meta itemprop="position" content="1"></a></li>
                   </ul>
                 </div>
+            <div class="main-section__row row">
+              <div class="main-section__left col-3 col-md-4 col-sm-12">
+                    <div class="filter-block main-section__filter js-filter-block">
+                      <form class="js-filter" action=""> 
+                        <div class="filter-block__head">
+                          <div class="filter-block__title">Фильтр</div><a class="filter-block__head-link" href="#">сбросить фильтр</a>
+                        </div>
+                        <div class="filter-block__result js-filter-result"></div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle is-active"><span>бренды</span>
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list is-active">
+                            <div class="filter-block__group-input"> 
+                              <input type="text" placeholder="поиск">
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch-1" type="checkbox" value="ARGENTA">
+                              <label for="ch-1">ARGENTA (<span>71</span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch-2" type="checkbox" value="ATEM">
+                              <label for="ch-2">ATEM (<span>232</span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch-3" type="checkbox" value="AquaMo">
+                              <label for="ch-3">AquaMo (<span>171</span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch-4" type="checkbox" value="Ceresit">
+                              <label for="ch-4">Ceresit (<span>672</span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch-5" type="checkbox" value="Ceresanit">
+                              <label for="ch-5">Ceresanit (<span>1402</span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch-6" type="checkbox" value="Golden Tile">
+                              <label for="ch-6">Golden Tile (<span>1150</span>)</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle is-active"><span>Цена </span>
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                          <div class="filter-block__group-body is-active">
+                            <div class="filter-block__range row row--between">
+                              <div class="filter-block__range-col col-auto">
+                                <input class="js-range-from" type="text" value="0" placeholder="" size="7">
+                              </div>
+                              <div class="filter-block__range-col col">
+                                <input class="js-range-to" type="text" value="152341" placeholder="" size="7">
+                              </div>
+                              <div class="filter-block__range-col col"><a class="btn btn--sm" href="#">OK</a></div>
+                            </div>
+                            <input class="js-range-slider" type="text" data-min="0" data-max="152341" data-from="0" data-to="152341">
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle is-active"><span>назначение</span>
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list is-active"> 
+                            <div class="checkbox">
+                              <input id="ch2-1" type="checkbox" value="Кухня">
+                              <label for="ch2-1">Кухня (<span>12<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch2-2" type="checkbox" value="Ванная">
+                              <label for="ch2-2">Ванная (<span>34<span>)</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle is-active"><span>применение</span>
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list is-active"> 
+                            <div class="checkbox">
+                              <input id="ch3-1" type="checkbox" value="ля пола">
+                              <label for="ch3-1">Для пола</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch3-2" type="checkbox" value="Для стен">
+                              <label for="ch3-2">Для стен</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle"><span>форма плитки</span>
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list"> 
+                            <div class="checkbox">
+                              <input id="ch4-1" type="checkbox" value="Квадрат">
+                              <label for="ch4-1">Квадрат (<span>12<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch4-2" type="checkbox" value="Прямоугольная">
+                              <label for="ch4-2">Прямоугольная (<span>34<span>)</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle"><span>габариты</span>
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list">
+                            <div class="filter-block__group-slogan">Ширина x длина, мм </div>
+                            <div class="checkbox">
+                              <input id="ch5-1" type="checkbox" value="300x300">
+                              <label for="ch5-1">300x300  (<span>27<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch5-2" type="checkbox" value="300x300">
+                              <label for="ch5-2">320x320  (<span>20<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch5-3" type="checkbox" value="300x300">
+                              <label for="ch5-3">300x300  (<span>27<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch5-4" type="checkbox" value="300x300">
+                              <label for="ch5-4">320x320  (<span>20<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch5-5" type="checkbox" value="300x300">
+                              <label for="ch5-5">300x300  (<span>27<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch5-6" type="checkbox" value="300x300">
+                              <label for="ch5-6">320x320  (<span>20<span>)</label>
+                            </div><hr>	
+                            <div class="filter-block__group-slogan">Ширина x длина, мм </div>
+                            <div class="checkbox">
+                              <input id="ch6-1" type="checkbox" value="30">
+                              <label for="ch6-1">30  (<span>27<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch6-2" type="checkbox" value="32">
+                              <label for="ch6-2">32  (<span>2<span>)	</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle"><span>цвет</span>
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list">
+                            <div class="checkbox">
+                              <input id="ch7-1" type="checkbox" value="Антрацит">
+                              <label for="ch7-1">Антрацит (<span>75<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch7-2" type="checkbox" value="Бужево-белый">
+                              <label for="ch7-2">Бужево-белый (<span>2<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch7-3" type="checkbox" value="Бужево-белый с коричневым">
+                              <label for="ch7-3">Бужево-белый с коричневым (<span>12<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch7-4" type="checkbox" value="Бужево-белый с розовым">
+                              <label for="ch7-4">Бужево-белый с розовым (<span>20<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch7-5" type="checkbox" value="Бужево-голубой">
+                              <label for="ch7-5">Бужево-голубой (<span>2<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch8-6" type="checkbox" value="Бужево-желтый с серым">
+                              <label for="ch8-6">Бужево-желтый с серым (<span>1<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch8-7" type="checkbox" value="Бужево-зеленый">
+                              <label for="ch8-7">Бужево-зеленый (<span>3<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch8-8" type="checkbox" value="Бужево-золотой с коричневым">
+                              <label for="ch8-8">Бужево-золотой с коричневым (<span>2<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch8-9" type="checkbox" value="Бужево-коричневый">
+                              <label for="ch8-9">Бужево-коричневый (<span>100<span>)</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle"><span>материал</span>
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list">
+                            <div class="checkbox">
+                              <input id="ch9-1" type="checkbox" value="Бетон">
+                              <label for="ch9-1">Бетон (<span>320<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch9-2" type="checkbox" value="Гипс">
+                              <label for="ch9-2">Гипс (<span>74<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch9-3" type="checkbox" value="Зеркало">
+                              <label for="ch9-3">Зеркало (<span>6<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch9-4" type="checkbox" value="керамика">
+                              <label for="ch9-4">керамика (<span>5565<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch9-5" type="checkbox" value="Керамогранит">
+                              <label for="ch9-5">Керамогранит (<span>4479<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch9-6" type="checkbox" value="Клинкер">
+                              <label for="ch9-6">Клинкер (<span>541<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch9-7" type="checkbox" value="Мрамор">
+                              <label for="ch9-7">Мрамор (<span>219<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch9-8" type="checkbox" value="Натуральный камень">
+                              <label for="ch9-8">Натуральный камень (<span>132<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch9-9" type="checkbox" value="Стекло">
+                              <label for="ch9-9">Стекло (<span>752<span>)</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle"><span>поверхности</span>
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list">
+                            <div class="checkbox">
+                              <input id="ch10-1" type="checkbox" value="Антрацит">
+                              <label for="ch10-1">Бетон (<span>320<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch10-2" type="checkbox" value="Бужево-белый">
+                              <label for="ch10-2">Гипс (<span>74<span>)</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__group accardion-block">
+                          <div class="filter-block__group-title js-accardion-toggle"><span>страна производства</span>
+                            <svg class="icon icon_arrow-down">
+                              <use xlink:href="images/sprite-svg.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                          <div class="filter-block__group-body checkbox-list">
+                            <div class="checkbox">
+                              <input id="ch11-1" type="checkbox" value="Украина">
+                              <label for="ch11-1">Украина (<span>12<span>)</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="ch11-2" type="checkbox" value="Польша">
+                              <label for="ch11-2">Польша (<span>34<span>)				</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-block__button">
+                          <button class="btn btn--block btn--yellow-2">Применить</button>
+                        </div>
+                      </form>
+                    </div>
+              </div>
+              <div class="main-section__content col-9 col-md-8 col-sm-12">
+                <div class="main-section__sort row"> 
+                  <div class="main-section__sort-button"><a class="btn btn--icon" href="#">ФИЛЬТР
+                      <svg class="icon icon_triangle">
+                        <use xlink:href="images/sprite-svg.svg#triangle"></use>
+                      </svg></a></div>
+                  <div class="main-section__sort-item col-4 col-md-6 col-xs-12">
+                    <select class="nice-select" name="">
+                      <option value="">СОРТИРОВАТЬ ПО</option>
+                      <option value="">Сначала популярные</option>
+                      <option value="">Потом другие</option>
+                    </select><a class="main-section__sort-link" href="#">
+                      <svg class="icon icon_sort-1">
+                        <use xlink:href="images/sprite-svg.svg#sort-1"></use>
+                      </svg></a><a class="main-section__sort-link" href="#">
+                      <svg class="icon icon_sort-2">
+                        <use xlink:href="images/sprite-svg.svg#sort-2"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="main-section__row row row--stretch">
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block product-block--yellow">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> Новинка
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block product-block--pink">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> Акция
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> 
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block product-block--yellow">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> Новинка
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block product-block--pink">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> Акция
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> 
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block product-block--yellow">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> Новинка
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block product-block--pink">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> Акция
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> 
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block product-block--yellow">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> Новинка
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block product-block--pink">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> Акция
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="main-section__row-item col-4 col-md-6 col-xs-12">
+                        <div class="product-block">
+                          <div class="product-block__img">
+                            <div class="product-block__special"> 
+                            </div><a class="product-block__img-link" href="#">
+                              <!--+webp(data.img)--><img src="../images/product-img-1.png" alt=""></a>
+                            <div class="product-block__icons"><a class="product-block__icon" href="#">
+                                <svg class="icon icon_libra">
+                                  <use xlink:href="images/sprite-svg.svg#libra"></use>
+                                </svg></a><a class="product-block__icon" href="#">
+                                <svg class="icon icon_heart">
+                                  <use xlink:href="images/sprite-svg.svg#heart"></use>
+                                </svg></a></div>
+                          </div>
+                          <div class="product-block__wrap">
+                            <div class="product-block__info">Плитка для пола Golden Tile Bamboo H77830 40x40 см 40*40 см
+                            </div>
+                            <div class="product-block__cost-items"> 
+                              <div class="product-block__cost">253 ₴
+                              </div><a class="product-block__cost-cart" href="#"> 
+                                <svg class="icon icon_cart">
+                                  <use xlink:href="images/sprite-svg.svg#cart"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+                <div class="main-section__row-bottom"><a class="main-section__row-link" href="#">
+                    <svg class="icon icon_exchange">
+                      <use xlink:href="images/sprite-svg.svg#exchange"></use>
+                    </svg><span>показать еще 60 товаров</span></a></div>
+                <div class="main-section__pagination">
+                      <div class="pagination">
+                        <div class="pagination__prev"><a href="#">
+                            <svg class="icon icon_arrow-right">
+                              <use xlink:href="images/sprite-svg.svg#arrow-right"></use>
+                            </svg></a></div>
+                        <div class="pagination__item"><span>1</span></div>
+                        <div class="pagination__item"><a href="#">2</a></div>
+                        <div class="pagination__item"><a href="#">3</a></div>
+                        <div class="pagination__item"><a href="#">4</a></div>
+                        <div class="pagination__item d-none_xs"><a href="#">5</a></div>
+                        <div class="pagination__item"><a href="#">...</a></div>
+                        <div class="pagination__item"><a href="#">28</a></div>
+                        <div class="pagination__next"><a href="#">
+                            <svg class="icon icon_arrow-right">
+                              <use xlink:href="images/sprite-svg.svg#arrow-right"></use>
+                            </svg></a></div>
+                      </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <footer class="footer">
+          <div class="footer__container container">
+            <div class="footer__row row">
+              <div class="footer__logo-col col-auto col-md-6 col-xs-12">
+                <div class="footer__logo"><img src="images/logo.png" alt="logo"></div>
+                <div class="footer__slogan">Интернет магазин керамической плитки</div>
+              </div>
+              <div class="footer__menu col-auto col-md-6 col-xs-12">
+                <div class="footer__title">Время работы  </div>
+                <div class="footer__menu-item">
+                  <p>Пн.-Пт.: 08:00 - 22:00 </p>
+                </div>
+                <div class="footer__menu-item">
+                  <p>Сб.: 09:00 - 20:00</p>
+                </div>
+                <div class="footer__menu-item">
+                  <p>Вс.: 09:00 - 19:00</p>
+                </div>
+              </div>
+              <div class="footer__menu col-auto col-md-6 col-xs-12">
+                <div class="footer__title">Контакты</div>
+                <div class="footer__menu-item">
+                  <p>Тел.: + 38 (044) 111-11-11</p>
+                </div>
+                <div class="footer__menu-item">
+                  <p>e-mail: info@sm2.com.ua</p>
+                </div>
+              </div>
+              <div class="footer__menu col-auto col-md-6 col-xs-12">
+                <div class="footer__title">Информация</div>
+                <div class="footer__menu-item">
+                  <p>Тел.: + 38 (044) 111-11-11</p>
+                </div>
+                <div class="footer__menu-item"><a href="#">Пользовательское соглашение</a></div>
+                <div class="footer__menu-item">
+                  <p>© 2020-2021  Интернет-магазин плитки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 .nav {
-	@include flex(space-around, center);
+	@include flex(flex-end, center);
 	flex: 1 1 auto;
 	&__nav {
 		@include flex(0, center);
@@ -24,6 +24,7 @@
 			}
 		}
 		&--right {
+			margin-left: auto;
 			.nav__item {
 				font: 14px/20px $baseFF;
 				padding: 0 16px;
@@ -53,7 +54,21 @@
 		}
 	}
 	&__item-icon {
+		position: relative;
 		@include flex(0, center, 0, 0, column);
+	}
+	&__amount {
+		@include flex(center, center);
+		position: absolute;
+		top: -8px;
+		right: -1px;
+		height: 20px;
+		width: 20px;
+		border-radius: 50%;
+		background-color: $blue;
+	}
+	@include media($xlg) {
+		display: none;
 	}
 	@include media($md) {
 		flex: 0 1 auto;

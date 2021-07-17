@@ -29,6 +29,7 @@
 	}
 
 	@include media($xs) {
+		display: none;
 		&__ul {
 			flex-wrap: nowrap;
 			overflow: auto;

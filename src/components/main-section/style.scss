@@ -1,7 +1,7 @@
 .main-section {
 	padding: 40px 0 170px;
 	position: relative;
-
+	background: url("../images/bg-main.png");
 	&__bread {
 		margin-bottom: 30px;
 	}
@@ -18,38 +18,78 @@
 			margin-bottom: 30px;
 		}
 	}
-	&__pagination {
-		margin-top: 40px;
+	&--catalog {
+		padding-bottom: 35px;
 	}
-
-	&--catalogs-page & {
-		&__banner {
-			margin-bottom: 40px;
-		}
-		&__info {
-			margin-bottom: 30px;
-		}
+	&--catalog & {
 		&__row {
-			margin: 0 -10px -20px;
-
-			&-item {
-				padding: 0 10px;
-				margin-bottom: 20px;
+			&-bottom {
+				margin: 40px 0;
+			}
+			&-link {
+				@include flex(center, center);
+				span {
+					font: 700 27px/1.2 $baseFF;
+					text-decoration: underline;
+				}
+				svg {
+					font-size: 60px;
+					margin-right: 25px;
+				}
 			}
 		}
-	}
-	&--agreement {
-		background-color: $gray-bg;
-		padding-top: 50px;
-	}
-	&--agreement & {
-		&__title {
-			margin-bottom: 30px;
+		&__filter {
+			margin-bottom: 70px;
+		}
+		&__pagination {
+			border-top: 2px solid $gray_dark;
+			padding-top: 50px;
+			margin-bottom: 20px;
+		}
+		&__sort {
+			@include flex(flex-end);
+			margin-bottom: 35px;
+			&-item {
+				@include flex(flex-end, center);
+				select {
+					padding: 10px 0 10px 0;
+					background-color: $white;
+					border-radius: 0;
+					border: 1px solid $gray-border;
+					margin-right: 10px;
+				}
+			}
+			&-button {
+				display: none;
+				max-width: 286px;
+				width: 100%;
+				margin-bottom: 25px;
+				.btn {
+					width: 100%;
+					justify-content: center;
+					padding-left: 95px;
+				}
+				svg {
+					margin-left: auto;
+					margin-right: 0;
+				}
+			}
+			&-link {
+				@include flex(center, center);
+				background-color: $white;
+				padding: 8px;
+				border: 1px solid $gray-border;
+				&:focus {
+					background-color: $gray-middle;
+				}
+				svg {
+					font-size: 26px;
+				}
+			}
 		}
 	}
 	&--cart {
 		padding: 30px 0 30px;
-		background: url("../images/bg-main.png");
 	}
 	&--cart & {
 		&__head {
@@ -82,7 +122,7 @@
 			margin-top: 67px;
 			margin-bottom: 95px;
 			&-body {
-				@include flex(0,0,0,0,column);
+				@include flex(0, 0, 0, 0, column);
 			}
 			&-title {
 				font: 700 18px/1.2 $baseFF;
@@ -102,1040 +142,16 @@
 		}
 	}
 
-	&--product & {
-		&__about {
-			border-bottom: 2px $gray-devider solid;
-		}
-		&__title {
-			text-transform: none;
-			font: bold 40px/1.16 $titleFF;
-		}
-		&__subtitle {
-			text-transform: none;
-			margin-bottom: 18px;
-		}
-		&__discription {
-			padding-bottom: 40px;
-			border-bottom: 2px solid #dae8f1;
-			margin-bottom: 40px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-		&__text {
-			margin-bottom: 20px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-
-		&__comments {
-			padding-bottom: 40px;
-			border-bottom: 2px solid #dae8f1;
-			margin-bottom: 40px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-
-		&__params {
-			&-item {
-				margin-bottom: 12px;
-				@include flex(0, center, center, nowrap);
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-			&-icon {
-				margin-right: 20px;
-				width: 48px;
-				height: 48px;
-				@include flex(center, center, center);
-				flex: 0 0 auto;
-				svg {
-					font-size: 25px;
-					fill: $green;
-					display: block;
-				}
-			}
-			&-label {
-				font-weight: bold;
-				color: $blue-dark;
-				margin-right: 10px;
-			}
-			&-value {
-				color: $text-green-dark;
-				flex: 1 1 auto;
-			}
-		}
-		&__button {
-			svg {
-				fill: $white;
-			}
-		}
-		// &__buttons {
-		// 	margin-top: 50px;
-		// 	@include flex();
-		// 	margin-bottom: -15px;
-		// 	svg{
-		// 		fill: $white;
-		// 	}
-		// 	.btn {
-		// 		margin-right: 15px;
-		// 		margin-bottom: 15px;
-		// 		&:last-child {
-		// 			margin-right: 15px;
-		// 		}
-		// 	}
-		// }
-		&__extra-body {
-			margin-bottom: 40px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-		&__catalog {
-			margin-top: 35px;
-			@include flex(0, center, center, nowrap);
-			&-icon {
-				margin-right: 15px;
-				flex: 0 0 auto;
-			}
-			a {
-				color: #51bcc3;
-				font-weight: bold;
-			}
-		}
-
-		&__prices-row {
-			max-width: 500px;
-			margin-bottom: 30px;
-			display: flex;
-			justify-content: space-between;
-		}
-		&__item {
-			// margin-right: 30px;
-			//display: flex;
-			&:last-child {
-				display: flex;
-				align-items: center;
-			}
-		}
-		&__state {
-			color: rgba($text-green-dark, 0.3);
-			font: 18px/1.3 $baseFF;
-		}
-		&__price {
-			font: 32px/1.4 $titleFF;
-			font-weight: 600;
-			color: #53392d;
-		}
-		&__count {
-			color: rgba(#95bab9, 0.8);
-			display: flex;
-			//align-items: center;
-			font: 18px $baseFF;
-			margin-top: 10px;
-		}
-		&__price-old {
-			font: 27px/1.4 $titleFF;
-			color: $bg-directory;
-			text-decoration: line-through;
-		}
-		&__label {
-			content: "";
-			position: absolute;
-			height: 60px;
-			width: 60px;
-			bottom: -20px;
-			left: 20px;
-		}
-
-		&__link {
-			svg {
-				font-size: 27px;
-				fill: $bg-directory;
-			}
-		}
-		&__add-block {
-			margin: 30px 0;
-			display: flex;
-			justify-content: space-between;
-		}
-		&__ads-item {
-			margin-bottom: 24px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-		&__amount {
-			margin-right: 38px;
-			width: 109px;
-			align-items: center;
-			justify-content: space-between;
-			display: flex;
-		}
-		&__add-btn a {
-			display: block;
-			background-color: $green;
-			height: 26px;
-			width: 26px;
-			border-radius: 50%;
-			position: relative;
-			&:before {
-				position: absolute;
-				content: "";
-				height: 1px;
-				width: 10px;
-				top: 50%;
-				left: 50%;
-				margin-left: -5px;
-				background-color: $white;
-			}
-		}
-		&__area {
-		}
-		&__number {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 42px;
-			width: 41px;
-			border-radius: 5px;
-			background-color: #f6f9ff;
-		}
-		&__del-btn a {
-			display: block;
-			background-color: $green;
-			height: 26px;
-			width: 26px;
-			border-radius: 50%;
-			position: relative;
-			&:before {
-				position: absolute;
-				content: "";
-				height: 1px;
-				width: 10px;
-				top: 50%;
-				left: 50%;
-				margin-left: -5px;
-				background-color: $white;
-			}
-			&:after {
-				position: absolute;
-				content: "";
-				height: 1px;
-				width: 10px;
-				top: 50%;
-				left: 50%;
-				margin-left: -5px;
-				background-color: $white;
-				transform: rotate(90deg);
-			}
-		}
-		&__button {
-			display: flex;
-			flex-direction: row-reverse;
-		}
-		/* &__button a {
-			padding-right: 56px;
-			padding-left: 56px;
-			flex-direction: row-reverse;
-			&:hover {
-				svg {
-					fill: #2f6283;
-					transition: all 0.3s ease 0s;
-				}
-			}
-			svg {
-				fill: $white;
-				margin-right: 16px;
-			}
-		} */
-		&__ads {
-		}
-		&__lolum-top {
-			margin-bottom: 24px;
-			.main-section__ad-title {
-				color: #f4a528;
-			}
-			.main-section__ad-subtitle {
-				color: $green;
-			}
-
-			background-color: #fcebcf;
-			border-radius: 20px;
-			padding: 30px;
-		}
-		&__title-sm {
-			font: 25px/1.1 $baseFF;
-			margin-bottom: 18px;
-		}
-		&__ad-subtitle {
-			font-weight: 500;
-			font: 16px/1.2 $baseFF;
-		}
-		&__config {
-			margin-top: 9px;
-			color: #6e8999;
-		}
-		&__lolum-bottom {
-			background-color: $form-input-bg;
-			border-radius: 20px;
-			padding: 30px;
-			.main-section__ad-subtitle {
-				color: $blue-dark;
-				margin-bottom: 30px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-			.main-section__ad-title {
-				color: $blue-dark;
-			}
-		}
-		@include media($lg) {
-			&__params {
-				margin-bottom: 25px;
-			}
-			&__add-block {
-				flex-direction: row;
-			}
-			&__button {
-				justify-content: center;
-			}
-		}
-		@include media($sm) {
-			&__ads {
-				display: none;
-			}
-			&__params {
-				margin-bottom: 25px;
-			}
-			&__ads {
-				display: none;
-			}
-			&__add-block {
-				flex-direction: row;
-			}
-			&__button {
-				justify-content: center;
-			}
-		}
-		@include media($xs) {
-			&__button a {
-				padding: 15px 25px;
-			}
-			&__title {
-				font-size: 30px;
-			}
-			&__price {
-				font-size: 25px;
-			}
-			&__price-old {
-				font-size: 18px;
-			}
-			&__count {
-				font-size: 15px;
-			}
-			&__amount {
-				margin-right: 20px;
-			}
-		}
-	}
-	&--category-page {
-		background-color: $gray-bg;
-	}
-	&--category-page & {
-		&__title {
-			margin-bottom: 40px;
-			display: flex;
-			align-content: center;
-		}
-		&__label {
-			margin-left: 30px;
-		}
-		&__sort {
-			margin-bottom: 40px;
-		}
-		&__delivery {
-			color: $green;
-			font: $fs-14;
-			text-align: right;
-		}
-		&__row {
-			margin: 0 -10px -30px;
-
-			&-item {
-				padding: 0 10px;
-				margin-bottom: 30px;
-			}
-		}
-		&__pagination {
-			margin-top: 46px;
-		}
-		&__desc {
-			margin-top: 40px;
-			background-color: $white;
-			box-shadow: 4px 4px 23px rgba(#719fa3, 0.14);
-			padding: 30px;
-			border-radius: 10px;
-			color: $blue-dark;
-			font: $fs-16;
-		}
-		&__filter {
-			&-link {
-				display: none;
-			}
-		}
-	}
-
-	&--profile {
-		background-color: $gray-bg;
-	}
-	&--profile & {
-		&__title {
-			margin-bottom: 50px;
-		}
-		&__nav {
-			margin-bottom: 50px;
-		}
-		&__subtitle {
-			margin-bottom: 40px;
-		}
-		&__tags {
-			margin: 0 -7px 30px;
-
-			&-item {
-				padding: 0 7px;
-				margin-bottom: 10px;
-			}
-		}
-	}
-
-	&--order-view & {
-		&__subtitle {
-			margin-bottom: 20px;
-		}
-		&__date {
-			margin-bottom: 40px;
-		}
-		&__wrapper {
-			margin-bottom: 90px;
-		}
-
-		@include media($md) {
-			&__date {
-				margin-bottom: 34px;
-			}
-			&__wrapper {
-				margin-bottom: 70px;
-			}
-		}
-	}
-
-	&--orders & {
-		&__head {
-			padding: 0 26px 23px 36px;
-			margin: 0 -8px;
-			&-item {
-				font: 500 18px $baseFF;
-				color: $blue-dark;
-				flex: 1 1 16.66%;
-				padding: 0 8px;
-
-				&--date {
-					flex: 1 1 16.66%;
-				}
-				&--number {
-					flex: 1 1 16.66%;
-				}
-				&--price {
-					flex: 1 1 16.66%;
-					text-align: center;
-				}
-				&--pay {
-					flex: 1 1 16.66%;
-				}
-				&--status {
-					flex: 1 1 16.66%;
-					text-align: center;
-				}
-				&--info {
-					flex: 1 1 16.66%;
-				}
-			}
-		}
-
-		&__list {
-			&-item {
-				margin-bottom: 20px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-		}
-	}
-
-	&--checkout {
-	}
-	&--checkout & {
-		&__subtitle {
-			font: bold 23px/1.4 $baseFF;
-			padding: 0 20px 15px;
-			margin-bottom: 30px;
-			color: $blue-dark;
-			border-bottom: 2px $gray-dark solid;
-		}
-		&__adres {
-			margin-top: 0;
-		}
-		&__subtitle-2 {
-			font: bold 20px/1.4 $baseFF;
-			margin-bottom: 26px;
-			color: $green;
-		}
-		&__delivery-time {
-			font: $fs-18;
-			color: $text-green-dark;
-		}
-		&__buttons {
-			@include flex(0, center, center);
-			margin-bottom: -16px;
-			.btn {
-				margin: 0 24px 16px 0;
-				&:last-child {
-					margin-right: 0;
-				}
-			}
-		}
-		&__row {
-			margin-bottom: -20px;
-		}
-		&__buttons,
-		&__input {
-			margin-bottom: 20px;
-			/* &:last-child {
-				margin-bottom: 0;
-			} */
-
-			&--middle {
-				padding-top: 10px;
-			}
-		}
-		&__group {
-			margin-bottom: 70px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-
-			&--min {
-				margin-bottom: 50px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-		}
-
-		&__result-block {
-			position: sticky;
-			top: 70px;
-		}
-
-		&__slider {
-			max-width: 560px;
-			margin: 0 -5px 20px;
-			position: relative;
-			z-index: 1;
-			&-item {
-				padding: 0 5px;
-			}
-			&-prev {
-				position: absolute;
-				top: 50%;
-				right: calc(100% + 20px);
-				transform: translateY(-50%);
-			}
-			&-next {
-				position: absolute;
-				top: 50%;
-				left: calc(100% + 20px);
-				transform: translateY(-50%);
-			}
-		}
-
-		&__right {
-			position: relative;
-		}
-	}
-	&--return-first {
-		background-color: $gray-bg;
-	}
-	&--return-first & {
-		&__title {
-			margin-bottom: 16px;
-		}
-		&__subtitle {
-			color: $text-green-dark;
-			margin-bottom: 50px;
-		}
-		&__products-title {
-			color: $blue-dark;
-			font: 23px/1.4 $baseFF;
-			font-weight: 700;
-			margin-bottom: 31px;
-		}
-		&__products-item {
-			border-bottom: 2px solid rgba($text-gray-dark, 0.2);
-		}
-		&__products-body {
-			background-color: $white;
-			padding: 9px 30px;
-			border-radius: 10px;
-			margin-bottom: 40px;
-			box-shadow: 4px 4px 23px rgba(113, 159, 163, 0.14);
-		}
-		&__button {
-			margin-bottom: 26px;
-		}
-	}
-	&--return-second & {
-		&__title {
-			margin-bottom: 30px;
-		}
-		&__about {
-			@include flex(space-between, center, center);
-			margin-bottom: 30px;
-		}
-		&__products-title {
-			margin-bottom: 0;
-		}
-		&__return-cost {
-			color: $color-price;
-			font: 600 20px/1.3 $baseFF;
-		}
-		&__list {
-			&-item {
-				margin-bottom: 30px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-		}
-		&__butttons {
-			margin-top: 40px;
-			@include flex();
-		}
-	}
-
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	// Это старые стили. Новые переместить вверх.
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-	&--search & {
-		&__title {
-			margin-bottom: 50px;
-		}
-		&__tab-nav {
-			margin-bottom: 50px;
-		}
-		&__group {
-			margin-bottom: 50px;
-			padding-bottom: 50px;
-			border-bottom: 2px rgba($gray-devider, 0.6) solid;
-			&.last,
-			&:last-child {
-				margin-bottom: 0;
-				padding-bottom: 0;
-				border: 0;
-			}
-
-			&-title {
-				color: $blue-dark;
-				font: bold 25px/29px $baseFF;
-				margin-bottom: 40px;
-			}
-		}
-		&__list {
-			&-item {
-				margin-bottom: 40px;
-				padding-bottom: 40px;
-				border-bottom: 2px rgba($gray-devider, 0.6) solid;
-				&:last-child {
-					margin-bottom: 0;
-					padding-bottom: 0;
-					border: 0;
-				}
-			}
-		}
-		&__buttons {
-			@include flex(center);
-			margin-top: 100px;
-		}
-	}
-	&--contacts & {
-		&__title {
-			margin-bottom: 40px;
-		}
-		&__row {
-			margin-bottom: -40px;
-			&-item {
-				margin-bottom: 40px;
-			}
-		}
-		&__adres {
-			margin-top: 20px;
-			&-metro {
-				margin-bottom: 20px;
-				@include flex(0, center, center, nowrap);
-				color: #777878;
-				font: bold 16px/1.4 $baseFF;
-				svg {
-					margin-right: 15px;
-					flex: 0 0 auto;
-					height: 48px;
-					width: 40px;
-					fill: #777878;
-				}
-				&--orange {
-					color: #f47201;
-					svg {
-						fill: #f47201;
-					}
-				}
-			}
-			&-item {
-				margin-bottom: 12px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-				strong {
-					color: $green;
-					font-weight: 700;
-				}
-			}
-		}
-	}
-	&--about-page & {
-		&__img {
-			picture {
-				position: relative;
-				z-index: 1;
-				display: block;
-				&:after {
-					content: "";
-					display: block;
-					width: 100%;
-					height: 100%;
-					position: absolute;
-					top: 0;
-					left: 0;
-					z-index: 3;
-					background: linear-gradient(
-						180deg,
-						rgba(255, 255, 255, 0) 0%,
-						rgba(201, 220, 233, 0.81) 62.29%,
-						rgba(201, 220, 233, 0.84) 100%
-					);
-					border-radius: 10px;
-				}
-				img {
-					border-radius: 10px;
-					width: 100%;
-					display: block;
-				}
-			}
-		}
-		&__title {
-			font: 700 27px/1.42 $baseFF;
-			margin-bottom: 50px;
-		}
-		&__group-1 {
-			padding-bottom: 130px;
-			background: url("../images/about-page-bg-2.svg") 0 100% no-repeat,
-				url("../images/about-page-bg-1.svg") calc(100% - 120px) calc(100% - 25px) no-repeat;
-			// &-text{}
-		}
-		&__slogan {
-			font: 600 20px/26px $baseFF;
-			color: $green;
-		}
-
-		&__adres {
-			margin-bottom: 30px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-			&-title {
-				color: $green;
-				margin-bottom: 20px;
-				font: bold 18px/26px $baseFF;
-			}
-		}
-
-		&__advantages {
-			margin-top: 132px;
-			&-title {
-				text-align: center;
-				margin-bottom: 50px;
-				color: $green;
-			}
-			&-row {
-				margin-bottom: -20px;
-			}
-			&-item {
-				margin-bottom: 20px;
-			}
-		}
-	}
-	&--delivery {
-		background-color: $gray-bg;
-	}
-	&--delivery & {
-		&__title {
-			margin-bottom: 50px;
-		}
-		&__tab-nav {
-			margin-bottom: 55px;
-		}
-		&__banner {
-			margin-bottom: 40px;
-		}
-		&__adres {
-			margin-top: 20px;
-			&-metro {
-				margin-bottom: 20px;
-				@include flex(0, center, center, nowrap);
-				color: #777878;
-				span {
-					font: 700 16px/1.25 $baseFF;
-				}
-				svg {
-					margin-right: 15px;
-					flex: 0 0 auto;
-					height: 48px;
-					width: 40px;
-					fill: #777878;
-				}
-
-				&--orange {
-					color: #f47201;
-					svg {
-						fill: #f47201;
-					}
-				}
-			}
-			&-item {
-				margin-bottom: 12px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-				strong {
-					color: $green;
-					font-weight: 700;
-				}
-			}
-		}
-		&__pay {
-			margin-top: 30px;
-			&-title {
-				margin-bottom: 15px;
-				font-weight: bold;
-				color: $green;
-			}
-		}
-	}
-
-	&--discount & {
-		&__row {
-			margin-bottom: 30px;
-			&-item {
-				margin-bottom: 20px;
-			}
-		}
-		&__subtitle {
-			margin-bottom: 40px;
-		}
-		&__progress {
-			margin-bottom: 90px;
-		}
-		&__conditions {
-			&-item {
-				margin-bottom: 30px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-		}
-	}
-	&--contacts {
-		background-color: $gray-bg;
-	}
-	&--bills & {
-		&__filter {
-			margin-bottom: 50px;
-		}
-		&__head {
-			padding: 0 30px 30px;
-			&-item {
-				text-align: center;
-				font-weight: 500;
-				color: $green;
-				&:first-child {
-					text-align: left;
-				}
-				/* &--number{ font-weight: bold; color: $blue-dark; flex: 0 0 22%; max-width: 22%; } 
-				&--date{ text-align: center; flex: 0 0 24%; max-width: 24%; } 
-				&--price{ text-align: center; flex: 0 0 24%; max-width: 24%; } 
-				&--status{ flex: 0 0 30%; max-width: 30%; }  */
-			}
-		}
-		&__list {
-			&-item {
-				margin-bottom: 15px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-		}
-	}
-
-	&--news & {
-		&__title {
-			margin-bottom: 50px;
-			//font: 700 27px/1.4 $baseFF;
-		}
-		/* &__item {
-			border-bottom: 1px solid rgba($gray-devider, 0.6);
-			margin-bottom: 40px;
-			padding-bottom: 40px;
-
-			&:last-child {
-				border-bottom: none;
-				padding-bottom: 0;
-				margin-bottom: 0;
-			}
-		} */
-
-		&__row {
-			margin-bottom: -24px;
-			&-item {
-				margin-bottom: 24px;
-			}
-		}
-		&__list {
-			&-item {
-				margin-bottom: 40px;
-				padding-bottom: 40px;
-				border-bottom: 2px rgba($gray-devider, 0.6) solid;
-				&:last-child {
-					margin-bottom: 0;
-					padding-bottom: 0;
-					border: 0;
-				}
-			}
-		}
-
-		// &__imgs {
-		// 	margin-bottom: 20px;
-		// 	&-item {
-		// 		margin-bottom: 20px;
-		// 	}
-		// }
-
-		// &__buttons {
-		// 	margin: 50px 0 -15px;
-		// 	.btn {
-		// 		margin: 0 15px 15px 0;
-		// 	}
-		// }
-
-		// &__other {
-		// 	margin-top: 150px;
-		// 	&-title {
-		// 		margin-bottom: 50px;
-		// 	}
-		// 	&-row {
-		// 		margin-bottom: -20px;
-		// 	}
-		// 	&-item {
-		// 		margin-bottom: 20px;
-		// 	}
-		// }
-	}
-
 	@include media($md) {
 		padding: 40px 0 200px;
 		&--cart {
 			padding: 20px 0 20px 0;
 		}
-		&--news & {
-			&__title {
-				margin-bottom: 40px;
-			}
-			&__other {
-				margin-top: 100px;
-			}
-		}
 		&--product {
 			padding: 40px 0 70px;
 		}
-		&--orders & {
-			&__head {
-				padding: 0 16px 20px;
-				&-item {
-					font: 500 14px $baseFF;
-					flex: 1 1 16.66%;
-				}
-			}
-
-			&__list {
-				&-item {
-					margin-bottom: 20px;
-					&:last-child {
-						margin-bottom: 0;
-					}
-				}
-			}
-		}
-
-		&--checkout & {
-			&__subtitle {
-				font: bold 20px/1.4 $baseFF;
-				padding: 0 16px 10px;
-			}
-			&__subtitle-2 {
-				font: bold 18px/1.4 $baseFF;
-				margin-bottom: 20px;
-			}
-
-			&__group {
-				margin-bottom: 50px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-
-				&--min {
-					margin-bottom: 40px;
-					&:last-child {
-						margin-bottom: 0;
-					}
-				}
-			}
-
-			&__slider {
-				max-width: none;
-				padding: 0 70px;
-
-				&-prev {
-					right: auto;
-					left: 0;
-				}
-				&-next {
-					left: auto;
-					right: 0;
-				}
-			}
+		&--catalog {
+			padding-bottom: 35px;
 		}
 	}
 
@@ -1147,160 +163,12 @@
 				margin-bottom: 35px;
 			}
 		}
-		&--return-first {
-			padding: 40px 0 150px;
+		&--catalog {
+			padding-bottom: 35px;
 		}
-		&--return-first & {
-			/* &__button {
-				display: flex;
-				justify-content: center;
-			} */
-			&__products-body {
-				padding: 0 10px;
-			}
-			&__subtitle {
-				margin-bottom: 20px;
-			}
-		}
-		&--news & {
-			/* &__title {
-				margin-bottom: 10px;
-			} */
-		}
-		&--cart {
-			padding: 20px 0 20px 0;
-		}
-		&--cart & {
-			&__text {
-				font: 16px/1.3 $baseFF;
-			}
-			&__accardion {
-				margin-bottom: 40px;
-			}
-		}
-		&--product & {
-			&__img {
-				margin-bottom: 40px;
-			}
-		}
-		&--product {
-			padding: 40px 0 60px;
-		}
-
-		&--profile & {
-			&__title {
-				margin-bottom: 40px;
-			}
-			&__subtitle {
-				margin-bottom: 30px;
-			}
-			&__nav {
-				margin-bottom: 40px;
-			}
-			&__subtitle {
-				margin-bottom: 30px;
-			}
-			&__tags {
-				margin: 0 -7px 30px;
-			}
-		}
-
-		&--category-page & {
-			&__title {
-				margin-bottom: 30px;
-			}
-			&__sort {
-				margin-bottom: 30px;
-			}
-			&__row {
-				margin: 0 -10px -20px;
-
-				&-item {
-					padding: 0 10px;
-					margin-bottom: 20px;
-				}
-			}
+		&--catalog & {
 			&__pagination {
-				margin-top: 30px;
-			}
-			&__desc {
-				margin-top: 30px;
-				padding: 24px 16px;
-				font: $fs-14;
-			}
-			&__filter {
-				&-link {
-					margin-bottom: 30px;
-					display: block;
-				}
-			}
-		}
-
-		&--about-page & {
-			&__group-1 {
-				padding-bottom: 100px;
-				background: url("../images/about-page-bg-2.svg") 0 calc(100% - 50px) no-repeat;
-				// &-text{}
-			}
-			&__slogan {
-				font: 600 18px/24px $baseFF;
-			}
-			&__title {
-				font: 700 25px/1.42 $baseFF;
-				margin-bottom: 50px;
-			}
-			&__adres {
-				margin-bottom: 20px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-				&-title {
-					margin-bottom: 10px;
-				}
-			}
-
-			&__advantages {
-				margin-top: 100px;
-				&-title {
-					margin-bottom: 40px;
-				}
-			}
-		}
-
-		&--search & {
-			&__title {
-				margin-bottom: 40px;
-			}
-			&__tab-nav {
-				margin-bottom: 40px;
-			}
-			&__group {
-				margin-bottom: 40px;
-				padding-bottom: 40px;
-				&.last,
-				&:last-child {
-					margin-bottom: 0;
-					padding-bottom: 0;
-					border: 0;
-				}
-
-				&-title {
-					font: bold 22px/26px $baseFF;
-					margin-bottom: 30px;
-				}
-			}
-			&__list {
-				&-item {
-					margin-bottom: 30px;
-					padding-bottom: 30px;
-					&:last-child {
-						margin-bottom: 0;
-						padding-bottom: 0;
-					}
-				}
-			}
-			&__buttons {
-				margin-top: 70px;
+				padding-top: 30px;
 			}
 		}
 	}
@@ -1319,26 +187,30 @@
 				margin-bottom: 20px;
 			}
 		}
-		&--agreement & {
-			&__title {
-				font: 700 18px/1.4 $baseFF;
-				margin-bottom: 20px;
-			}
-			&__text {
-				font: 15px/1.37 $baseFF;
-				margin-bottom: 15px;
-			}
+		&--catalog {
+			padding: 40px 0 35px;
 		}
-		&--return-first {
-			padding: 30px 0 100px;
-		}
-		&--return-first & {
-			&__products-title {
-				font: 700 16px/1.3 $baseFF;
+		&--catalog & {
+			&__sort-button {
+				display: block;
 			}
-			&__button {
-				.btn {
-					width: 100%;
+			&__sort {
+				@include flex(center, center, 0, nowrap, column);
+			}
+			&__row {
+				&-bottom {
+					margin: 20px 0;
+				}
+				&-link {
+					@include flex(center, center);
+					span {
+						font: 700 17px/1.2 $baseFF;
+						text-decoration: underline;
+					}
+					svg {
+						font-size: 30px;
+						margin-right: 25px;
+					}
 				}
 			}
 		}
@@ -1403,198 +275,6 @@
 				&-icon {
 					display: none;
 				}
-			}
-		}
-
-		&--profile & {
-			&__title {
-				margin-bottom: 30px;
-			}
-			&__subtitle {
-				margin-bottom: 20px;
-			}
-			&__nav {
-				margin-bottom: 30px;
-			}
-			&__subtitle {
-				margin-bottom: 20px;
-			}
-			&__tags {
-				margin: 0 -7px 20px;
-			}
-		}
-
-		&--category-page & {
-			&__title {
-				margin-bottom: 30px;
-				display: flex;
-				flex-wrap: wrap;
-				span {
-					flex: 0 0 100%;
-				}
-			}
-			&__label {
-				margin: 15px 0 0;
-			}
-
-			&__sort {
-				margin-bottom: 24px;
-
-				&-item {
-					margin-bottom: 16px;
-					&:last-child {
-						margin-bottom: 0;
-					}
-				}
-			}
-			&__delivery {
-				text-align: left;
-			}
-
-			&__pagination {
-				margin-top: 24px;
-			}
-			&__desc {
-				margin-top: 30px;
-				padding: 24px 16px;
-				font: $fs-14;
-			}
-			&__filter {
-				&-link {
-					margin-bottom: 24px;
-				}
-			}
-		}
-
-		&--about-page & {
-			&__img {
-				margin-bottom: 20px;
-			}
-			&__group-1 {
-				padding-bottom: 70px;
-				background: none;
-				// &-text{}
-			}
-			&__title {
-				font: 700 22px/1.42 $baseFF;
-				margin-bottom: 50px;
-			}
-			&__group-2 {
-				// .main-section__img{ margin: 20px 0 0; }
-			}
-			&__slogan {
-				font: 600 16px/20px $baseFF;
-				br {
-					display: none;
-				}
-			}
-
-			&__advantages {
-				margin-top: 70px;
-				&-title {
-					margin-bottom: 30px;
-				}
-			}
-		}
-
-		&--discount & {
-			&__title {
-				margin-bottom: 40px;
-			}
-			&__row {
-				margin-bottom: 40px;
-				&-item {
-					margin-bottom: 20px;
-				}
-			}
-			&__subtitle {
-				margin-bottom: 40px;
-			}
-			&__progress {
-				margin-bottom: 70px;
-			}
-		}
-
-		&--bills &,
-		&--orders & {
-			&__filter {
-				margin-bottom: 40px;
-				&-item {
-					margin-bottom: 10px;
-					&:last-child {
-						margin-bottom: 0;
-					}
-				}
-			}
-			&__head {
-				display: none;
-			}
-		}
-
-		&--news & {
-			&__list {
-				&-item {
-					margin-bottom: 30px;
-					padding-bottom: 30px;
-					&:last-child {
-						margin-bottom: 0;
-						padding-bottom: 0;
-					}
-				}
-			}
-
-			&__buttons {
-				margin: 40px 0 -15px;
-			}
-
-			&__other {
-				margin-top: 70px;
-				&-title {
-					margin-bottom: 40px;
-				}
-			}
-		}
-		&--contacts & {
-			&__title {
-				margin-bottom: 30px;
-			}
-			&__row {
-				margin-bottom: -20px;
-				&-item {
-					margin-bottom: 20px;
-				}
-			}
-		}
-
-		&--checkout & {
-			&__subtitle {
-				font: bold 18px/1.4 $baseFF;
-				padding: 0 0 10px;
-			}
-			&__subtitle-2 {
-				font: bold 16px/1.4 $baseFF;
-				margin-bottom: 16px;
-			}
-			&__delivery-time {
-				font: $fs-14;
-			}
-
-			&__group {
-				margin-bottom: 40px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-
-				&--min {
-					margin-bottom: 30px;
-					&:last-child {
-						margin-bottom: 0;
-					}
-				}
-			}
-
-			&__slider {
-				padding: 0 50px;
 			}
 		}
 	}
