@@ -66,13 +66,44 @@
                 <div class="header__user"><a class="header__language-link" href="#">
                     <svg class="icon icon_earth">
                       <use xlink:href="images/sprite-svg.svg#earth"></use>
-                    </svg><span>UA</span></a><a class="header__user-link" href="#">
+                    </svg><span>UA</span></a><a class="header__user-link js-popup-show" href="#popup-login">
                     <svg class="icon icon_user">
                       <use xlink:href="images/sprite-svg.svg#user"></use>
                     </svg></a></div>
               </div>
             </div>
           </div>
+                  <div class="popup popup--login" id="popup-login">
+                    <div class="popup__overflow js-popup-hide"></div>
+                    <div class="popup__wrapper"><a class="popup__close js-popup-hide">
+                        <svg class="icon icon_close">
+                          <use xlink:href="images/sprite-svg.svg#close"></use>
+                        </svg></a>
+                      <div class="popup__title">Вход</div>
+                          <div class="form-block form-block--login">
+                            <div class="form-block__form">
+                              <div class="form-block__form-row">
+                                <div class="form-block__form-item"><span>Ел. почта или телефон<sup>*</sup></span>
+                                  <input type="text" name="Email или телефон">
+                                </div>
+                              </div>
+                              <div class="form-block__form-row">
+                                <div class="form-block__form-item"><span>Пароль <sup>*</sup></span>
+                                  <input type="password" name="Пароль">
+                                </div>
+                              </div>
+                              <div class="form-block__info">
+                                <div class="checkbox">
+                                  <input id="ch-1" type="checkbox" value="Запомнить меня">
+                                  <label for="ch-1">Запомнить меня</label>
+                                </div><a href="#">Забыли пароль?</a>
+                              </div>
+                              <div class="form-block__button"><a class="btn btn--lg btn--blue" href="#">войти</a></div>
+                              <div class="form-block__link"> <a href="#">Зарегистрироваться</a></div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
           <div class="header__bottom" id="top_nav"> 
             <div class="header__container container">
               <div class="header__bottom-body"> 

@@ -105,6 +105,31 @@
 			}
 		}
 	}
+	&--login & {
+		&__form {
+			font-size: 14px;
+			width: 375px;
+			&-item {
+				margin-bottom: 15px;
+			}
+		}
+		&__info {
+			margin-bottom: 20px;
+			margin-left: 20px;
+			@include flex(space-between,center,0,nowrap);
+		}
+		&__button {
+			.btn {
+				width: 100%;
+				text-transform: uppercase;
+			}
+			margin-bottom: 15px;
+		}
+		&__link {
+			text-align: center;
+			color: $gray-dark;
+		}
+	}
 
 	@include media($sm) {
 		&__body {
@@ -120,6 +145,11 @@
 			width: 500px;
 			height: 300px;
 		}
+		&--login & {
+			&__form {
+				width: 100%;
+			}
+		}
 	}
 	@include media($xs) {
 		&__check-list {
@@ -130,6 +160,14 @@
 		}
 		&__input {
 			width: 100%;
+		}
+		&--login & {
+			&__info {
+				flex-direction: column;
+				.checkbox {
+					margin-bottom: 15px;
+				}
+			}
 		}
 	}
 }

@@ -1,4 +1,4 @@
-//- include ../form-block/template
+include ../form-block/template
 //- include ../upload-block/template
 //- include ../stars/template
 
@@ -10,12 +10,18 @@ mixin popup(data)
 				+svg('close')
 			block
 
+mixin popupDuble(data)
+	.popup&attributes(attributes)
+		._overflow.js-popup-hide
+		._wrapper
+			a._close.js-popup-hide
+				+svg('close')
+			block
 
 
-mixin popupFinish(data)
+
+mixin popupLogin(data)
 	+popup().popup--login#popup-login
-		._title Спасибо! заказ оформлен
-		._desc Наши менеджеры скоро свяжутся с вами<br> для уточнения заказа
-		._buttons
-			a.btn.-border(href="#") Вернуться к каталогу
+		._title Вход
+		+formBlockLogin()
 

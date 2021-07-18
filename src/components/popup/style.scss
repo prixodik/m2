@@ -9,7 +9,7 @@
 	visibility: hidden;
 	pointer-events: none;
 	opacity: 0;
-	padding: 70px 30px;
+	padding: 170px 15px;
 	overflow-y: auto;
 	//@include time(0.4s, opacity);
 	transition: left 0s ease 0.5s, opacity 0.1s ease;
@@ -28,11 +28,12 @@
 	&__wrapper {
 		position: relative;
 		width: 100%;
-		padding: 100px 160px;
-		max-width: 810px;
+		padding: 10px 15px 20px 15px;
+		max-width: 470px;
 		margin: auto;
 		z-index: 1;
 		background: $white;
+		border: 4px solid $blue;
 		border-radius: 5px;
 		transform: translateY(150px) rotateX(-85deg);
 		opacity: 0;
@@ -42,37 +43,27 @@
 	}
 
 	&__close {
-		width: 48px;
-		height: 48px;
 		cursor: pointer;
 		position: absolute;
-		top: 25px;
 		z-index: 10;
-		right: 25px;
-		background: $white;
-		box-shadow: 2px 2px 8px rgba(92, 109, 116, 0.1);
+		top: 10px;
+		right: 40px;
 		margin: 0;
 		padding: 0;
 		visibility: visible;
 		@include time();
-		@include flex(center, center, center);
-		border-radius: 50%;
 
 		svg {
-			fill: $green;
-			font-size: 20px;
-		}
-
-		&:hover {
-			background: $gray-bg;
+			fill: $gray-dark;
+			font-size: 12px;
 		}
 	}
 	&__title {
-		text-align: center;
-		margin: 0 0 40px;
-		font: $title-h3;
+		padding-bottom: 20px;
+		font: $title-h5;
 		text-transform: uppercase;
-		color: $green;
+		color: $black;
+		border-bottom: 1px solid $gray-border;
 	}
 	&__desc {
 		text-align: center;
@@ -105,26 +96,9 @@
 		}
 	}
 
-	&--finish & {
-		&__wrapper {
-			padding-top: 50px;
-			padding-bottom: 50px;
-		}
-		&__img {
-			margin-bottom: 40px;
-			@include flex(center);
-		}
+	&--login & {
 		&__title {
 			margin-bottom: 20px;
-		}
-		&__desc {
-			margin: 0 auto 34px;
-			max-width: 520px;
-			color: $text-green-dark;
-			a {
-				color: $link;
-				font-weight: bold;
-			}
 		}
 		&__buttons {
 			@include flex(center);
@@ -140,58 +114,21 @@
 				}
 			}
 		}
-
-		@include media($xs) {
-			&__wrapper {
-				padding-top: 40px;
-				padding-bottom: 40px;
-			}
-			&__img {
-				margin-bottom: 34px;
-			}
-			&__desc {
-				margin: 0 auto 24px;
-			}
-
-			&__buttons {
-				.btn {
-					width: 100%;
-					margin-left: 0;
-					margin-right: 0;
-				}
-			}
-		}
 	}
 
 	@include media($md) {
-		&__wrapper {
-			padding: 100px 100px;
-		}
 	}
 
 	@include media($sm) {
-
-	}
-	@include media($xs) {
-		padding: 20px 10px;
-		&__wrapper {
-			padding: 50px 20px 40px;
-		}
-		&__title {
-			font: $title-h3-xs;
-			margin-bottom: 30px;
-		}
 		&__close {
 			top: 10px;
 			right: 10px;
-			width: 38px;
-			height: 38px;
-			svg {
-				font-size: 16px;
-			}
 		}
-		&__desc {
-			font: $fs-14;
+		&__wraper {
+			padding-left: 10px;
+			padding-right: 10px;
 		}
+	}
+	@include media($xs) {
 	}
 }

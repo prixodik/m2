@@ -3,6 +3,7 @@ include ../menu-block/template
 include ../nav-block/template
 include ../search-block/template
 include ../burger/template
+include ../popup/template
 
 mixin header(data)
 	header.header&attributes(attributes)
@@ -40,8 +41,9 @@ mixin header(data)
 						a(href="#")._language-link
 							+svg('earth')
 							span UA
-						a(href="#")._user-link
+						a(href="#popup-login")._user-link.js-popup-show
 							+svg('user')
+		+popupLogin()
 
 
 					

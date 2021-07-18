@@ -83,3 +83,24 @@ mixin formBlockMessage(data)
 					textarea(name="Сообщение", cols="30", rows="10") 
 		._button
 			a(href="#").btn.-md.-blue-dark Отправить
+
+mixin formBlockLogin(data)
+	.form-block.-login&attributes(attributes)
+		._form
+			._form-row
+				._form-item
+					span Ел. почта или телефон<sup>*</sup>
+					input(type="text" name="Email или телефон")
+			._form-row
+				._form-item
+					span Пароль <sup>*</sup>
+					input(type="password" name="Пароль")
+			._info
+				.checkbox
+					input#ch-1(type="checkbox" value="Запомнить меня")
+					label(for="ch-1") Запомнить меня
+				a(href="#") Забыли пароль?
+			._button
+				a(href="#").btn.-lg.-blue войти
+			._link 
+				a(href="#") Зарегистрироваться
