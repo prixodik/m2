@@ -1,0 +1,85 @@
+mixin formBlock(data)
+	.form-block&attributes(attributes)
+		._form
+			._form-row
+				._form-item
+					span Имя <sup>*</sup>
+					input(type="text" name="Имя")
+				._form-item
+					span Фамилия <sup>*</sup>
+					input(type="text" name="Фамилия")
+			._form-row
+				._form-item
+					span Название компании
+					input(type="text" name="Название компании")
+			._form-row
+				._form-item
+					span Email <sup>*</sup>
+					input(type="text" name="Email")
+				._form-item
+					span Телефон <sup>*</sup>
+					input(type="number" name="Телефон")
+			.__form-row
+				._form-item
+					select.nice-select(name="Город")
+						option(value="" disabled selected) Город
+						option(value="") Киев
+						option(value="") Львов
+						option(value="") Севастополь
+			._form-row
+				._form-item
+					span Адрес <sup>*</sup>
+					input(type="text" name="Email" placeholder="Улица")
+				._form-item
+					input(type="text" name="Телефон" placeholder="Корпус")
+		._check-list
+			.checkbox
+				input#ch-1(type="checkbox" value="Создать аккаунт")
+				label(for="ch-1") Создать аккаунт
+		._check-list
+			._title.title-h5 доставка
+			.radiobox
+				input(type="radio" id="p1" name="Доставка" value="1" checked)
+				label(for="p1")  <strong>Самовывоз</strong>
+			.radiobox
+				input(type="radio" id="p2" name="Доставка" value="2")
+				label(for="p2") Курьер: <strong>100 грн</strong>
+			.radiobox
+				input(type="radio" id="p3" name="Доставка" value="3")
+				label(for="p3") Новая Почта
+			.radiobox
+				input(type="radio" id="p4" name="Доставка" value="4")
+				label(for="p4") Беслпатная доставка от <strong>100 шт</strong>
+		._check-list
+			._title.title-h5 оплата
+			.radiobox
+				input(type="radio" id="p5" name="оплата" value="5" checked)
+				label(for="p5") Безналичный расчет
+			span Произведите оплату непосредственно на наш банковский счет. Пожалуйста, используйте ID вашего заказа в качестве ссылки на платеж. Ваш заказ не будет отправлен до тех пор, пока оплата не будет произведена на наш счет.
+			.radiobox
+				input(type="radio" id="p6" name="оплата" value="6")
+				label(for="p6") Оплата наличными при получении
+		._button
+			a(href="#").btn.btn--blue-dark Подтвердить заказ
+
+mixin formBlockMessage(data)
+	.form-block.-message&attributes(attributes)
+		._form
+			._form-row
+				._form-item
+					span Имя <sup>*</sup>
+					input(type="text" name="Имя")
+			._form-row
+				._form-item
+					span Email <sup>*</sup>
+					input(type="text" name="Email")
+			._form-row
+				._form-item
+					span Тема 
+					input(type="text" name="Тема")
+			._form-row
+				._form-item
+					span Сообщение
+					textarea(name="Сообщение", cols="30", rows="10") 
+		._button
+			a(href="#").btn.-md.-blue-dark Отправить

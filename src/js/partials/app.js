@@ -864,7 +864,7 @@ var uikit = {
 
 		//this.tabs();
 		//this.navFixed();
-		//this.niceSelect();
+		this.niceSelect();
 		this.countBlock();
 		this.fancybox();
 		this.headerFix();

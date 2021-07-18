@@ -10225,7 +10225,7 @@ var uikit = {
 
 		//this.navFixed();
 
-		//this.niceSelect();
+		this.niceSelect();
 
 		this.countBlock();
 

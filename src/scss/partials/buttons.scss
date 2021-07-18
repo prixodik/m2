@@ -44,7 +44,13 @@
 			margin: 0 0 0 6px;
 		}
 	}
-
+	&--gray {
+		background: $gray-btn;
+		text-transform: uppercase;
+		color: $white;
+		font-size: 12px;
+		font-weight: 600;
+	}
 	&--blue-dark {
 		background: $blue-dark;
 		color: $white;
@@ -62,6 +68,10 @@
 			font-size: 19px;
 			margin-right: 16px;
 		}
+	}
+	&--md {
+		padding: 13px 15px;
+		border-radius: 1px;
 	}
 	&--sm {
 		padding: 5px 16px;

@@ -117,7 +117,7 @@
             </div>
           </div>
         </header>
-        <div class="main-section main-section--cart">
+        <div class="main-section main-section--delivery">
           <div class="main-section__container container">
                 <div class="breadcrumbs main-section__bread">
                   <ul class="breadcrumbs__ul" itemscope="" itemtype="http://schema.org/BreadcrumbList">
@@ -128,110 +128,100 @@
                   </ul>
                 </div>
             <div class="_container container--sm">
-              <div class="main-section__head">
-                <h1 class="main-section__title title-h2">ваша корзина</h1><a class="main-section__head-link" href="#">вернутся к каталогу</a>
-              </div>
-                  <div class="table table--carts">
-                    <div class="table__row table__row--head">
-                      <div class="table__cell"><span>наименование</span></div>
-                      <div class="table__cell"><span>цена</span></div>
-                      <div class="table__cell"><span>количество</span></div>
-                      <div class="table__cell"><span>всего</span></div>
-                    </div>
-                    <div class="table__row">
-                      <div class="table__cell">
-                        <div class="table__cell-product">
-                          <div class="table__img"><img src="images/cart-img-1.png" alt=""></div><a class="table__name" href="#">Плитка Zeus Ceramica Calcare ZRXCL0BR</a>
-                        </div>
-                      </div>
-                      <div class="table__cell"> 
-                        <div class="table__slogan">цена</div><span>121 грн </span>
-                      </div>
-                      <div class="table__cell">
-                        <div class="table__slogan">количество</div>
-                            <div class="count-block">
-                              <div class="count-block__body">
-                                <input class="count-block__input" type="number" value="1">
-                                <div class="count-block__buttons"><a class="count-block__plus js-count-plus" href="#"></a><a class="count-block__minus js-count-minus" href="#"></a></div>
-                              </div>
+              <div class="main-section__title title-h2">доставка и оплата</div>
+              <div class="main-section__body row">
+                <div class="main-section__body-left col-6 col-sm-12">
+                      <div class="form-block">
+                        <div class="form-block__form">
+                          <div class="form-block__form-row">
+                            <div class="form-block__form-item"><span>Имя <sup>*</sup></span>
+                              <input type="text" name="Имя">
                             </div>
-                      </div>
-                      <div class="table__cell"> 
-                        <div class="table__slogan">всего</div>
-                        <div class="table__cell-icon"><span>242 грн</span><a class="table__close" href="#"></a></div>
-                      </div>
-                    </div>
-                    <div class="table__row">
-                      <div class="table__cell">
-                        <div class="table__cell-product">
-                          <div class="table__img"><img src="images/cart-img-1.png" alt=""></div><a class="table__name" href="#">Плитка Zeus Ceramica Calcare ZRXCL0BR</a>
-                        </div>
-                      </div>
-                      <div class="table__cell"> 
-                        <div class="table__slogan">цена</div><span>235 грн </span>
-                      </div>
-                      <div class="table__cell">
-                        <div class="table__slogan">количество</div>
-                            <div class="count-block">
-                              <div class="count-block__body">
-                                <input class="count-block__input" type="number" value="1">
-                                <div class="count-block__buttons"><a class="count-block__plus js-count-plus" href="#"></a><a class="count-block__minus js-count-minus" href="#"></a></div>
-                              </div>
+                            <div class="form-block__form-item"><span>Фамилия <sup>*</sup></span>
+                              <input type="text" name="Фамилия">
                             </div>
-                      </div>
-                      <div class="table__cell">
-                        <div class="table__slogan">всего</div>
-                        <div class="table__cell-icon"> <span>235 грн</span><a class="table__close" href="#"></a></div>
-                      </div>
-                    </div>
-                    <div class="table__row">
-                      <div class="table__cell">
-                        <div class="table__cell-product">
-                          <div class="table__img"><img src="images/cart-img-1.png" alt=""></div><a class="table__name" href="#">Плитка Zeus Ceramica Calcare ZRXCL0BR</a>
-                        </div>
-                      </div>
-                      <div class="table__cell">
-                        <div class="table__slogan">цена </div><span>456 грн </span>
-                      </div>
-                      <div class="table__cell">
-                        <div class="table__slogan">количество</div>
-                            <div class="count-block">
-                              <div class="count-block__body">
-                                <input class="count-block__input" type="number" value="1">
-                                <div class="count-block__buttons"><a class="count-block__plus js-count-plus" href="#"></a><a class="count-block__minus js-count-minus" href="#"></a></div>
-                              </div>
+                          </div>
+                          <div class="form-block__form-row">
+                            <div class="form-block__form-item"><span>Название компании</span>
+                              <input type="text" name="Название компании">
                             </div>
+                          </div>
+                          <div class="form-block__form-row">
+                            <div class="form-block__form-item"><span>Email <sup>*</sup></span>
+                              <input type="text" name="Email">
+                            </div>
+                            <div class="form-block__form-item"><span>Телефон <sup>*</sup></span>
+                              <input type="number" name="Телефон">
+                            </div>
+                          </div>
+                          <div class="form-block__form-row">
+                            <div class="form-block__form-item">
+                              <select class="nice-select" name="Город">
+                                <option value="" disabled selected>Город</option>
+                                <option value="">Киев</option>
+                                <option value="">Львов</option>
+                                <option value="">Севастополь</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-block__form-row">
+                            <div class="form-block__form-item"><span>Адрес <sup>*</sup></span>
+                              <input type="text" name="Email" placeholder="Улица">
+                            </div>
+                            <div class="form-block__form-item">
+                              <input type="text" name="Телефон" placeholder="Корпус">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-block__check-list">
+                          <div class="checkbox">
+                            <input id="ch-1" type="checkbox" value="Создать аккаунт">
+                            <label for="ch-1">Создать аккаунт</label>
+                          </div>
+                        </div>
+                        <div class="form-block__check-list">
+                          <div class="form-block__title title-h5">доставка</div>
+                          <div class="radiobox">
+                            <input type="radio" id="p1" name="Доставка" value="1" checked>
+                            <label for="p1"> <strong>Самовывоз</strong></label>
+                          </div>
+                          <div class="radiobox">
+                            <input type="radio" id="p2" name="Доставка" value="2">
+                            <label for="p2">Курьер: <strong>100 грн</strong></label>
+                          </div>
+                          <div class="radiobox">
+                            <input type="radio" id="p3" name="Доставка" value="3">
+                            <label for="p3">Новая Почта</label>
+                          </div>
+                          <div class="radiobox">
+                            <input type="radio" id="p4" name="Доставка" value="4">
+                            <label for="p4">Беслпатная доставка от <strong>100 шт</strong></label>
+                          </div>
+                        </div>
+                        <div class="form-block__check-list">
+                          <div class="form-block__title title-h5">оплата</div>
+                          <div class="radiobox">
+                            <input type="radio" id="p5" name="оплата" value="5" checked>
+                            <label for="p5">Безналичный расчет</label>
+                          </div><span>Произведите оплату непосредственно на наш банковский счет. Пожалуйста, используйте ID вашего заказа в качестве ссылки на платеж. Ваш заказ не будет отправлен до тех пор, пока оплата не будет произведена на наш счет.</span>
+                          <div class="radiobox">
+                            <input type="radio" id="p6" name="оплата" value="6">
+                            <label for="p6">Оплата наличными при получении</label>
+                          </div>
+                        </div>
+                        <div class="form-block__button"><a class="btn btn--blue-dark" href="#">Подтвердить заказ</a></div>
                       </div>
-                      <div class="table__cell">
-                        <div class="table__slogan">всего</div>
-                        <div class="table__cell-icon"> <span>456 грн</span><a class="table__close" href="#"></a></div>
-                      </div>
+                </div>
+                <div class="main-section__body-right col-6 col-sm-12">
+                  <div class="main-section__comment">
+                    <div class="checkbox checkbox--bold">
+                      <input id="ch2-1" type="checkbox" value="Отправить на другой адрес">
+                      <label for="ch2-1">Отправить на другой адрес</label>
+                    </div>
+                    <div class="main-section__input"><span>Комментарий</span>
+                      <textarea name="Комментарий"></textarea>
                     </div>
                   </div>
-              <div class="main-section__total">
-                <div class="main-section__total-body">
-                  <div class="main-section__total-title title-h4">итого</div>
-                      <div class="table table--carts table--total">
-                        <div class="table__row table__row--head">
-                          <div class="table__cell"><span>цена за все</span></div>
-                          <div class="table__cell">
-                            <div class="table__slogan">цена за все</div><span>933,00 грн</span>
-                          </div>
-                        </div>
-                        <div class="table__row">
-                          <div class="table__cell"><span>персональная скидка <strong>(10%)</strong></span></div>
-                          <div class="table__cell">
-                            <div class="table__slogan">персональная скидка <strong>(10%)</strong> </div><span><strong>93 грн</strong></span>
-                          </div>
-                        </div>
-                        <div class="table__row">
-                          <div class="table__cell"><span>всего</span></div>
-                          <div class="table__cell"> 
-                            <div class="table__slogan">всего</div><span><strong>840,00 грн</strong></span>
-                          </div>
-                        </div>
-                      </div>
-                  <div class="main-section__total-button"> <a class="btn btn--blue" href="#">оформить заказ</a></div>
                 </div>
               </div>
             </div>
