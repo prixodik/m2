@@ -1,0 +1,27 @@
+extends extends/base.pug
+
+block styles
+	
+block content
+	include ../components/main-section/template
+	include ../components/form-block/template
+
+	+mainSection({
+		bread: [{url: '#', title: 'корзина'}]
+	}).main-section--delivery
+		._container.container--sm
+			.main-section__title.title-h2 доставка и оплата
+			.main-section__body.row
+				.main-section__body-left.col-6.col-sm-12
+					+formBlock()
+				.main-section__body-right.col-6.col-sm-12
+					.main-section__comment
+						.checkbox.checkbox--bold
+							input#ch2-1(type="checkbox" value="Отправить на другой адрес")
+							label(for="ch2-1") Отправить на другой адрес
+						.main-section__input
+							span Комментарий
+							textarea(name="Комментарий")
+
+	include ../components/footer/template  
+	+footer()

@@ -19,11 +19,11 @@ $arrow_color: $gray !default;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	text-decoration: none;
 	background-color: $white;
-	border-radius: $input_border_radius;
-	border: 1px $blue-dark solid;
+	border-radius: 2px;
+	border: 1px $gray-border solid;
 	box-sizing: border-box;
 	clear: both;
-	color: $text-green-dark;
+	color: $gray-dark;
 	cursor: pointer;
 	display: block;
 	font: 16px/37px $family;
@@ -31,14 +31,12 @@ $arrow_color: $gray !default;
 	//line-height: $input_height - 2;
 	outline: none;
 	padding-left: 20px;
-	padding-right: 20px;
 	position: relative;
 	text-align: left !important;
 	transition: all 0.2s ease-in-out;
 	user-select: none;
 	white-space: nowrap;
 	width: auto;
-
 	&--transparent {
 		background-color: transparent;
 	}
@@ -48,10 +46,9 @@ $arrow_color: $gray !default;
 	&:hover {
 		//border-color: darken($gray_light, 5%);
 	}
-	&:active,
-	&:focus {
-		//border-color: #B9B9B9;
-		//box-shadow: 0 0px 30px rgba(#070C34,0.06);
+	&:active {
+		border-color:$blue;
+		box-shadow: 0 0px 30px rgba($blue,0.06);
 	}
 
 	&__head {
@@ -74,23 +71,23 @@ $arrow_color: $gray !default;
 		width: 12px;
 		transform: rotate(0deg);
 		pointer-events: none;
-		margin-left: 10px;
-		/* position: absolute; 
-    right: 15px; 
-    top: 50%;  */
+		//margin-left: 10px;
+		position: absolute;
+		right: 15px;
+		top: 35%;
 		//fill: none;
-		fill: $blue-dark;
+		fill: $gray-dark-border;
 		//transform-origin: 66% 66%;
 		//transform: rotate(45deg);
 		@include time();
-		//background: url('../images/select-bg.svg') 50% 50%/contain no-repeat;
+		background: url("../../images/arrow-down.svg") 50% 50% / contain no-repeat;
 	}
 	//.nice-select-search-box{ display: none!important; }
 
 	&__drop {
 		background: $white;
-		border-radius: 11px;
-		border: 1px $blue-dark solid;
+		border-radius: 2px;
+		border: 1px $gray-border solid;
 		box-sizing: border-box;
 		margin-top: 0;
 		opacity: 0;
@@ -103,7 +100,7 @@ $arrow_color: $gray !default;
 		width: 100%;
 
 		//right: -1px;
-		min-width: 250px;
+		min-width: 210px;
 		//max-width: 100%;
 		transform-origin: 50% 0;
 		transform: scale(0.75) translate(-50%, (-$input_height / 2));
@@ -130,7 +127,7 @@ $arrow_color: $gray !default;
 		}
 	}
 	&.disabled {
-		border-color: $gray;
+		border-color: $text-gray;
 		background-color: #f5f6f7;
 		color: rgba(#111, 0.54);
 		pointer-events: none;
@@ -213,7 +210,7 @@ $arrow_color: $gray !default;
 		}
 		&.disabled {
 			//background-color: transparent;
-			color: $gray;
+			color: $text-gray;
 			cursor: default;
 		}
 
@@ -222,7 +219,6 @@ $arrow_color: $gray !default;
       padding: 6px 15px;
     } */
 	}
-
 	&--auto {
 		width: auto;
 		display: inline-block;
@@ -270,9 +266,6 @@ $arrow_color: $gray !default;
 	}
 
 	@include media($xs) {
-		&__drop {
-			width: 270px;
-		}
 
 		&--drop-checkbox {
 			.list {

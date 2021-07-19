@@ -45,7 +45,7 @@
 
 /* Модальные окна
 -----------------------------*/
-//@import "../../bower_components/fancybox/dist/jquery.fancybox.css";
+@import "../../bower_components/fancybox/dist/jquery.fancybox.css";
 
 /* Шапка сайта
 -----------------------------*/
@@ -59,7 +59,7 @@
 
 // @import "../components/soc-list/style";
 @import "../components/burger/style";
-// @import "../components/popup/style";
+@import "../components/popup/style";
 @import "../components/filter-block/style";
 @import "../components/search-block/style";
 @import "../components/breadcrumbs/style";
@@ -69,6 +69,9 @@
 @import "../components/nav-block/style";
 @import "../components/product-block/style";
 @import "../components/pagination/style";
+@import "../components/gallery-block/style";
+@import "../components/calculator-block/style";
+@import "../components/form-block/style";
 
 /* Модификаторы  
 -----------------------------*/

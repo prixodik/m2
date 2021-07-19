@@ -1,4 +1,4 @@
-//- include ../form-block/template
+include ../form-block/template
 //- include ../upload-block/template
 //- include ../stars/template
 
@@ -10,45 +10,26 @@ mixin popup(data)
 				+svg('close')
 			block
 
+mixin popupDuble(data)
+	.popup&attributes(attributes)
+		._overflow.js-popup-hide
+		._wrapper
+			a._close.js-popup-hide
+				+svg('close')
+			block
 
+mixin popupLogin(data)
+	+popup().popup--login#popup-login
+		._title Вход
+		+formBlockLogin()
 
-mixin popupFinish(data)
-	+popup().popup--finish#popup-finish
-		._img
-			+webp('images/finish-popup-img.png')
-		._title Спасибо! заказ оформлен
-		._desc Наши менеджеры скоро свяжутся с вами<br> для уточнения заказа
-		._buttons
-			a.btn.-border(href="#") Вернуться к каталогу
+mixin popupCall(data)
+	+popup().popup--call#popup-call
+		._title
+		+formBlockCall()
 
-
-mixin popupLogin()
-	+popup().popup--login.popup--terms-order#popup-login(attributes)
-		._title вход в личный кабинет
-		form._form(action="") 
-			.form-group.-sm._input
-				._label Введите телефон
-				input.form-control.form-control--border.js-required(type="tel" placeholder="" required)
-			.form-group.-sm._input
-				._label Введите пароль
-				input.form-control.form-control--border.js-required(type="password" placeholder="" required)
-			._buttons
-				button.btn.-block.js-submit  Войти  в личный кабинет
-		._links
-			a.btn.-icon.-link.-blue-dark.js-popup-show(href="#popup-registration-1")
-				+svg('registration')
-				span Регистрация
-
-mixin popupRegistration1()
-	+popup().popup--registration#popup-registration-1(attributes)
-		._title регистрация в личном кабинете
-		._desc Вы сможете быстро оформлять и отслеживать заказы, получать скидки постоянного покупателя
-		form._form(action="") 
-			.form-group.-sm._input
-				._label Введите телефон
-				input.form-control.form-control--border.js-required(type="tel" placeholder="" required)
-			._buttons
-				button.btn.-block.js-submit(data-href="#popup-registration-2") Отправить код в SMS
-			._links
-				a(href="#") У меня уже есть аккаунт
+mixin popupCall(data)
+	+popup().popup--director#popup-director
+		._title оставить сообщение директору
+		+formBlockMessage().form-block--director
 

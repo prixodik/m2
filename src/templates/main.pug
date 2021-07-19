@@ -1,19 +1,106 @@
 extends extends/base.pug
 append vars
-	- var pageUrl = 'main.html';
-	- var pageTitle = 'Главная';
-	- var classBody = 'main-page';
-	- var headerBg = 'images/main-banner.jpg';
+
 block styles
 	
 block content
-	
-	//- include ../components/catalog-section/template 
-	//- +catalogSection()
-	
-	
+	include ../components/main-section/template
+
+	.main-section.-main
+		._items-top
+			._container.container
+				._body
+					._item
+						a(href="#")
+							img(src="../images/main-1.jpg", alt="")
+						a(href="#")
+							span Плитка для пола
+					._item
+						a(href="#")
+							img(src="../images/main-2.jpg", alt="")
+						a(href="#")
+							span Плитка для стен
+					._item
+						a(href="#")
+							img(src="../images/main-3.jpg", alt="")
+						a(href="#")
+							span Плитка для ванной
+					._item
+						a(href="#")
+							img(src="../images/main-4.jpg", alt="")
+						a(href="#")
+							span Керамогранит
+					._item
+						a(href="#")
+							img(src="../images/main-5.jpg", alt="")
+						a(href="#")
+							span Плитка под дерево
+					._item
+						a(href="#")
+							img(src="../images/main-6.jpg", alt="")
+						a(href="#")
+							span Клинкерная плитка
+					._item
+						a(href="#")
+							img(src="../images/main-7.jpg", alt="")
+						a(href="#")
+							span Плитка мозайка
+		._container.container
+			._images
+				._title.title-h2 готовые решения
+				._images-body.row
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/product-img-show.jpg", alt="")
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/main-img-2.jpg", alt="")
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/main-img-3.jpg", alt="")
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/main-img-4.jpg", alt="")
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/product-img-show.jpg", alt="")
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/main-img-2.jpg", alt="")
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/main-img-3.jpg", alt="")
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/main-img-4.jpg", alt="")
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/product-img-show.jpg", alt="")
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/main-img-2.jpg", alt="")
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/main-img-3.jpg", alt="")
+					._img.col-3.col-md-6.col-xs-12
+						a(href="#")
+							img(src="../images/main-img-4.jpg", alt="")
+			._info.item-page 
+				._info-title.title-h3 Украинская плитка  — лучшая за свою цену
+				p Преимущества продукции компании позволили ей завоевать доверие потребителей в кратчайшие сроки. Intercerama — успешный украинский проект, работающий в отрасли всего 8 лет. За это время ему удалось стать одним из лидеров сегмента. Для выпуска качественной плитки используется уникальная база сырья, а на производстве установлено итальянское оборудование с высочайшим уровнем автоматизации рабочих процессов.
+				p Керамическая плита в Украине от отечественного производителя представлена обширным ассортиментом товаров для внутренней и наружной облицовки. Новинки и классические модели подходят для создания уюта и стильного оформления на долгие годы. В коллекциях кафеля переплетаются разные художественные мотивы и стили. Оригинальные декоративные элементы повышают креативность пространства.
+			._info.item-page 
+				._info-title.title-h3 Керамика — материал на десятки лет
+				p Магазин Intercerama впечатляет ассортиментом облицовочного материала, который прослужит не один десяток лет. Во время производственного процесса на сырье воздействуют высокие температуры. Этот этап делает итоговый материал устойчивым к постоянному трению и даже порезам. К тому же, основа плитки — экологически чистая глина, не оказывающая негативного воздействия на окружающее пространство. За облицованной поверхностью легко ухаживать, разрешено применение бытовой химии.
+				p Актуальный каталог продукции Интеркерама включает в себя плитку, имитирующую камни, дерево и другие натуральные материалы. Различия также заметны в текстуре и узорах. Внедрение в производство последних технологий позволяет экспериментировать не только с внешним видом материала. Современная керамическая плитка:
+				ul._list 
+					li защищена от разрушительного влияния влаги;
+					li термостойкая;
+					li устойчива к воздействию ударной силы.
+				p Отзывы в сети подтверждают, что продукция отечественного производителя достойно конкурирует с мировыми брендами. Она дешево стоит, но при этом её качество остается на высочайшем уровне. Заказ плитки оптом в интернет-магазине доступен потребителям из Киева, Днепра, Одессы, Львова, Харькова и других городов Украины. Квалифицированные менеджеры проводят исчерпывающие консультации и помогают сделать окончательный выбор с учетом предполагаемых финансовых затрат. Сделайте выбор в пользу долгого срока службы, эстетичности и экономии!		
+
 	include ../components/footer/template  
-		+footer()    
+	+footer()
 
 	//- +gridLayout() 
 

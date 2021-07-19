@@ -1,0 +1,26 @@
+extends extends/base.pug
+
+block styles
+	
+block content
+	include ../components/main-section/template
+	include ../components/form-block/template
+
+	+mainSection({
+		bread: [{url: '#', title: 'контакты'}]
+	}).main-section--contacts
+		._container.container--sm
+			.main-section__body.row
+				.main-section__form.col-6.col-sm-12
+					._title.title-h4 Оставить сообщение
+					+formBlockMessage()
+				.main-section__location.col-6.col-sm-12
+					._title.title-h4 Контактная информация
+					p Выберите один из альтернативных способов связи. Мы готовы ответить на ваш звонок с понедельника по пятницу с 08:00 до 22:00.
+					p <strong>Адрес:</strong> Киев, ул. Крещатик 1
+					p <strong>Телефон:</strong> (044) 111-11-11, (067) 111-11-11, (063) 111-11-11, (050) 111-11-11
+					p <strong>Email:</strong> owner@m2.com
+					a(href="#popup-director").btn.-md.-gray.js-popup-show Связь с директором
+
+	include ../components/footer/template
+	+footer()

@@ -10,18 +10,19 @@
 		//padding-top: 3px;
 		display: inline-block;
 		cursor: pointer;
-		font: $fs-16;
+		font: $fs-14;
 		&:before {
 			content: "";
 			display: block;
-			width: 20px;
-			height: 20px;
+			width: 15px;
+			height: 15px;
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: 4px;
+			left: 2px;
 			background: $white;
 			border-radius: 50%;
-			border: 1px $green solid;
+			border: 1px $gray-border solid;
+			box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.3);
 		}
 		a {
 			text-decoration: underline;
@@ -39,92 +40,15 @@
 		&:after {
 			content: "";
 			display: block;
-			width: 12px;
-			height: 12px;
-			background: $green;
+			width: 7px;
+			height: 7px;
+			background: $black;
 			position: absolute;
-			top: 4px;
-			left: 4px;
+			top: 7.5px;
+			left: 5.8px;
 			border-radius: 50%;
 		}
 	}
-
-	&--white {
-		label {
-			color: $white;
-		}
-	}
-
-	&--block-shadow {
-		height: 100%;
-		width: 100%;
-		label {
-			width: 100%;
-			background-color: $white;
-			box-shadow: $cards-bg;
-			border: 1px $white solid;
-			border-radius: 10px;
-			padding: 24px 16px 24px 19px;
-			height: 100%;
-			@include time();
-			&:after,
-			&:before {
-				display: none;
-			}
-		}
-		input[type="radio"]:checked + label {
-			background: $white;
-			border-color: $form-blue;
-			&:after,
-			&:before {
-				display: none;
-			}
-			.icon-inline__title {
-				color: $form-blue;
-			}
-		}
-	}
-
-	&--block {
-		label {
-			padding: 12px 20px;
-			border: 1px $gray-dark solid;
-			border-radius: 10px;
-			background: $white;
-			font: 16px/20px $baseFF;
-			color: rgba($text-green-dark, 0.4);
-			display: block;
-			&:after,
-			&:before {
-				display: none;
-			}
-		}
-		input[type="radio"]:checked + label {
-			background: $gray-dark;
-			border-color: $gray-dark;
-			&:after,
-			&:before {
-				display: none;
-			}
-		}
-	}
-	&--block & {
-		&__title {
-			color: $text-green-dark;
-			margin-bottom: 5px;
-		}
-	}
-
-	&--date {
-		label {
-			color: $text-green-dark;
-			text-align: center;
-			span {
-				color: rgba($text-form, 0.4);
-			}
-		}
-	}
-
 	input.is-error {
 		& + label {
 			border-color: red;
@@ -160,7 +84,7 @@
 			border-radius: 3px;
 			@include time();
 			background-color: $white;
-			box-shadow: inset 0 0 10px 0px rgba(0,0,0,0.3);
+			box-shadow: inset 0 0 10px 0px rgba(0, 0, 0, 0.3);
 		}
 		&:after {
 			content: "";
@@ -193,71 +117,11 @@
 	/* input[type=checkbox]:invalid + label, input[type=radio]:invalid + label{
 		&:before{ border-color: red!important; }
 	} */
-
-	&--block-shadow {
-		height: 100%;
+	&--bold {
 		label {
-			background-color: $white;
-			box-shadow: $cards-bg;
-			border: 1px $white solid;
-			border-radius: 10px;
-			padding: 24px 16px 24px 19px;
-			height: 100%;
-			@include time();
-			&:after,
-			&:before {
-				display: none;
-			}
-		}
-		input[type="radio"]:checked + label {
-			background: $white;
-			border-color: $form-blue;
-			&:after,
-			&:before {
-				display: none;
-			}
-			.icon-inline__title {
-				color: $form-blue;
-			}
+			font: 700 18px/1.3 $baseFF;
 		}
 	}
-
-	&--fs-14 {
-		label {
-			font: $fs-14;
-			a {
-				color: $form-blue;
-				font-weight: bold;
-			}
-		}
-	}
-	&--fs-12 {
-		label {
-			font: $fs-12;
-		}
-	}
-
-	&--white {
-		label {
-			color: $white;
-		}
-	}
-
-	&--blue {
-		input[type="checkbox"]:checked + label,
-		input[type="radio"]:checked + label {
-			&:before {
-				background: $form-blue;
-				border-color: $form-blue;
-				padding-top: 10px;
-			}
-			&:after {
-				padding-top: 10px;
-				background: url("../images/check-white.svg") 50% 50%/16px auto no-repeat;
-			}
-		}
-	}
-
 	input.is-error + label {
 		&:before {
 			border-color: $red;

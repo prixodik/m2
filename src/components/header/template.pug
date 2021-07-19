@@ -3,6 +3,7 @@ include ../menu-block/template
 include ../nav-block/template
 include ../search-block/template
 include ../burger/template
+include ../popup/template
 
 mixin header(data)
 	header.header&attributes(attributes)
@@ -13,7 +14,7 @@ mixin header(data)
 						img(src="images/logo.png", alt="logo")
 					._slogan Интернет магазин керамической плитки
 				._body-content
-					a(href="#")._item 
+					a(href="#popup-call")._item.js-popup-show
 						img(src="images/call.png", alt="")
 						._item-slogan Обратная связь
 						._item-number <strong>+38 (044) 111-11-11</strong>
@@ -40,23 +41,26 @@ mixin header(data)
 						a(href="#")._language-link
 							+svg('earth')
 							span UA
-						a(href="#")._user-link
+						a(href="#popup-login")._user-link.js-popup-show
 							+svg('user')
+		+popupLogin()
+		+popupCall()
 
 
 					
 					
 						
-		._bottom 
-			._container.container   
-				._menu
-					a(href="#").btn Каталог продукции
-					//- ._menu.js-mobile-menu
-					//- 	+menuBlock()
-					+burger().header__menu-burger
-					+searchBlock({
-						placeholder: 'введите артикул или бренд плитки'
-					}) 
-				+navBlock().header__menu-nav
+		div#top_nav._bottom  
+			._container.container
+				._bottom-body 
+					._menu
+						a(href="#").btn Каталог продукции
+						//- ._menu.js-mobile-menu
+						//- 	+menuBlock()
+						+burger().header__menu-burger
+						+searchBlock({
+							placeholder: 'введите артикул или бренд плитки'
+						}) 
+					+navBlock().header__menu-nav
 						
 

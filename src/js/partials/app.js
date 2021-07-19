@@ -31,19 +31,59 @@ var uikit = {
 	countBlock: function () {
 		// Количество +-
 		$(".js-count-plus").click(function () {
-			var count = $(this).parent().children('input').val();
-			$(this).parent().children('input').val(++count);
+			var count = $(this).parent().parent().children('input').val();
+			$(this).parent().parent().children('input').val(++count);
 			return false;
 		});
 
 		$(".js-count-minus").click(function () {
-			var tempCount = $(this).parent().children('input').val();
-			var count = (--tempCount <= 0) ? 0 : tempCount;
+			var tempCount = $(this).parent().parent().children('input').val();
+			var count = (--tempCount <= 1) ? 1 : tempCount;
 
-			$(this).parent().children('input').val(count);
+			$(this).parent().parent().children('input').val(count);
 			return false;
 		});
 	},
+
+	headerFix: function () {
+		var scroller = 0;
+		var hpos = hpos = $('.header__bottom').offset().top;
+		$(document).scroll(function () {
+			scroller = $('html,body').scrollTop();
+
+			console.log(scroller >= hpos);
+			if (scroller >= hpos) {
+				$('.header').height($('.header').height());
+				$('.header__bottom').addClass('fixed');
+			} else {
+				$('.header').attr('style', '');
+				$('.header__bottom').removeClass('fixed');
+			}
+		});
+
+	},
+
+	// navFixed: function () {
+	// 	var MaxHight = 195,
+	// 	var MinHight = 0;
+
+	// 	var elem = $('#top_nav');
+	// 	var top = $(this).scrollTop();
+		
+	// 	if(top > MaxHight){
+	// 		elem.css('top', MinHight);
+	// 	}           
+		
+	// 	$(window).scroll(function(){
+	// 		top = $(this).scrollTop();
+				
+	// 		if (top+MinHight < MaxHight) {
+	// 				elem.css('top', (MaxHight-top));
+	// 		} else {
+	// 				elem.css('top', MinHight);
+	// 		}
+	// 	});
+	// },
 
 	validation: function () {
 		var
@@ -236,7 +276,7 @@ var uikit = {
 			}
 		});
 	},
-
+	
 	tabs: function () {
 		$('[data-tab]').click(function (e) {
 			e.preventDefault();
@@ -378,7 +418,7 @@ var uikit = {
 				focusOnSelect: true,
 				infinite: true,
 				variableWidth: false,
-				slidesToShow: 3,
+				slidesToShow: 4,
 				slidesToScroll: 1,
 				centerMode: false,
 				lazyLoad: 'progressive',
@@ -639,7 +679,7 @@ var uikit = {
 		$(".js-fancybox, .fancybox").fancybox({
 			// Options will go here
 			iframe: {
-				preload: false
+				preload: true
 			}
 		});
 	},
@@ -817,24 +857,23 @@ var uikit = {
 
 	mainInit: function () {
 
-		//this.sliders();
+		this.sliders();
 
 		this.lazy();
 		//this.validation();
 
 		//this.tabs();
-
-		//this.niceSelect();
-		//this.countBlock();
-		//this.fancybox();
+		//this.navFixed();
+		this.niceSelect();
+		this.countBlock();
+		this.fancybox();
+		this.headerFix();
 		this.popups();
 		this.mask();
 		this.accardion();
 		this.mobile();
-
-		//this.scrollTo();
-
 		this.rangeSlider();
+		//this.scrollTo();
 
 
 	}
