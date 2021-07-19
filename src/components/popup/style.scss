@@ -116,6 +116,29 @@
 		}
 	}
 
+	&--call & {
+		&__title {
+			border-bottom: 0;
+		}
+	}
+	&--director & {
+		&__close {
+			svg {
+				fill: $white;
+			}
+		}
+		&__title {
+			text-transform: uppercase;
+			color: $white;
+			font: 600 18px/1.1 $baseFF;
+			margin-bottom: 15px;
+			border-bottom: none;
+		}
+		&__wrapper {
+			background: transparent;
+			border: none;
+		}
+	}
 	@include media($md) {
 	}
 

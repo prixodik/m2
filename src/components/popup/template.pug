@@ -18,10 +18,18 @@ mixin popupDuble(data)
 				+svg('close')
 			block
 
-
-
 mixin popupLogin(data)
 	+popup().popup--login#popup-login
 		._title Вход
 		+formBlockLogin()
+
+mixin popupCall(data)
+	+popup().popup--call#popup-call
+		._title
+		+formBlockCall()
+
+mixin popupCall(data)
+	+popup().popup--director#popup-director
+		._title оставить сообщение директору
+		+formBlockMessage().form-block--director
 

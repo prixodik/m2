@@ -7,7 +7,7 @@ block content
 	include ../components/form-block/template
 
 	+mainSection({
-		bread: [{url: '#', title: 'корзина'}]
+		bread: [{url: '#', title: 'контакты'}]
 	}).main-section--contacts
 		._container.container--sm
 			.main-section__body.row
@@ -20,5 +20,7 @@ block content
 					p <strong>Адрес:</strong> Киев, ул. Крещатик 1
 					p <strong>Телефон:</strong> (044) 111-11-11, (067) 111-11-11, (063) 111-11-11, (050) 111-11-11
 					p <strong>Email:</strong> owner@m2.com
-					a(href="#").btn.btn--md.btn--gray Связь с директором 
-						
+					a(href="#popup-director").btn.-md.-gray.js-popup-show Связь с директором
+
+	include ../components/footer/template
+	+footer()

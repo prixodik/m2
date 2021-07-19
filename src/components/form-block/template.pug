@@ -104,3 +104,18 @@ mixin formBlockLogin(data)
 				a(href="#").btn.-lg.-blue войти
 			._link 
 				a(href="#") Зарегистрироваться
+
+mixin formBlockCall(data)
+	.form-block.-message.-call&attributes(attributes)
+		._form
+			._form-row
+				._form-item
+					input(type="text" name="Имя" placeholder="Ваше имя")
+			._form-row
+				._form-item
+					input(type="number" name="Телефон" placeholder="Телефон")
+			._form-row
+				._form-item
+					textarea(name="Комментарий" placeholder="Комментарий" cols="30" rows="10")
+			._button
+				a(href="#").btn.-lg.-blue Перезвонить мне	

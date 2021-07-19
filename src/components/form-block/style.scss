@@ -117,6 +117,11 @@
 			margin-bottom: 20px;
 			margin-left: 20px;
 			@include flex(space-between,center,0,nowrap);
+			a {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 		&__button {
 			.btn {
@@ -126,11 +131,45 @@
 			margin-bottom: 15px;
 		}
 		&__link {
+			a {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 			text-align: center;
 			color: $gray-dark;
 		}
 	}
-
+	&--call {
+		textarea {
+			border: 1px solid $blue;
+			height: 125px;
+			&:focus {
+				box-shadow: 0 0 15px rgba($blue-dark,0.6);
+			}
+		}
+		input {
+			border: 1px solid $blue;
+			&:focus {
+				box-shadow: 0 0 15px rgba($blue-dark,0.6);
+			}
+		}
+	}
+	&--call & {
+		&__form {
+			margin-top: 30px;
+		}
+		&__button {
+			.btn {
+				width: 100%;
+			}
+		}
+	}
+	&--director {
+		span {
+			color: $white;
+		}
+	}
 	@include media($sm) {
 		&__body {
 			&-left {
@@ -148,6 +187,11 @@
 		&--login & {
 			&__form {
 				width: 100%;
+			}
+		}
+		&--call & {
+			&__form {
+				margin-top: 10px;
 			}
 		}
 	}

@@ -32,7 +32,7 @@
               <div class="header__logo-wrap"><a class="header__logo" href="#"><img src="images/logo.png" alt="logo"></a>
                 <div class="header__slogan">Интернет магазин керамической плитки</div>
               </div>
-              <div class="header__body-content"><a class="header__item" href="#"> <img src="images/call.png" alt="">
+              <div class="header__body-content"><a class="header__item js-popup-show" href="#popup-call"><img src="images/call.png" alt="">
                   <div class="header__item-slogan">Обратная связь</div>
                   <div class="header__item-number"><strong>+38 (044) 111-11-11</strong></div></a>
                 <div class="header__numbers">
@@ -101,6 +101,40 @@
                               <div class="form-block__button"><a class="btn btn--lg btn--blue" href="#">войти</a></div>
                               <div class="form-block__link"> <a href="#">Зарегистрироваться</a></div>
                             </div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="popup popup--director" id="popup-director">
+                    <div class="popup__overflow js-popup-hide"></div>
+                    <div class="popup__wrapper"><a class="popup__close js-popup-hide">
+                        <svg class="icon icon_close">
+                          <use xlink:href="images/sprite-svg.svg#close"></use>
+                        </svg></a>
+                      <div class="popup__title">оставить сообщение директору</div>
+                          <div class="form-block form-block--message form-block--director">
+                            <div class="form-block__form">
+                              <div class="form-block__form-row">
+                                <div class="form-block__form-item"><span>Имя <sup>*</sup></span>
+                                  <input type="text" name="Имя">
+                                </div>
+                              </div>
+                              <div class="form-block__form-row">
+                                <div class="form-block__form-item"><span>Email <sup>*</sup></span>
+                                  <input type="text" name="Email">
+                                </div>
+                              </div>
+                              <div class="form-block__form-row">
+                                <div class="form-block__form-item"><span>Тема </span>
+                                  <input type="text" name="Тема">
+                                </div>
+                              </div>
+                              <div class="form-block__form-row">
+                                <div class="form-block__form-item"><span>Сообщение</span>
+                                  <textarea name="Сообщение" cols="30" rows="10"> </textarea>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-block__button"><a class="btn btn--md btn--blue-dark" href="#">Отправить</a></div>
                           </div>
                     </div>
                   </div>

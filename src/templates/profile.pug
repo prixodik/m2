@@ -1,0 +1,51 @@
+extends extends/base.pug
+
+block styles
+	
+block content
+	include ../components/main-section/template
+
+	+mainSection({
+		bread: [{url: '#', title: 'мой аккаунт'}]
+	}).main-section--cart.main-section--profile
+		.main-section__container.container--sm
+			.main-section__head
+				h1.main-section__title.title-h2 мой аккаунт
+				a.main-section__head-link(href="#") вернутся к каталогу
+			.main-section__body.row
+				.main-section__links.col-6.col-sm-12
+					.main-section__items 
+						.main-section__item
+							a(href="#") Мои заказы
+						.main-section__item
+							a(href="#") Список желаний
+						.main-section__item
+							a(href="#") Просмотренные товары
+						.main-section__item
+							a(href="#") Мой бонусный счет
+						.main-section__item
+							a(href="#") Мои отзывы
+						.main-section__item
+							a(href="#") Участие в акциях
+				.main-section__orders.col-6.col-sm-12
+					.main-section__order
+						.main-section__order-head 
+							span № 704 903 932 от 21.01.21
+							span Выполнен
+						.main-section__order-info
+							.main-section__img
+								img(src="../images/cart-img-1.png", alt="")
+								span Плитка Zeus Ceramica Calcare ZRXCL0BR
+							.main-section__cost <strong>242 грн</strong>
+					.main-section__order
+						.main-section__order-head 
+							span № 704 903 932 от 21.01.21
+							span Выполнен
+						.main-section__order-info
+							.main-section__img
+								img(src="../images/cart-img-1.png", alt="")
+								span Плитка Zeus Ceramica Calcare ZRXCL0BR
+							.main-section__cost <strong>242 грн</strong>
+
+	include ../components/footer/template
+	+footer()

@@ -32,7 +32,7 @@
               <div class="header__logo-wrap"><a class="header__logo" href="#"><img src="images/logo.png" alt="logo"></a>
                 <div class="header__slogan">Интернет магазин керамической плитки</div>
               </div>
-              <div class="header__body-content"><a class="header__item" href="#"> <img src="images/call.png" alt="">
+              <div class="header__body-content"><a class="header__item js-popup-show" href="#popup-call"><img src="images/call.png" alt="">
                   <div class="header__item-slogan">Обратная связь</div>
                   <div class="header__item-number"><strong>+38 (044) 111-11-11</strong></div></a>
                 <div class="header__numbers">
@@ -104,6 +104,40 @@
                           </div>
                     </div>
                   </div>
+                  <div class="popup popup--director" id="popup-director">
+                    <div class="popup__overflow js-popup-hide"></div>
+                    <div class="popup__wrapper"><a class="popup__close js-popup-hide">
+                        <svg class="icon icon_close">
+                          <use xlink:href="images/sprite-svg.svg#close"></use>
+                        </svg></a>
+                      <div class="popup__title">оставить сообщение директору</div>
+                          <div class="form-block form-block--message form-block--director">
+                            <div class="form-block__form">
+                              <div class="form-block__form-row">
+                                <div class="form-block__form-item"><span>Имя <sup>*</sup></span>
+                                  <input type="text" name="Имя">
+                                </div>
+                              </div>
+                              <div class="form-block__form-row">
+                                <div class="form-block__form-item"><span>Email <sup>*</sup></span>
+                                  <input type="text" name="Email">
+                                </div>
+                              </div>
+                              <div class="form-block__form-row">
+                                <div class="form-block__form-item"><span>Тема </span>
+                                  <input type="text" name="Тема">
+                                </div>
+                              </div>
+                              <div class="form-block__form-row">
+                                <div class="form-block__form-item"><span>Сообщение</span>
+                                  <textarea name="Сообщение" cols="30" rows="10"> </textarea>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-block__button"><a class="btn btn--md btn--blue-dark" href="#">Отправить</a></div>
+                          </div>
+                    </div>
+                  </div>
           <div class="header__bottom" id="top_nav"> 
             <div class="header__container container">
               <div class="header__bottom-body"> 
@@ -163,11 +197,12 @@
         <h1>Cтраницы проекта</h1>
         <ol>
           <li><a target="_blank" href="main.html">Главная</a></li>
+          <li><a target="_blank" href="profile.html">Мой аккаунт</a></li>
           <li><a target="_blank" href="cart.html">Корзина</a></li>
-          <li><a target="_blank" href="catalog.html">Каталог</a></li>
-          <li><a target="_blank" href="delivery.html">Доставка и оплата</a></li>
-          <li><a target="_blank" href="contacts.html">Контакты</a></li>
           <li><a target="_blank" href="product.html">Товар</a></li>
+          <li><a target="_blank" href="delivery.html">Доставка и оплата</a></li>
+          <li><a target="_blank" href="catalog.html">Каталог</a></li>
+          <li><a target="_blank" href="contacts.html">Контакты</a></li>
         </ol>
         <div class="tabs-panel">
           <div class="in"><a class="is-active" href="#tab1" data-tab>Заголовки</a><a href="#tab2" data-tab>Элементы форм</a><a href="#tab3" data-tab>Кнопки</a><a href="#tab4" data-tab>Иконки</a></div>
