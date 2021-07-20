@@ -2,7 +2,7 @@
 	background: $white;
 	position: relative;
 	z-index: 3;
-	min-height: 500px;
+	min-height: auto;
 	padding: 20px 13px;
 	&--yellow & {
 		&__special {
@@ -36,6 +36,9 @@
 		position: relative;
 		@include flex(flex-end, 0, 0, nowrap);
 		margin-bottom: 35px;
+		&-link {
+			margin-left: 40px;
+		}
 		img {
 			object-fit: cover;
 			display: block;

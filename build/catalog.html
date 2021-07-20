@@ -104,37 +104,32 @@
                           </div>
                     </div>
                   </div>
-                  <div class="popup popup--director" id="popup-director">
+                  <div class="popup popup--call" id="popup-call">
                     <div class="popup__overflow js-popup-hide"></div>
                     <div class="popup__wrapper"><a class="popup__close js-popup-hide">
                         <svg class="icon icon_close">
                           <use xlink:href="images/sprite-svg.svg#close"></use>
                         </svg></a>
-                      <div class="popup__title">оставить сообщение директору</div>
-                          <div class="form-block form-block--message form-block--director">
+                      <div class="popup__title"></div>
+                          <div class="form-block form-block--message form-block--call">
                             <div class="form-block__form">
                               <div class="form-block__form-row">
-                                <div class="form-block__form-item"><span>Имя <sup>*</sup></span>
-                                  <input type="text" name="Имя">
+                                <div class="form-block__form-item">
+                                  <input type="text" name="Имя" placeholder="Ваше имя">
                                 </div>
                               </div>
                               <div class="form-block__form-row">
-                                <div class="form-block__form-item"><span>Email <sup>*</sup></span>
-                                  <input type="text" name="Email">
+                                <div class="form-block__form-item">
+                                  <input type="number" name="Телефон" placeholder="Телефон">
                                 </div>
                               </div>
                               <div class="form-block__form-row">
-                                <div class="form-block__form-item"><span>Тема </span>
-                                  <input type="text" name="Тема">
+                                <div class="form-block__form-item">
+                                  <textarea name="Комментарий" placeholder="Комментарий" cols="30" rows="10"></textarea>
                                 </div>
                               </div>
-                              <div class="form-block__form-row">
-                                <div class="form-block__form-item"><span>Сообщение</span>
-                                  <textarea name="Сообщение" cols="30" rows="10"> </textarea>
-                                </div>
-                              </div>
+                              <div class="form-block__button"><a class="btn btn--lg btn--blue" href="#">Перезвонить мне	</a></div>
                             </div>
-                            <div class="form-block__button"><a class="btn btn--md btn--blue-dark" href="#">Отправить</a></div>
                           </div>
                     </div>
                   </div>
@@ -244,15 +239,15 @@
                           </div>
                           <div class="filter-block__group-body is-active">
                             <div class="filter-block__range row row--between">
-                              <div class="filter-block__range-col col-auto">
-                                <input class="js-range-from" type="text" value="0" placeholder="" size="7">
+                              <div class="filter-block__range-col">
+                                <input class="js-range-from" type="text" value="100" placeholder="" size="7">
                               </div>
-                              <div class="filter-block__range-col col">
-                                <input class="js-range-to" type="text" value="152341" placeholder="" size="7">
+                              <div class="filter-block__range-col">
+                                <input class="js-range-to" type="text" value="15234" placeholder="" size="7">
                               </div>
-                              <div class="filter-block__range-col col"><a class="btn btn--sm" href="#">OK</a></div>
+                              <div class="filter-block__range-col"><a class="btn btn--sm" href="#">OK</a></div>
                             </div>
-                            <input class="js-range-slider" type="text" data-min="0" data-max="152341" data-from="0" data-to="152341">
+                            <input class="js-range-slider" type="text" data-min="0" data-max="15234" data-from="0" data-to="15234">
                           </div>
                         </div>
                         <div class="filter-block__group accardion-block">
@@ -377,20 +372,20 @@
                               <label for="ch7-5">Бежево-голубой (<span>2<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch8-6" type="checkbox" value="Бужево-желтый с серым">
-                              <label for="ch8-6">Бежево-желтый с серым (<span>1<span>)</label>
+                              <input id="ch7-6" type="checkbox" value="Бужево-желтый с серым">
+                              <label for="ch7-6">Бежево-желтый с серым (<span>1<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch8-7" type="checkbox" value="Бужево-зеленый">
-                              <label for="ch8-7">Бежево-зеленый (<span>3<span>)</label>
+                              <input id="ch7-7" type="checkbox" value="Бужево-зеленый">
+                              <label for="ch7-7">Бежево-зеленый (<span>3<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch8-8" type="checkbox" value="Бужево-золотой с коричневым">
-                              <label for="ch8-8">Бежево-золотой с коричневым (<span>2<span>)</label>
+                              <input id="ch7-8" type="checkbox" value="Бужево-золотой с коричневым">
+                              <label for="ch7-8">Бежево-золотой с коричневым (<span>2<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch8-9" type="checkbox" value="Бужево-коричневый">
-                              <label for="ch8-9">Бежево-коричневый (<span>100<span>)</label>
+                              <input id="ch7-9" type="checkbox" value="Бужево-коричневый">
+                              <label for="ch7-9">Бежево-коричневый (<span>100<span>)</label>
                             </div>
                           </div>
                         </div>
@@ -402,40 +397,40 @@
                           </div>
                           <div class="filter-block__group-body checkbox-list">
                             <div class="checkbox">
-                              <input id="ch9-1" type="checkbox" value="Бетон">
-                              <label for="ch9-1">Бетон (<span>320<span>)</label>
+                              <input id="ch8-1" type="checkbox" value="Бетон">
+                              <label for="ch8-1">Бетон (<span>320<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch9-2" type="checkbox" value="Гипс">
-                              <label for="ch9-2">Гипс (<span>74<span>)</label>
+                              <input id="ch8-2" type="checkbox" value="Гипс">
+                              <label for="ch8-2">Гипс (<span>74<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch9-3" type="checkbox" value="Зеркало">
-                              <label for="ch9-3">Зеркало (<span>6<span>)</label>
+                              <input id="ch8-3" type="checkbox" value="Зеркало">
+                              <label for="ch8-3">Зеркало (<span>6<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch9-4" type="checkbox" value="керамика">
-                              <label for="ch9-4">керамика (<span>5565<span>)</label>
+                              <input id="ch8-4" type="checkbox" value="керамика">
+                              <label for="ch8-4">керамика (<span>5565<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch9-5" type="checkbox" value="Керамогранит">
-                              <label for="ch9-5">Керамогранит (<span>4479<span>)</label>
+                              <input id="ch8-5" type="checkbox" value="Керамогранит">
+                              <label for="ch8-5">Керамогранит (<span>4479<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch9-6" type="checkbox" value="Клинкер">
-                              <label for="ch9-6">Клинкер (<span>541<span>)</label>
+                              <input id="ch8-6" type="checkbox" value="Клинкер">
+                              <label for="ch8-6">Клинкер (<span>541<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch9-7" type="checkbox" value="Мрамор">
-                              <label for="ch9-7">Мрамор (<span>219<span>)</label>
+                              <input id="ch8-7" type="checkbox" value="Мрамор">
+                              <label for="ch8-7">Мрамор (<span>219<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch9-8" type="checkbox" value="Натуральный камень">
-                              <label for="ch9-8">Натуральный камень (<span>132<span>)</label>
+                              <input id="ch8-8" type="checkbox" value="Натуральный камень">
+                              <label for="ch8-8">Натуральный камень (<span>132<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch9-9" type="checkbox" value="Стекло">
-                              <label for="ch9-9">Стекло (<span>752<span>)</label>
+                              <input id="ch8-9" type="checkbox" value="Стекло">
+                              <label for="ch8-9">Стекло (<span>752<span>)</label>
                             </div>
                           </div>
                         </div>
@@ -447,12 +442,12 @@
                           </div>
                           <div class="filter-block__group-body checkbox-list">
                             <div class="checkbox">
-                              <input id="ch10-1" type="checkbox" value="Антрацит">
-                              <label for="ch10-1">Бетон (<span>320<span>)</label>
+                              <input id="ch9-1" type="checkbox" value="Антрацит">
+                              <label for="ch9-1">Бетон (<span>320<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch10-2" type="checkbox" value="Бужево-белый">
-                              <label for="ch10-2">Гипс (<span>74<span>)</label>
+                              <input id="ch9-2" type="checkbox" value="Бужево-белый">
+                              <label for="ch9-2">Гипс (<span>74<span>)</label>
                             </div>
                           </div>
                         </div>
@@ -464,17 +459,17 @@
                           </div>
                           <div class="filter-block__group-body checkbox-list">
                             <div class="checkbox">
-                              <input id="ch11-1" type="checkbox" value="Украина">
-                              <label for="ch11-1">Украина (<span>12<span>)</label>
+                              <input id="ch10-1" type="checkbox" value="Украина">
+                              <label for="ch10-1">Украина (<span>12<span>)</label>
                             </div>
                             <div class="checkbox">
-                              <input id="ch11-2" type="checkbox" value="Польша">
-                              <label for="ch11-2">Польша (<span>34<span>)				</label>
+                              <input id="ch10-2" type="checkbox" value="Польша">
+                              <label for="ch10-2">Польша (<span>34<span>)				</label>
                             </div>
                           </div>
                         </div>
                         <div class="filter-block__button">
-                          <button class="btn btn--block btn--yellow-2">Применить</button>
+                          <button class="btn btn--lg">Применить</button>
                         </div>
                       </form>
                     </div>

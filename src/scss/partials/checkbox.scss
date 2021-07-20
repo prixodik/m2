@@ -75,12 +75,12 @@
 		&:before {
 			content: "";
 			display: block;
-			width: 20px;
-			height: 20px;
+			width: 15px;
+			height: 15px;
 			position: absolute;
-			top: 0;
+			top: 3px;
 			left: 0;
-			border: 1px $gray solid;
+			border: 1px $gray-dark solid;
 			border-radius: 3px;
 			@include time();
 			background-color: $white;
@@ -89,11 +89,11 @@
 		&:after {
 			content: "";
 			display: block;
-			width: 20px;
-			height: 20px;
+			width: 15px;
+			height: 15px;
 			background: url("../../images/check.svg") 50% 50%/10px auto no-repeat;
 			position: absolute;
-			top: 0;
+			top: 3px;
 			left: 0;
 			opacity: 0;
 			border-radius: 3px;

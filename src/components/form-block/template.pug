@@ -1,5 +1,5 @@
 mixin formBlock(data)
-	.form-block&attributes(attributes)
+	.form-block.-main&attributes(attributes)
 		._form
 			._form-row
 				._form-item
@@ -60,7 +60,7 @@ mixin formBlock(data)
 				input(type="radio" id="p6" name="оплата" value="6")
 				label(for="p6") Оплата наличными при получении
 		._button
-			a(href="#").btn.btn--blue-dark Подтвердить заказ
+			a(href="#").btn.-blue-dark.-bold Подтвердить заказ
 
 mixin formBlockMessage(data)
 	.form-block.-message&attributes(attributes)
@@ -118,4 +118,4 @@ mixin formBlockCall(data)
 				._form-item
 					textarea(name="Комментарий" placeholder="Комментарий" cols="30" rows="10")
 			._button
-				a(href="#").btn.-lg.-blue Перезвонить мне	
+				a(href="#").btn.-lg.-blue Заказать звонок

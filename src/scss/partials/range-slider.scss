@@ -137,8 +137,10 @@ Build date: 2019-12-19 16:51:02
 
 .irs--round {
 	height: 14px;
+	max-width: 270px;
 	.to {
-		display: none;
+		background: url(../../images/sort-scroll_03.png) 50% -1px/16px auto no-repeat;
+		border-radius: 50%;
 	}
 	.from {
 		background: url(../../images/sort-scroll_03.png) 50% -1px/16px auto no-repeat;
