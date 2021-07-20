@@ -277,6 +277,26 @@ var uikit = {
 		});
 	},
 	
+	tile: function() {
+		$(".js-tile-1").addClass('active');
+		$(".js-tile-2").click(function(e) {
+			e.preventDefault();
+			$(this).addClass('active');
+			$(".main-section__row").addClass('js-row');
+			$(".js-tile-1").removeClass('active');
+		});
+		$(".js-tile-1").click(function(e) {
+			e.preventDefault();
+			if ($(this).hasClass('active')) {
+				false
+			} else {
+				$(this).addClass('active');
+				$(".main-section__row").removeClass('js-row');
+				$(".js-tile-2").removeClass('active');
+			}
+		});
+	},
+
 	tabs: function () {
 		$('[data-tab]').click(function (e) {
 			e.preventDefault();
@@ -873,6 +893,7 @@ var uikit = {
 		this.accardion();
 		this.mobile();
 		this.rangeSlider();
+		this.tile();
 		//this.scrollTo();
 
 

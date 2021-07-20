@@ -56,6 +56,7 @@
 	}
 	&__info {
 		margin-bottom: 25px;
+		text-align: center;
 	}
 	&__cost {
 		font: 700 25px/1.2 $baseFF;
@@ -72,6 +73,7 @@
 		&__img {
 			@include flex(center,0,0,nowrap);
 		}
+		
 	}
 	@include media($sm) {
 		height: auto;

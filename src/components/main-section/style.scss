@@ -41,6 +41,60 @@
 					fill: $gray-dark;
 				}
 			}
+			.js-row {
+				.main-section__row-item {
+					flex: 0 0 100% !important;
+					max-width: 100%;
+				}
+				.product-block {
+					@include flex(0, center, center,nowrap);
+					padding: 20px 40px 20px 20px;
+					&__img {
+						margin-bottom: 0;
+						justify-content: flex-start;
+						&-link {
+							margin-left: 20px;
+							width: 70%;
+						}
+					}
+					&__wrap {
+						padding: 0;
+						flex: 0 1 60%;
+					}
+					&__info {
+						font-size: 16px;
+						margin-bottom: 30px;
+						text-align: end;
+					}
+					&__cost {
+						&-items {
+							@include flex(flex-end);
+						}
+						&-cart {
+							margin-left: 30px;
+						}
+					}
+					@include media ($sm) {
+					}
+					@include media ($xs) {
+						@include flex(center, center, center,0,column);
+						&__img {
+							justify-content: center;
+							margin-bottom: 25px;
+						}
+						&__info {
+							text-align: center;
+							font-size: 14px;
+							margin-bottom: 20px;
+						}
+						&__cost {
+							&-items {
+								@include flex(space-between);
+							}
+						}
+					}
+				}
+			}
 		}
 		&__filter {
 			margin-bottom: 70px;
@@ -89,11 +143,12 @@
 				background-color: $white;
 				padding: 8px;
 				border: 1px solid $gray-border;
-				&:focus {
-					background-color: $gray-middle;
-				}
+				transition: all 0.3s;
 				svg {
 					font-size: 26px;
+				}
+				&.active {
+					background-color: $gray-middle;
 				}
 			}
 		}
@@ -552,7 +607,7 @@
 			}
 			&__button {
 				margin-top: 20px;
-				@include flex(center,center);
+				@include flex(center, center);
 			}
 			&__input {
 				margin: 0 auto;
@@ -739,7 +794,7 @@
 					margin-bottom: 10px;
 				}
 				&-info {
-					@include flex(center, center,center,0,column);
+					@include flex(center, center, center, 0, column);
 				}
 			}
 			&__img {
@@ -747,7 +802,7 @@
 					margin-bottom: 10px;
 				}
 				margin-bottom: 10px;
-				@include flex(center, center,0,0,column);
+				@include flex(center, center, 0, 0, column);
 			}
 		}
 	}
