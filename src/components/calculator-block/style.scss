@@ -1,7 +1,7 @@
 .calculator-block {
 	@include flex(0, center);
 	&__body {
-		flex: 0 1 75%;
+		flex: 0 1 61%;
 		color: $text-gray;
 		@include flex(0, center);
 		margin-bottom: -7px;
@@ -13,6 +13,12 @@
 		margin-right: 7px;
 		&:last-child {
 			margin-right: 0;
+		}
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			/* display: none; <- Crashes Chrome on hover */
+			-webkit-appearance: none;
+			margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 		}
 		input {
 			width: 100%;
@@ -29,9 +35,9 @@
 	}
 	&__total {
 		flex: 1 1 auto;
-		font: 700 30px/1.2 $baseFF;
+		font: 700 25px/1.2 $baseFF;
 	}
-	@include media ($xs) {
-		@include flex(0, center,0,0,column);
+	@include media($xs) {
+		@include flex(0, center, 0, 0, column);
 	}
 }
