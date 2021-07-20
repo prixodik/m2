@@ -9051,6 +9051,132 @@ var uikit = {
 
 	
 
+	tile: function() {
+
+		$(".js-tile-1").addClass('active');
+
+		$(".js-tile-2").click(function(e) {
+
+			e.preventDefault();
+
+			$(this).addClass('active');
+
+			$(".main-section__row").addClass('js-row');
+
+			$(".js-tile-1").removeClass('active');
+
+		});
+
+		$(".js-tile-1").click(function(e) {
+
+			e.preventDefault();
+
+			if ($(this).hasClass('active')) {
+
+				false
+
+			} else {
+
+				$(this).addClass('active');
+
+				$(".main-section__row").removeClass('js-row');
+
+				$(".js-tile-2").removeClass('active');
+
+			}
+
+		});
+
+	},
+
+
+
+	calculate: function() {
+
+		var value1=0;
+
+		var value2=0;
+
+		var value3=0;
+
+		var value4=0;
+
+		var value5=0;
+
+		$("#calc-value-1").keyup(function() {
+
+			value1 = $(this).val();
+
+			if(value1 != 0 && value2 != 0 && value3 != 0 && value4 != 0 && value5 != 0){
+
+				uikit.calcResult( value1, value2, value3, value4, value5 );
+
+			}
+
+  		});
+
+		$("#calc-value-2").keyup(function() {
+
+			value2 = $(this).val();
+
+			if(value1 != 0 && value2 != 0 && value3 != 0 && value4 != 0 && value5 != 0){
+
+				uikit.calcResult( value1, value2, value3, value4, value5 );
+
+			}
+
+  		});
+
+		$("#calc-value-3").keyup(function() {
+
+			value3 = $(this).val();
+
+			if(value1 != 0 && value2 != 0 && value3 != 0 && value4 != 0 && value5 != 0){
+
+				uikit.calcResult( value1, value2, value3, value4, value5 );
+
+			}
+
+  		});
+
+		$("#calc-value-4").keyup(function() {
+
+			value4 = $(this).val();
+
+			if(value1 != 0 && value2 != 0 && value3 != 0 && value4 != 0 && value5 != 0){
+
+				uikit.calcResult(value1, value2, value3, value4, value5);
+
+			}
+
+  		});
+
+		$("#calc-value-5").keyup(function() {
+
+			value5 = $(this).val();
+
+			if(value1 != 0 && value2 != 0 && value3 != 0 && value4 != 0 && value5 != 0){
+
+				uikit.calcResult(value1, value2, value3, value4, value5);
+
+			}
+
+  		});
+
+	},
+
+
+
+	calcResult: function(value1, value2, value3, value4, value5) {
+
+		var result = 0.36*value1 + 2.77*value2 + 360000*value3 + value4 + value5;
+
+		$('.js-calc-result').text(result);
+
+	},
+
+	
+
 	tabs: function () {
 
 		$('[data-tab]').click(function (e) {
@@ -10242,6 +10368,12 @@ var uikit = {
 		this.mobile();
 
 		this.rangeSlider();
+
+		this.tile();
+
+		this.calcResult();
+
+		this.calculate();
 
 		//this.scrollTo();
 

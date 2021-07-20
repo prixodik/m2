@@ -125,11 +125,18 @@
 			width: 100%;
 		}
 	}
+	&__item {
+		margin-right: 15px;
+		&-slogan {
+			font-size: 14px;
+		}
+	}
 	&__menu {
-		flex: 0 0 588px;
+		flex: 1 1 328px;
 		//width: 72%;
 		@include flex(0, center,0,nowrap);
 		.btn {
+			width: 450px;
 			margin-right: 11px;
 		}
 		&-nav {
@@ -192,27 +199,9 @@
 				@include flex(flex-end, 0, 0, 0, 0);
 			}
 		}
-		&__item {
-			margin-right: 0;
-			@include flex(0, center);
-			img {
-				margin-bottom: 0;
-				margin-right: 15px;
-				width: 30px;
-			}
-			&-slogan {
-				display: none;
-			}
-			&-number {
-				display: block;
-			}
-		}
 		&__menu {
 			flex: 1 1 auto;
 			flex-wrap: nowrap;
-		}
-		&__numbers {
-			display: none;
 		}
 		&__user {
 			display: none;
@@ -247,6 +236,21 @@
 				flex-wrap: wrap;
 			}
 		}
+		&__item {
+			margin-right: 0;
+			@include flex(0, center);
+			img {
+				margin-bottom: 0;
+				margin-right: 15px;
+				width: 30px;
+			}
+			&-slogan {
+				display: none;
+			}
+			&-number {
+				display: block;
+			}
+		}
 		&__search {
 			flex: 0 0 100%;
 			margin-bottom: 10px;
@@ -260,6 +264,9 @@
 					margin-left: 0;
 				}
 			}
+		}
+		&__numbers {
+			display: none;
 		}
 	}
 

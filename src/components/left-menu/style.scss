@@ -1,0 +1,16 @@
+.left-menu {
+	&__item {
+		width: 300px;
+		height: auto;
+		a {
+			padding: 15px;
+			@include flex(0, center);
+			font: 600 16px/1.1 $baseFF;
+			text-transform: uppercase;
+			&:hover {
+				background-color: $purple-dark;
+				color: $white;
+			}
+		}
+	}
+}

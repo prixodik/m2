@@ -5,6 +5,8 @@ block styles
 block content
 	include ../components/main-section/template
 	include ../components/form-block/template
+	include ../components/popup/template
+	
 
 	+mainSection({
 		bread: [{url: '#', title: 'контакты'}]
@@ -21,6 +23,7 @@ block content
 					p <strong>Телефон:</strong> (044) 111-11-11, (067) 111-11-11, (063) 111-11-11, (050) 111-11-11
 					p <strong>Email:</strong> owner@m2.com
 					a(href="#popup-director").btn.-md.-gray.js-popup-show Связь с директором
+	+popupDirector()
 
 	include ../components/footer/template
 	+footer()

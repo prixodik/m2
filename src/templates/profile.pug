@@ -4,6 +4,7 @@ block styles
 	
 block content
 	include ../components/main-section/template
+	include ../components/left-menu/template
 
 	+mainSection({
 		bread: [{url: '#', title: 'мой аккаунт'}]
@@ -14,19 +15,7 @@ block content
 				a.main-section__head-link(href="#") вернутся к каталогу
 			.main-section__body.row
 				.main-section__links.col-6.col-sm-12
-					.main-section__items 
-						.main-section__item
-							a(href="#") Мои заказы
-						.main-section__item
-							a(href="#") Список желаний
-						.main-section__item
-							a(href="#") Просмотренные товары
-						.main-section__item
-							a(href="#") Мой бонусный счет
-						.main-section__item
-							a(href="#") Мои отзывы
-						.main-section__item
-							a(href="#") Участие в акциях
+					+leftMenu()
 				.main-section__orders.col-6.col-sm-12
 					.main-section__order
 						.main-section__order-head 

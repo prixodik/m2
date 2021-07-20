@@ -104,37 +104,32 @@
                           </div>
                     </div>
                   </div>
-                  <div class="popup popup--director" id="popup-director">
+                  <div class="popup popup--call" id="popup-call">
                     <div class="popup__overflow js-popup-hide"></div>
                     <div class="popup__wrapper"><a class="popup__close js-popup-hide">
                         <svg class="icon icon_close">
                           <use xlink:href="images/sprite-svg.svg#close"></use>
                         </svg></a>
-                      <div class="popup__title">оставить сообщение директору</div>
-                          <div class="form-block form-block--message form-block--director">
+                      <div class="popup__title"></div>
+                          <div class="form-block form-block--message form-block--call">
                             <div class="form-block__form">
                               <div class="form-block__form-row">
-                                <div class="form-block__form-item"><span>Имя <sup>*</sup></span>
-                                  <input type="text" name="Имя">
+                                <div class="form-block__form-item">
+                                  <input type="text" name="Имя" placeholder="Ваше имя">
                                 </div>
                               </div>
                               <div class="form-block__form-row">
-                                <div class="form-block__form-item"><span>Email <sup>*</sup></span>
-                                  <input type="text" name="Email">
+                                <div class="form-block__form-item">
+                                  <input type="number" name="Телефон" placeholder="Телефон">
                                 </div>
                               </div>
                               <div class="form-block__form-row">
-                                <div class="form-block__form-item"><span>Тема </span>
-                                  <input type="text" name="Тема">
+                                <div class="form-block__form-item">
+                                  <textarea name="Комментарий" placeholder="Комментарий" cols="30" rows="10"></textarea>
                                 </div>
                               </div>
-                              <div class="form-block__form-row">
-                                <div class="form-block__form-item"><span>Сообщение</span>
-                                  <textarea name="Сообщение" cols="30" rows="10"> </textarea>
-                                </div>
-                              </div>
+                              <div class="form-block__button"><a class="btn btn--lg btn--blue" href="#">Заказать звонок</a></div>
                             </div>
-                            <div class="form-block__button"><a class="btn btn--md btn--blue-dark" href="#">Отправить</a></div>
                           </div>
                     </div>
                   </div>
@@ -196,7 +191,7 @@
               <div class="main-section__title title-h2">доставка и оплата</div>
               <div class="main-section__body row">
                 <div class="main-section__body-left col-6 col-sm-12">
-                      <div class="form-block">
+                      <div class="form-block form-block--main">
                         <div class="form-block__form">
                           <div class="form-block__form-row">
                             <div class="form-block__form-item"><span>Имя <sup>*</sup></span>
@@ -274,7 +269,7 @@
                             <label for="p6">Оплата наличными при получении</label>
                           </div>
                         </div>
-                        <div class="form-block__button"><a class="btn btn--blue-dark" href="#">Подтвердить заказ</a></div>
+                        <div class="form-block__button"><a class="btn btn--blue-dark btn--bold" href="#">Подтвердить заказ</a></div>
                       </div>
                 </div>
                 <div class="main-section__body-right col-6 col-sm-12">
@@ -286,6 +281,7 @@
                     <div class="main-section__input"><span>Комментарий</span>
                       <textarea name="Комментарий"></textarea>
                     </div>
+                    <div class="main-section__button"><a class="btn btn--blue-dark btn--bold" href="#">Подтвердить заказ	</a></div>
                   </div>
                 </div>
               </div>

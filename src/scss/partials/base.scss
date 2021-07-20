@@ -14,6 +14,7 @@ body {
 	background: $baseBg;
 	overflow-x: hidden;
 	overflow-y: auto;
+	@include flex(space-between,stretch,stretch,nowrap,column); 
 
 	&.checkout-page {
 		overflow: visible;
@@ -22,9 +23,10 @@ body {
 	&.overflow {
 		overflow: hidden;
 	}
-
+	
 	@include media($xs) {
 		font: $fs-12;
+		display: block;
 	}
 }
 
@@ -135,3 +137,4 @@ hr {
 	border-top: 1px rgba($blue-dark, 0.2) solid;
 	margin: 24px 0;
 }
+

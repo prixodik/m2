@@ -1,7 +1,7 @@
 .filter-block {
 	background: $gray-middle;
 	color: $black;
-	padding: 60px 40px 40px 16px;
+	padding: 60px 40px 30px 16px;
 
 	&__head {
 		@include flex(space-between, center, center, nowrap);
@@ -9,10 +9,7 @@
 		&-link {
 			font: 600 14px/1.2 $baseFF;
 			color: $blue;
-			&:hover {
-				color: $blue;
-				text-decoration: underline;
-			}
+			text-decoration: underline;
 		}
 	}
 	&__title {
@@ -21,9 +18,7 @@
 		margin: 0;
 	}
 	&__group {
-		margin: 0 -16px 20px;
-		padding: 0 16px 20px;
-		border-bottom: 1px #f2f5fb solid;
+		padding: 0 0 30px 16px;
 		&-title {
 			font: 700 13px $baseFF;
 			background: $gray;
@@ -61,6 +56,9 @@
 		&-body {
 			max-height: 0;
 			overflow: hidden;
+			.checkbox {
+				margin-left: 20px;
+			}
 			&.is-active {
 				max-height: 100%;
 				overflow-y: auto;
@@ -87,7 +85,6 @@
 	&__button {
 		@include flex(center);
 		.btn {
-			flex: 0 0 90%;
 			margin-bottom: 15px;
 			&:last-child {
 				margin-bottom: 0;
@@ -97,19 +94,20 @@
 	}
 
 	&__range {
-		margin: 15px -6px;
+		margin: 15px -4px;
 		flex-wrap: nowrap;
 		&-col {
-			padding: 0 6px;
+			flex: 0 1 35%;
+			padding: 0 4px;
 			.btn {
-				padding: 4px 30px;
+				padding: 4px 22px;
 			}
 		}
 		input {
 			border: none;
 			border: 1px $gray-dark solid;
-			padding: 5px 12px;
-			font: 14px/20px $baseFF;
+			padding: 7px 3px;
+			font: 13px/10px $baseFF;
 			background: $white;
 			color: $text-green-dark;
 			display: block;
